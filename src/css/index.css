@@ -12,7 +12,8 @@ body {
   display: inline-flex;
 }
 
-.header-content {
+.header-content,
+.menu {
   width: auto;
   text-align: center;
 }
@@ -37,6 +38,13 @@ body {
 .text-company {
   font-weight: bold;
   font-size: 20px;
+}
+
+button:hover {
+  border-bottom: rgb(240, 240, 240) solid 2px;
+}
+button:focus {
+  border-bottom: rgb(240, 240, 240) solid 2px;
 }
 
 /* hidden menu */

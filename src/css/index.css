@@ -25,11 +25,12 @@ body {
 
 .phone,
 .email,
-.text-company {
+.text-company,
+.footer {
   color: rgb(240, 240, 240);
 }
 
-.email-header-send {
+.email-header-send, .email-footer-send {
   width: 20px;
   height: auto;
   cursor: pointer;
@@ -163,12 +164,18 @@ button {
 
 .footer {
   width: 100%;
-  height: 130px;
+  height: 150px;
   background-color: darkred;
   bottom: 0;
   right: 0;
   left: 0;
   position: absolute;
+}
+.footer-content{
+  clear: both;
+}
+.company-description{
+  word-wrap: break-word;
 }
 @media only screen and (max-width: 768px) {
   /* MOBILE PHONES */

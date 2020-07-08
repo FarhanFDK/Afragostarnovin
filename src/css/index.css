@@ -172,10 +172,56 @@ button {
   position: absolute;
 }
 .footer-content{
-  clear: both;
+  word-wrap: none;
+}
+.footer-links{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .company-description{
-  word-wrap: break-word;
+}
+.fa.fa-instagram {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.fa-whatsapp  {
+  color:#fff;
+  background:
+  linear-gradient(#25d366,#25d366)15px 84%/15px 15px no-repeat,
+  radial-gradient(#25d366 59%,transparent 0);
+}
+.social-networks{
+}
+.instagram{
+  bottom:20px;
+  left: 30px;
+  position: absolute;
+  background-color: white;
+  border-radius: 15px;
+  height: 43px;
+  width:42px;
+}
+
+.telegram{
+  bottom:20px;
+  left: 100px;
+  position: absolute;
+  background-color: white;
+  border-radius:70%;
+  height: 43px;
+  width:42px;
+  color: #0088CC;
+}
+.whatsapp{
+  bottom:20px;
+  left: 170px;
+  position: absolute;
+  border-radius:50%;
+  height: 42px;
+  width:42px;
 }
 @media only screen and (max-width: 768px) {
   /* MOBILE PHONES */

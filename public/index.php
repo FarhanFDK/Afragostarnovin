@@ -160,18 +160,124 @@
             </p>
           </div>
           <div class="my-10 mx-10 text-3xl">
-            <label for="firstName">نام:</label>
-            <input class="border-solid border-4 border-gray-600" type="text" name="firstName" id="firstName" required/>
-            <br>
-            <label class="my-5" for="lastName">نام خانوادگی:</label>
-            <input class="mx-5 my-5 border-solid border-4 border-gray-600" type="text" name="lastName" id="lastName" required/>
-            <br>
-            <label class="my-5" for="contact-us-description">توضیحات:</label>
-            <textarea class="text-area-description mx-5 border-solid border-4 border-gray-600" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
-            <br>
-            <input class="" type="submit" name="submit" id="submit" value="ارسال"/>
-            <br>
-            
+            <form action="index.php" method="post">
+              <label for="firstname">نام:</label>
+              <input class="border-solid border-4 border-gray-600" type="text" name="firstname" id="firstname" required/>
+              <br>
+              <label class="my-5" for="lastname">نام خانوادگی:</label>
+              <input class="mx-5 my-5 border-solid border-4 border-gray-600" type="text" name="lastname" id="lastname" required/>
+              <br>
+              <label class="my-5" for="phonenumber">شماره تماس:</label>
+              <input class="mx-5 my-5 border-solid border-4 border-gray-600" type="text" name="phonenumber" id="phonenumber" required/>
+              <br>
+              <label class="my-5" for="contact-us-description">توضیحات:</label>
+              <textarea class="text-area-description mx-5 border-solid border-4 border-gray-600" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
+              <br>
+              <input class="" type="submit" name="submit" id="submit" value="ارسال"/>
+              <br>
+            </form>
+            <div>
+            <?php
+              if(isset($_POST['submit'])){
+                $firstname = $_POST['firstname'];
+                $lastname = $_POST['lastname'];
+                $phonenumber = $_POST['phonenumber'];
+                $description = $_POST['contact-us-description'];
+                date_default_timezone_set("Iran");
+                $date = date ("Y/m/d.h:i:sa");
+                $milliseconds = round(microtime(true) * 1000);
+                $id = $date + " " + $milliseconds;
+                if($firstname && $lastname && $phonenumber && $description){
+                  include "../src/php/db.php";
+                  if($result){
+                    $to = "Farhanabdollahiab@gmail.com";
+                    $subject = "ایمیل دریافت شده برای مشاوره";
+                    $message = "
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                      <title>مشاوره</title>
+                      <style>
+                        body{
+                          font-family:yekan;
+                          direction:rtl;
+                        }
+                        .header{
+                          width:100%;
+                          height:150px;
+                          background-color:darkred;
+                          top:0;
+                          right:0;
+                          left:0;
+                          position:absolute;
+                        }
+                        .container{
+                          margin-top;20px;
+                          text-align;center;
+                        }
+                      </style>
+                    </head>
+                    <body>
+                    <div class='header'>
+                        <p>
+                        سلام استاد
+                        این ایمیل برای دریافت مشاوره به شما ارسال شده است
+                        <br>
+                        لطفا برای پیگیری با ایشان تماس حاصل فرمایید
+                        </p>
+                    </div>
+                    <div class='container'>
+                      <div class='details'>
+                        اقای استاد
+                        ضمن عرض سلام از طرف ربات فرستنده ایمیل سایت
+                        مشخصاتی که در ذیل نوشته شده اند
+                        برای ارتباط با کاربر می باشند.
+                        چنانچه وقتتان به شما اجازه میدهد،
+                        لطفا رسیدگی کنید.
+                        با تشکر.ربات فرستنده ایمیل(طراحی شده توسط FDK(
+                      </div>
+                      <div class='firstname'>
+                       نام:
+                        <?php
+                          echo $firstname;
+                        ?>
+                      </div>
+                      <div class='lastname'>
+                          نام خانوادگی:
+                        <?php
+                        echo $lastname;
+                        ?>    
+                      </div>
+                      <div class='phonenumber'>
+                        شماره تماس:
+                        <?php
+                          echo $phonenumber;
+                        ?>
+                      </div>
+                      <div class='descriptions'>
+                          توضیحات:
+                          <?php
+                          echo $description;
+                          ?>
+                      </div>
+                    </div>
+                    </body>
+                    </html>
+                    ";
+                    $headers = "MIME-Version: 1.0" . "\r\n";
+                    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                    $headers .= 'From: <info@afragostarnovin.ir>' . "\r\n";
+                    $headers .= 'Cc: info@afragostarnovin.ir' . "\r\n";
+                    $GLOBALS['sendemail'] = mail($to,$subject,$message,$headers); 
+                  } else{
+                    echo "<p class='warning-text'>درخواست شما انجام نشد لطفا بعدا تلاش کنید</p>";
+                  }
+                } else{
+                  echo "<p class='warning-text'>لطفا فرم را کامل کنید</p>";
+                }
+              }
+            ?>
+            </div>
           </div>
         </div>
       </div>

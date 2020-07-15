@@ -192,6 +192,7 @@
                 $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
                 $description = mysqli_real_escape_string($connection,$description);
                 if($firstname && $lastname && $phonenumber && $description){
+                  $chng = mysqli_set_charset($connection, "UTF-8");
                   $sql = "INSERT INTO users(id,firstname,lastname,phonenumber,descriptions)";
                   $sql .= "VALUES('$id','$firstname','$lastname','$phonenumber','$description')";
                   $result = mysqli_query($connection,$sql);

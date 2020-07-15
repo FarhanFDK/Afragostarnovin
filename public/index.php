@@ -186,8 +186,15 @@
                 date_default_timezone_set("Iran");
                 $date = date("Y/m/d.h:i:sa");
                 $id = $date;
+                $connection = mysqli_connect('localhost', 'root', '', 'consulting');
+                $firstname = mysqli_real_escape_string($connection,$firstname);
+                $lastname = mysqli_real_escape_string($connection,$lastname);
+                $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
+                $description = mysqli_real_escape_string($connection,$description);
                 if($firstname && $lastname && $phonenumber && $description){
-                  include "../src/php/db.php";
+                  $sql = "INSERT INTO users(id,firstname,lastname,phonenumber,descriptions)";
+                  $sql .= "VALUES('$id','$firstname','$lastname','$phonenumber','$description')";
+                  $result = mysqli_query($connection,$sql);
                   if($result){
                     $to = "Farhanabdollahiab@gmail.com";
                     $subject = "ایمیل دریافت شده برای مشاوره";
@@ -196,25 +203,6 @@
                     <html>
                     <head>
                       <title>مشاوره</title>
-                      <style>
-                        body{
-                          font-family:yekan;
-                          direction:rtl;
-                        }
-                        .header{
-                          width:100%;
-                          height:150px;
-                          background-color:darkred;
-                          top:0;
-                          right:0;
-                          left:0;
-                          position:absolute;
-                        }
-                        .container{
-                          margin-top;20px;
-                          text-align;center;
-                        }
-                      </style>
                     </head>
                     <body>
                     <div class='header'>
@@ -236,28 +224,17 @@
                         با تشکر.ربات فرستنده ایمیل(طراحی شده توسط FDK(
                       </div>
                       <div class='firstname'>
-                       نام:
-                        <?php
-                          echo $firstname;
-                        ?>
+                       نام:" . $firstname . "
                       </div>
                       <div class='lastname'>
-                          نام خانوادگی:
-                        <?php
-                        echo $lastname;
-                        ?>    
+                          نام خانوادگی:" . $lastname .
+                          "
                       </div>
                       <div class='phonenumber'>
-                        شماره تماس:
-                        <?php
-                          echo $phonenumber;
-                        ?>
+                        شماره تماس:" . $phonenumber . "
                       </div>
                       <div class='descriptions'>
-                          توضیحات:
-                          <?php
-                          echo $description;
-                          ?>
+                          توضیحات:" . $description . "
                       </div>
                     </div>
                     </body>

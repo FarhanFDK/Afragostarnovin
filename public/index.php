@@ -187,12 +187,12 @@
                 $date = date("Y/m/d.h:i:sa");
                 $id = $date;
                 $connection = mysqli_connect('localhost', 'root', '', 'consulting');
-                $firstname = mysqli_real_escape_string($connection,$firstname);
-                $lastname = mysqli_real_escape_string($connection,$lastname);
-                $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
-                $description = mysqli_real_escape_string($connection,$description);
                 if($firstname && $lastname && $phonenumber && $description){
                   $chng = mysqli_set_charset($connection, "UTF-8");
+                  $firstname = mysqli_real_escape_string($connection,$firstname);
+                  $lastname = mysqli_real_escape_string($connection,$lastname);
+                   $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
+                  $description = mysqli_real_escape_string($connection,$description);
                   $sql = "INSERT INTO users(id,firstname,lastname,phonenumber,descriptions)";
                   $sql .= "VALUES('$id','$firstname','$lastname','$phonenumber','$description')";
                   $result = mysqli_query($connection,$sql);

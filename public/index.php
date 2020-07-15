@@ -59,7 +59,7 @@
           <button
             title="فروشگاه"
             class="btn text-white font-bold mx-4 my-2 focus:outline-none"
-            href="index.html"
+            href="index.php"
           >
             فروشگاه
           </button>
@@ -184,9 +184,8 @@
                 $phonenumber = $_POST['phonenumber'];
                 $description = $_POST['contact-us-description'];
                 date_default_timezone_set("Iran");
-                $date = date ("Y/m/d.h:i:sa");
-                $milliseconds = round(microtime(true) * 1000);
-                $id = $date + " " + $milliseconds;
+                $date = date("Y/m/d.h:i:sa");
+                $id = $date;
                 if($firstname && $lastname && $phonenumber && $description){
                   include "../src/php/db.php";
                   if($result){
@@ -268,7 +267,7 @@
                     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
                     $headers .= 'From: <info@afragostarnovin.ir>' . "\r\n";
                     $headers .= 'Cc: info@afragostarnovin.ir' . "\r\n";
-                    $GLOBALS['sendemail'] = mail($to,$subject,$message,$headers); 
+                    $sendmail = mail($to,$subject,$message,$headers); 
                   } else{
                     echo "<p class='warning-text'>درخواست شما انجام نشد لطفا بعدا تلاش کنید</p>";
                   }

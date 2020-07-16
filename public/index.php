@@ -159,7 +159,7 @@
                ما با شما تماس خواهیم گرفت
             </p>
           </div>
-          <div class="my-10 mx-10 text-3xl">
+          <div class="div-form my-10 mx-10 text-3xl">
             <form action="index.php" method="post">
               <label for="firstname">نام:</label>
               <input class="border-solid border-4 border-gray-600" type="text" name="firstname" id="firstname" required/>
@@ -173,7 +173,7 @@
               <label class="my-5" for="contact-us-description">توضیحات:</label>
               <textarea class="text-area-description mx-5 border-solid border-4 border-gray-600" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
               <br>
-              <input class="" type="submit" name="submit" id="submit" value="ارسال"/>
+              <input class="bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" name="submit" id="submit" value="ارسال"/>
               <br>
             </form>
             <div>
@@ -183,26 +183,29 @@
                 $lastname = $_POST['lastname'];
                 $phonenumber = $_POST['phonenumber'];
                 $description = $_POST['contact-us-description'];
-                
                 date_default_timezone_set("Iran");
                 $date = date("Y/m/d.h:i:sa");
                 $id = $date;
-                $connection = mysqli_connect('localhost', 'afragost_admin', '#XbdV?zsa0dT', 'afragost_consulting');
-                
-                  $chng = mysqli_set_charset($connection, "UTF-8");
+                $connection = mysqli_connect('localhost', 'admin', '', 'consulting');
+                $chng = mysqli_set_charset($connection, "UTF-8");
                 if($firstname && $lastname && $phonenumber && $description){
                   $sql = "INSERT INTO users(id,firstname,lastname,phonenumber,descriptions)";
                   $sql .= "VALUES('$id','$firstname','$lastname','$phonenumber','$description')";
                   $result = mysqli_query($connection,$sql);
                   if($result){
-                    $to = "Farhanabdollahiab@gmail.com";
+                    $to = "info@afragostarnovin.ir";
                     $subject = "ایمیل دریافت شده برای مشاوره";
                     $message = "
                                 <!DOCTYPE html>
                                 <html>
                                 <head>
+                                  <title>دریافت مشاوره</title>
+                                  <link rel='stylesheet' href='https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css'/>
                                 </head>";
-                    $message .= "<body style='direction:rtl;'>
+                    $message .= "<body style='direction:rtl;'>";
+                    $message .= "<div class='header bg-red-700' style='left:0;right:0;top:0;position:absolute;width:100%;height:100px;color:blue;'>
+                                  این ایمیل به منظور دریافت مشاوره رایگان فرستاده شده است،چناچه وقتتان اجازه می دهد،لطفا رسیدگی کنید
+                                </div>
                                 نام:
                                 ";
                     $message .= $firstname;
@@ -224,7 +227,7 @@
                     $headers .= 'From: <info@afragostarnovin.ir>' . "\r\n";
                     $headers .= 'Cc: info@afragostarnovin.ir' . "\r\n";
                     $sendmail = mail($to,$subject,$message,$headers); 
-                    echo "<p class='success-text'>درخواست شما با موفقیت ثبت شد</p>";
+                    echo "<p class='success-text' style='color:green;'>درخواست شما با موفقیت ثبت شد</p>";
                   } else{
                     echo "<p class='warning-text'>درخواست شما انجام نشد لطفا بعدا تلاش کنید</p>";
                   }

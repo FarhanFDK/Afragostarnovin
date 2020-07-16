@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -183,16 +183,14 @@
                 $lastname = $_POST['lastname'];
                 $phonenumber = $_POST['phonenumber'];
                 $description = $_POST['contact-us-description'];
+                
                 date_default_timezone_set("Iran");
                 $date = date("Y/m/d.h:i:sa");
                 $id = $date;
-                $connection = mysqli_connect('localhost', 'root', '', 'consulting');
-                if($firstname && $lastname && $phonenumber && $description){
+                $connection = mysqli_connect('localhost', 'afragost_admin', '#XbdV?zsa0dT', 'afragost_consulting');
+                
                   $chng = mysqli_set_charset($connection, "UTF-8");
-                  $firstname = mysqli_real_escape_string($connection,$firstname);
-                  $lastname = mysqli_real_escape_string($connection,$lastname);
-                   $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
-                  $description = mysqli_real_escape_string($connection,$description);
+                if($firstname && $lastname && $phonenumber && $description){
                   $sql = "INSERT INTO users(id,firstname,lastname,phonenumber,descriptions)";
                   $sql .= "VALUES('$id','$firstname','$lastname','$phonenumber','$description')";
                   $result = mysqli_query($connection,$sql);
@@ -200,52 +198,33 @@
                     $to = "Farhanabdollahiab@gmail.com";
                     $subject = "ایمیل دریافت شده برای مشاوره";
                     $message = "
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
-                      <title>مشاوره</title>
-                    </head>
-                    <body>
-                    <div class='header'>
-                        <p>
-                        سلام استاد
-                        این ایمیل برای دریافت مشاوره به شما ارسال شده است
-                        <br>
-                        لطفا برای پیگیری با ایشان تماس حاصل فرمایید
-                        </p>
-                    </div>
-                    <div class='container'>
-                      <div class='details'>
-                        اقای استاد
-                        ضمن عرض سلام از طرف ربات فرستنده ایمیل سایت
-                        مشخصاتی که در ذیل نوشته شده اند
-                        برای ارتباط با کاربر می باشند.
-                        چنانچه وقتتان به شما اجازه میدهد،
-                        لطفا رسیدگی کنید.
-                        با تشکر.ربات فرستنده ایمیل(طراحی شده توسط FDK(
-                      </div>
-                      <div class='firstname'>
-                       نام:" . $firstname . "
-                      </div>
-                      <div class='lastname'>
-                          نام خانوادگی:" . $lastname .
-                          "
-                      </div>
-                      <div class='phonenumber'>
-                        شماره تماس:" . $phonenumber . "
-                      </div>
-                      <div class='descriptions'>
-                          توضیحات:" . $description . "
-                      </div>
-                    </div>
-                    </body>
-                    </html>
-                    ";
+                                <!DOCTYPE html>
+                                <html>
+                                <head>
+                                </head>";
+                    $message .= "<body style='direction:rtl;'>
+                                نام:
+                                ";
+                    $message .= $firstname;
+                    $message .= "<br>";
+                    $message .= "نام خانوادگی:";
+                    $message .= $lastname;
+                    $message .= "<br>";
+                    $message .= "شماره تماس:";
+                    $message .= $phonenumber;
+                    $message .= "<br>";
+                    $message .= "توضیحات:";
+                    $message .= $description;
+                    $message .="
+                                </body>
+                                </html>
+                    " ;
                     $headers = "MIME-Version: 1.0" . "\r\n";
                     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
                     $headers .= 'From: <info@afragostarnovin.ir>' . "\r\n";
                     $headers .= 'Cc: info@afragostarnovin.ir' . "\r\n";
                     $sendmail = mail($to,$subject,$message,$headers); 
+                    echo "<p class='success-text'>درخواست شما با موفقیت ثبت شد</p>";
                   } else{
                     echo "<p class='warning-text'>درخواست شما انجام نشد لطفا بعدا تلاش کنید</p>";
                   }

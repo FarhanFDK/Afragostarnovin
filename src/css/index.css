@@ -3,6 +3,7 @@
   font-family: yekan;
 }
 body {
+  all: unset;
   font-family: yekan;
   background-color: white;
   direction: rtl;
@@ -80,6 +81,7 @@ button:focus {
   margin-left: auto;
   margin-right: auto;
 }
+
 .img-slideshow {
   height: 300px;
   width: auto;
@@ -100,11 +102,22 @@ button {
   height: 30px;
 }
 .div-form{
-  left:20px;
+  left:0px;
 }
 form{
-  left: inherit;
+  left:0;
 }
+input{
+  left:0;
+}
+.div-description{
+  display : flex;
+  align-items : center;
+  justify-content: center;  
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
 textarea{ 
   resize: none;
 }

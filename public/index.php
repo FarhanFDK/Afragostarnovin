@@ -183,7 +183,8 @@
           </table>
         </div>
         <div class="contact-us flex flex-row">
-          <div class="my-5 mx-5 text-3xl">
+          <div class="my-3 mx-10 text-3xl" style="width:50%;">
+            <br>
             <p>
               مشاوره رایگان دریافت کنید!
               <br>
@@ -195,19 +196,25 @@
                ما با شما تماس خواهیم گرفت
             </p>
           </div>
-          <div class="div-form my-10 mx-10 text-3xl">
-            <form action="index.php" method="post">
+          <div class="div-form my-2 mx-10 text-3xl" style="width:50%;">
+            <form class="bg-white rounded px-8 pt-6 pb-8 mb-4" action="index.php" method="post">
               <label for="firstname">نام:</label>
-              <input class="border-solid border-4 border-gray-600" type="text" name="firstname" id="firstname" required/>
+              <input class="firstname border-solid border-4 border-gray-600 shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="firstname" id="firstname" required/>
               <br>
               <label class="my-5" for="lastname">نام خانوادگی:</label>
-              <input class="mx-5 my-5 border-solid border-4 border-gray-600" type="text" name="lastname" id="lastname" required/>
+              <input class="my-5 border-solid border-4 border-gray-600 shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="lastname" id="lastname" required/>
               <br>
               <label class="my-5" for="phonenumber">شماره تماس:</label>
-              <input class="mx-5 my-5 border-solid border-4 border-gray-600" type="text" name="phonenumber" id="phonenumber" required/>
+              <input class="my-5 border-solid border-4 border-gray-600 shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="phonenumber" id="phonenumber" required/>
               <br>
-              <label class="my-5" for="contact-us-description">توضیحات:</label>
-              <textarea class="text-area-description mx-5 border-solid border-4 border-gray-600" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
+              <div class="div-description">
+                <div class="inner"> 
+                  <label class="" for="contact-us-description ">توضیحات:</label>
+                </div>
+                <textarea class="text-area-description  border-solid border-4 border-gray-600 shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
+               </div>
+               
+              
               <br>
               <input class="bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" name="submit" id="submit" value="ارسال"/>
               <br>

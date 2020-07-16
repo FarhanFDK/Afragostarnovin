@@ -195,6 +195,23 @@
                <br>
                ما با شما تماس خواهیم گرفت
             </p>
+            <div class="social-networks">
+          <div class="instagram">
+            <a class="" title="" href="#">
+              <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="telegram">
+            <a class="" title="" href="#">
+              <i class="fa fa-telegram fa-3x" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="whatsapp">
+            <a class="" title="" href="#">
+              <i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
           </div>
           <div class="div-form my-2 mx-10 text-3xl" style="width:50%;">
             <form class="bg-white rounded px-8 pt-6 pb-8 mb-4" action="index.php" method="post">
@@ -209,7 +226,7 @@
               <br>
               <div class="div-description">
                 <div class="inner"> 
-                  <label class="" for="contact-us-description ">توضیحات:</label>
+                  <label class="" for="contact-us-description">توضیحات:</label>
                 </div>
                 <textarea class="text-area-description  border-solid border-4 border-gray-600 shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
                </div>
@@ -331,23 +348,6 @@
           ساخت وب اپلیکیشن و ...
           </p>
           برای سفارش با ما تماس بگیرید
-        </div>
-        <div class="social-networks">
-          <div class="instagram">
-            <a class="" title="" href="#">
-              <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="telegram">
-            <a class="" title="" href="#">
-              <i class="fa fa-telegram fa-3x" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="whatsapp">
-            <a class="" title="" href="#">
-              <i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i>
-            </a>
-          </div>
         </div>
       </div>
     </div>

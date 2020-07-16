@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -52,21 +52,21 @@
           <button
             title="صفحه اصلی"
             class="btn text-white font-bold mx-4 my-2 focus:outline-none"
-            href="#"
+            onclick="location.href='index.php'"
           >
             صفحه اصلی
           </button>
           <button
             title="فروشگاه"
             class="btn text-white font-bold mx-4 my-2 focus:outline-none"
-            href="index.php"
+            onclick="location.href='store.php'"
           >
             فروشگاه
           </button>
           <button
             title="مشاوره رایگان"
             class="btn text-white font-bold mx-4 my-2 focus:outline-none"
-            href="store.html"
+            onclick="location.href='free-consulting.php'"
           >
             مشاوره رایگان
           </button>
@@ -87,7 +87,11 @@
         </div>
         <div class="header-content flex-1">
           <p class="text-company m-auto">
-            شرکت افراگستر نوین
+            <a class="cursor-pointer mx-5" title="" href='index.php'>
+              <h1 class="my-3">
+                 شرکت افراگستر نوین
+              </h1>
+            </a>
           </p>
           <p class="phone my-auto mx-2">
             <i class="fa fa-phone"></i>
@@ -146,6 +150,38 @@
           <script src="../src/assets/slideshow/slideshow.js"></script>
           <script src="../src/assets/slideshow/mouse-wheel/jquery.mousewheel.js"></script>
         </div>
+        <div class="company-description">
+          <p>
+            
+          </p>
+        </div>
+        <div class="attributes my-5">
+          <div class="text-2xl text-center">
+            ویژگی های محصولات ما:
+          </div>
+          <table class="text-center">
+            <tr class="text-center mx-5">
+              <td class="att-item bg-gray-200 mx-10 text-2xl text-center">
+                عدم بلوکه شدن پول در حساب بانکی
+                <i class="fa fa-line-chart" style="color:rgb(10,20,50)" aria-hidden="true"></i>
+              </td>
+              <td class="att-item bg-gray-200 mx-10 text-2xl text-center">
+                سرعت بالای انجام تراکنش
+                <i class="fa fa-plane fa-rotate-270" style="color:rgb(10,20,50)" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr class="text-center mx-5">
+              <td class="att-item bg-gray-200 mx-10 text-2xl text-center">
+                پشتیبانی از تمامی بانک ها
+                <i class="fa fa-credit-card" style="color:rgb(10,20,50)" aria-hidden="true"></i>
+              </td>
+              <td class="att-item bg-gray-200 mx-10 text-2xl text-center">
+
+                <i class="fa fa-" style="color:rgb(10,20,50)" aria-hidden="true"></i>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="contact-us flex flex-row">
           <div class="my-5 mx-5 text-3xl">
             <p>
@@ -199,6 +235,7 @@
                                 <!DOCTYPE html>
                                 <html>
                                 <head>
+                                  <meta charset='UTF-8'/>
                                   <title>دریافت مشاوره</title>
                                   <link rel='stylesheet' href='https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css'/>
                                 </head>";

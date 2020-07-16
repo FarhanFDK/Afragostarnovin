@@ -25,7 +25,8 @@ body {
 
 .phone,
 .email,
-.text-company {
+.text-company,
+h1 {
   color: rgb(240, 240, 240);
 }
 
@@ -35,20 +36,42 @@ body {
   cursor: pointer;
 }
 
-.text-company {
+.text-company , h1 {
   font-weight: bold;
   font-size: 20px;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-spacing: 50px;
+}
+
+.attributes{
+  padding-top:0px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+}
+
+.att-item{
+  width: 380px;
+  height:100px;
+}
+
+.att-item:hover{
+  border: 1px grey solid;
 }
 
 button:hover {
   border-bottom: rgb(240, 240, 240) solid 2px;
 }
+
 button:focus {
   border-bottom: rgb(240, 240, 240) solid 2px;
 }
 
-.middle {
-}
 .slideshow {
   text-align: center;
   direction: ltr;
@@ -78,6 +101,9 @@ button {
 }
 .div-form{
   left:20px;
+}
+form{
+  left: inherit;
 }
 textarea{ 
   resize: none;

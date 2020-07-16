@@ -138,7 +138,7 @@ textarea{
   padding-right: 10px;
 }
 
-.fa.fa-instagram {
+.fa-instagram {
   color: transparent;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
@@ -146,29 +146,28 @@ textarea{
   -webkit-background-clip: text;
 }
 .fa-whatsapp  {
-  color:#fff;
-  background:
+  color:#25d366;/*
   linear-gradient(#25d366,#25d366)15px 84%/15px 15px no-repeat,
-  radial-gradient(#25d366 59%,transparent 0);
+  radial-gradient(#25d366 59%,transparent 0);*/
+  float: left;
+  margin-left: 30px;
 }
 .social-networks{
-}
-.instagram{
-  background-color: white;
-  border-radius: 15px;
-  height: 43px;
-  width:42px;
+  font-size: 20px;
 }
 
-.telegram{
+.fa-instagram{
+  font-size: 20px;
   background-color: white;
-  border-radius:70%;
-  height: 43px;
-  width:42px;
-  color: #0088CC;
+  float: left;
 }
-.whatsapp{
-  border-radius:50%;
-  height: 42px;
-  width:42px;
+
+.fa-telegram{
+  font-size: 18px;
+  background-color: white;
+  margin-left: 30px;
+  color: #0088CC;
+  float:left;
+}
+.fa-whatsapp{
 }

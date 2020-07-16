@@ -195,28 +195,27 @@
                <br>
                ما با شما تماس خواهیم گرفت
             </p>
+            <p>
+              <br>
+              <br>
+              در شبکه های اجتماعی با ما در ارتباط باشید!
+            </p>
             <div class="social-networks">
-          <div class="instagram">
             <a class="" title="" href="#">
-              <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+              <i class="fa fa-instagram fa-3x mx-5" aria-hidden="true"></i>
             </a>
-          </div>
-          <div class="telegram">
             <a class="" title="" href="#">
               <i class="fa fa-telegram fa-3x" aria-hidden="true"></i>
             </a>
-          </div>
-          <div class="whatsapp">
             <a class="" title="" href="#">
               <i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i>
             </a>
-          </div>
         </div>
           </div>
           <div class="div-form my-2 mx-10 text-3xl" style="width:50%;">
             <form class="bg-white rounded px-8 pt-6 pb-8 mb-4" action="index.php" method="post">
-              <label for="firstname">نام:</label>
-              <input class="firstname border-solid border-4 border-gray-600 shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="firstname" id="firstname" required/>
+              <label class="my-5" for="firstname">نام:</label>
+              <input class="my-5 firstname border-solid border-4 border-gray-600 shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="firstname" id="firstname" required/>
               <br>
               <label class="my-5" for="lastname">نام خانوادگی:</label>
               <input class="my-5 border-solid border-4 border-gray-600 shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="lastname" id="lastname" required/>
@@ -279,7 +278,9 @@
                     $message .= "<br>";
                     $message .= "توضیحات:";
                     $message .= $description;
-                    $message .="
+                    $message .= "زمان ثبت درخواست: ";
+                    $message .= $id;
+                    $message .= "
                                 </body>
                                 </html>
                     " ;
@@ -310,10 +311,7 @@
         </p>
         <p class="email my-5 mx-2">
           <i class="fa fa-envelope"></i>
-          <a
-            class="email-footer-send"
-            onclick="location.href = 'mailto:info@afragostarnovin.ir'"
-          >
+          <a class="email-footer-send" href = "mailto:info@afragostarnovin.ir">
             info@afragostarnovin.ir
           </a>
         </p>

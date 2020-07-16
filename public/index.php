@@ -285,7 +285,72 @@
         </div>
       </div>
       
-      <div class="footer"></div>
+      <div class="footer flex flex-row">
+        <div>
+        <p class="phone my-5 mx-2">
+          <i class="fa fa-phone fa-30x"></i>
+          09354107274
+        </p>
+        <p class="email my-5 mx-2">
+          <i class="fa fa-envelope"></i>
+          <a
+            class="email-footer-send"
+            onclick="location.href = 'mailto:info@afragostarnovin.ir'"
+          >
+            info@afragostarnovin.ir
+          </a>
+        </p>
+        </div>
+      
+      <div>
+        <p class="footer-content my-3 mx-10 text-2xl">
+          دسترسی سریع
+        </p>
+        <p class="footer-links">
+          <a class="mx-5 my-auto" title="" href="#">
+            فروشگاه
+          </a>
+          <a class="mx-5 my-auto" title="" href="">
+            مشاوره رایگان
+          </a>
+          <br>
+        </p>
+      </div>
+      <div class="company-description">
+        <div class="my-5 text-lg">
+          <p>
+          شرکت افراگستر نوین شرکتی در زمینه فروش دستگاه های خودپرداز
+          (ATM)،
+          دستگاه های کارتخوان
+          (POS)
+          و ارائه خدمات دیگر می باشد
+          </p>
+          <p class="my-3 text-lg">
+          خدماتی نظیر طراحی وبسایت،
+          طراحی لوگو،
+          ساخت وب اپلیکیشن و ...
+          </p>
+          برای سفارش با ما تماس بگیرید
+        </div>
+        <div class="social-networks">
+          <div class="instagram">
+            <a class="" title="" href="#">
+              <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="telegram">
+            <a class="" title="" href="#">
+              <i class="fa fa-telegram fa-3x" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="whatsapp">
+            <a class="" title="" href="#">
+              <i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   </body>
 </html>

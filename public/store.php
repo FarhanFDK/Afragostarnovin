@@ -3,34 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <title>شرکت افراگستر نوین</title>
-    <meta
-      name="keywords"
-      content="شرکت افراگستر نوین,afragostarnovin,خرید دستگاه خودپرداز,خرید دستگاه کارتخوان و POS"
-    />
+    <meta name="keywords" content="شرکت افراگستر نوین,afragostarnovin,خرید دستگاه خودپرداز,خرید دستگاه کارتخوان و POS" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="robots" content="index,follow" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" />
     <link rel="stylesheet" href="../src/css/index.css" />
+    <link rel="stylesheet" href="../src/css/store.css" />
     <link rel="stylesheet" href="../src/css/hamburger.css" />
     <link rel="stylesheet" href="../src/css/media.css" />
-    <link
-      rel="stylesheet"
-      href="../src/assets/slideshow/OwlCarousel/dist/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../src/assets/slideshow/OwlCarousel/dist/assets/owl.theme.default.min.css"
-    />
     <link rel="shortcut icon" href="../src/Icon/Afra.ico" />
     <link rel="icon" href="../src/Icon/Afra.ico" />
-    <script
-      src="https://kit.fontawesome.com/b39b75221a.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/b39b75221a.js" crossorigin="anonymous"></script>
     <script src="../src/jquery/jquery-3.4.1.slim.min.js"></script>
     <script src="../src/assets/slideshow/OwlCarousel/dist/owl.carousel.min.js"></script>
     <style></style>
@@ -49,18 +33,10 @@
           <div id="menu-content"></div>
         </div>
         <div class="menu flex-1 my-2">
-          <button
-            title="صفحه اصلی"
-            class="btn text-white font-bold mx-4 my-2 focus:outline-none"
-            onclick="location.href='index.php'"
-          >
+          <button title="صفحه اصلی" class="btn text-white font-bold mx-4 my-2 focus:outline-none" onclick="location.href='index.php'">
             صفحه اصلی
           </button>
-          <button
-            title="فروشگاه"
-            class="btn text-white font-bold mx-4 my-2 focus:outline-none"
-            onclick="location.href='store.php'"
-          >
+          <button title="فروشگاه" class="btn text-white font-bold mx-4 my-2 focus:outline-none" onclick="location.href='store.php'">
             فروشگاه
           </button>
           <button

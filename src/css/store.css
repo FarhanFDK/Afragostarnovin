@@ -1,5 +1,23 @@
+.item{
+    width: 275px;
+    height: 275px;
+    background-color:gray;
+}
+
 .img-store{
     width: 250px;
     height: 250px;
-    text-shadow:5px;
+}
+
+.img-store:hover{
+    transition: border 0.5;
+    border:1px grey solid;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.font-text{
+    font-family: Arial;
 }

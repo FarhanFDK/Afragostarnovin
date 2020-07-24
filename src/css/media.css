@@ -1,5 +1,5 @@
-@media only screen and (max-width: 768px) {
-    /* MOBILE PHONES */
+/*@media only screen and (max-width: 768px) {
+    /* MOBILE PHONES 
     .buttons {
       display: none;
       visibility: hidden;
@@ -10,17 +10,4 @@
     .menu-content {
       visibility: visible;
     }
-  }
-  
-  @media only screen and (min-width: 768px) {
-    /* DESKTOP */
-    .menu-with-hamburger {
-      display: none;
-      visibility: hidden;
-    }
-    .menu-content {
-      display: none;
-      visibility: hidden;
-    }
-  }
-  
+  }*/

@@ -1,7 +1,11 @@
+.store{
+    margin-right: 100px;
+}
+
 .item{
-    width: 275px;
-    height: 275px;
-    background-color:gray;
+    text-shadow:1px 1px grey ;
+    margin-top:70px;
+    margin-right: 70px;
 }
 
 .img-store{
@@ -10,8 +14,10 @@
 }
 
 .img-store:hover{
-    transition: border 0.5;
+    transition: border 1s;
     border:1px grey solid;
+    width: 250px;
+    height: 250px;
 }
 
 .text-center{
@@ -21,3 +27,4 @@
 .font-text{
     font-family: Arial;
 }
+

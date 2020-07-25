@@ -234,8 +234,8 @@
             </tr>
           </table>
         </div>
-        <div class="contact-us">
-          <div class="my-4 mx-10 text-xl sm:text-xl md:text-2xl lg:text-3xl text-center">
+        <div class="contact-us flex flex-row">
+          <div class="my-4 mx-10 text-xl sm:text-xl md:text-2xl lg:text-3xl text-center" style="width:50%">
             <br>
             <p class="text-center">
               مشاوره رایگان دریافت کنید!
@@ -248,28 +248,12 @@
                
                ما با شما تماس خواهیم گرفت
             </p>
-            <p class="text-center">
-              <br>
-              <br>
-              در شبکه های اجتماعی با ما در ارتباط باشید!
-            </p>
-            <div class="social-networks inline text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
-            <a class="text-center" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
-              <i class="fa fa-instagram fa-3x text-center ml-8" aria-hidden="true"></i>
-            </a>
-            <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
-              <i class="fa fa-telegram fa-3x text-center ml-8" aria-hidden="true" style="margin-top:2px;"></i>
-            </a>
-            <a class="" title="" target="_blank" href="https://wa.me/989354107274">
-              <i class="fa fa-whatsapp fa-3x text-center" aria-hidden="true"></i>
-            </a>
-            </p>
-        </div>
+            
           </div>
           <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl">
             <form class="pt-6 pb-8 mb-4" action="index.php" method="post">
               <a id="contactus"></a>
-              <label class="my-4 mr-12" for="firstname" id="consult">نام:</label>
+              <label class="my-4 mr-20" for="firstname" id="consult">نام:</label>
               <input title="نام" class="my-5 firstname border-solid border-4 h-13 text-center border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="firstname" id="firstname" required/>
               <br>
               <label class="my-4" for="lastname">نام خانوادگی:</label>
@@ -280,9 +264,9 @@
               <br>
               <div class="div-description">
                 <div class="inner"> 
-                  <label class="" for="contact-us-description">توضیحات:</label>
+                  <label class="mr-5" for="contact-us-description">توضیحات:</label>
                 </div>
-                <textarea title="توضیحات" class="mr-6 text-area-descriptio h-25  border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
+                <textarea title="توضیحات" class="mr-2 text-area-descriptio h-25  border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
                </div>
                 <script src="https://www.google.com/recaptcha/api.js"></script>
                 <script>
@@ -367,6 +351,10 @@
             </div>
           </div>
         </div>
+        <div class="text-center">
+          <iframe class="m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.454677919363!2d51.40732261517469!3d32.48727468106042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x65816dafb7d03b4d!2sAfra%20Computer%20Store!5e0!3m2!1sen!2sus!4v1595663704479!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <br>
+          </div>
       </div>
       
       <div class="footer h-50 w-full">
@@ -423,7 +411,24 @@
                 </p>
                 برای سفارش با ما تماس بگیرید
                 </div>
+                <p class="">
+                  <br>
+                  <br>
+                  در شبکه های اجتماعی با ما در ارتباط باشید!
+                </p>
+                <div class="social-networks inline text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
+                  <a class="text-center" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
+                    <i class="fa fa-instagram fa-3x text-center ml-8" aria-hidden="true"></i>
+                  </a>
+                  <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
+                    <i class="fa fa-telegram fa-3x text-center ml-8" aria-hidden="true" style="margin-top:2px;"></i>
+                  </a>
+                  <a class="" title="" target="_blank" href="https://wa.me/989354107274">
+                    <i class="fa fa-whatsapp fa-3x text-center" aria-hidden="true"></i>
+                  </a>
             </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -58,15 +58,11 @@
           <button title="درباره ما" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='#aboutus'">
             درباره شرکت
           </button>
-        </div>
-        <div class="inline-flex flex-1">
-          <p>
-            <a class="cursor-pointer mx-4 text-xl text-right-pos truncate float-right" title="" href='index.php'>
-              <h1 class="my-3 font-bold">
+          <a class="cursor-pointer mx-4 text-xl text-right-pos truncate float-right" title="" href='index.php'>
+              <h1 class="my-2 font-bold">
                  شرکت افراگستر نوین
               </h1>
-            </a>
-          </p>
+          </a>
         </div>
       </div>
       <div class="middle">

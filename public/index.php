@@ -213,21 +213,21 @@
           </div>
           <table class="text-center">
             <tr class="text-center mx-4">
-              <td class="att-item h-20 bg-gray-200 border-none hover:border-gray-500 mx-10 text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl text-center">
+              <td class="att-item bg-gray-200 border-none hover:border-gray-500 mx-10 text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl text-center">
                 عدم بلوکه شدن پول در حساب بانکی
                 <i class="fa fa-line-chart" style="color:rgb(10,20,50)" aria-hidden="true"></i>
               </td>
-              <td class="att-item h-20 bg-gray-200 border-none hover:border-gray-500 mx-10 text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl text-center">
+              <td class="att-item bg-gray-200 border-none hover:border-gray-500 mx-10 text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl text-center">
                 سرعت بالای انجام تراکنش
                 <i class="fa fa-plane fa-rotate-270" style="color:rgb(10,20,50)" aria-hidden="true"></i>
               </td>
             </tr>
             <tr class="text-center mx-4">
-              <td class="att-item h-20 bg-gray-200 border-none hover:border-gray-500 mx-10 text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl text-center">
+              <td class="att-item bg-gray-200 border-none hover:border-gray-500 mx-10 text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl text-center">
                 پشتیبانی از تمامی بانک ها
                 <i class="fa fa-credit-card" style="color:rgb(10,20,50)" aria-hidden="true"></i>
               </td>
-              <td class="att-item h-20 bg-gray-200 border-none hover:border-gray-500 mx-10 text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl text-center">
+              <td class="att-item bg-gray-200 border-none hover:border-gray-500 mx-10 text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl text-center">
                 گارانتی یک ساله
                 <i class="fa fa-users" style="color:rgb(10,20,50)" aria-hidden="true"></i>
               </td>

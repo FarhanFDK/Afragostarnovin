@@ -58,6 +58,10 @@ table{
   padding-bottom: 50px;
 }
 
+.att-item{
+  width: 25rem;
+  height: 5rem;
+}
 
 .att-item:hover{
   border: 1px grey solid;

@@ -41,18 +41,6 @@
               </h1>
             </a>
           </p>
-          <p class="phone my-auto mx-2">
-          <a class="cursor-pointer truncate " href="tel:09354107274">
-            <i class="fa fa-phone"></i>
-            09354107274
-          </a>
-          </p>
-          <p class="email my-auto mx-2">
-            <i class="fa fa-envelope"></i>
-            <a class="email-header-send cursor-pointer" href = "mailto:info@afragostarnovin.ir">
-              info@afragostarnovin.ir
-            </a>
-          </p>
         </div>
         <div class="menu flex-1 my-2 hidden sm:hidden md:flex lg:flex xl:flex">
           <button title="صفحه اصلی" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='https://www.afragostarnovin.ir/public/index.php'">
@@ -71,24 +59,12 @@
             درباره شرکت
           </button>
         </div>
-        <div class="inline-flex flex-1 hidden sm:hidden md:flex lg:flex xl:flex">
+        <div class="inline-flex flex-1">
           <p>
-            <a class="cursor-pointer mx-4 md:text-xl text-base text-right-pos truncate float-right" title="" href='https://www.afragostarnovin.ir/public/index.php'>
+            <a class="cursor-pointer mx-4 text-xl text-right-pos truncate float-right" title="" href='https://www.afragostarnovin.ir/public/index.php'>
               <h1 class="my-3 font-bold">
                  شرکت افراگستر نوین
               </h1>
-            </a>
-          </p>
-          <p class="phone my-auto mx-2">
-          <a class="cursor-pointer truncate" href="tel:09354107274">
-            <i class="fa fa-phone"></i>
-            09354107274
-          </a>
-          </p>
-          <p class="email my-auto mx-2">
-            <i class="fa fa-envelope"></i>
-            <a class="email-header-send cursor-pointer" href = "mailto:info@afragostarnovin.ir">
-              info@afragostarnovin.ir
             </a>
           </p>
         </div>
@@ -404,6 +380,12 @@
                     <a class="cursor-pointer" href="tel:09354107274">
                         <i class="fa fa-phone fa-30x"></i>
                         09354107274
+                    </a>
+                </p>
+                <p class="phone my-5 mx-2">
+                    <a class="cursor-pointer" href="tel:09132364267">
+                        <i class="fa fa-phone fa-30x"></i>
+                        09132364267
                     </a>
                 </p>
                 <p class="email my-5 mx-2">

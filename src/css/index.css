@@ -59,9 +59,9 @@ table{
 }
 
 
-/*.att-item:hover{
+.att-item:hover{
   border: 1px grey solid;
-}*/
+}
 
 .slideshow {
   text-align: center;

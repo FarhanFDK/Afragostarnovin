@@ -35,7 +35,7 @@
         </div>
         <div class="inline-flex flex-1 hidden sm:inline-flex md:hidden lg:hidden xl:hidden">
           <p>
-            <a class="cursor-pointer mx-4 md:text-xl invisible sm:invisible md:visible lg:visible xl:visible text-base text-right-pos truncate float-right" title="" href='https://www.afragostarnovin.ir/public/index.php'>
+            <a class="cursor-pointer mx-4 md:text-xl invisible sm:invisible md:visible lg:visible xl:visible text-base text-right-pos truncate float-right" title="" href='index.php'>
               <h1 class="my-3 font-bold">
                  شرکت افراگستر نوین
               </h1>
@@ -43,10 +43,10 @@
           </p>
         </div>
         <div class="menu flex-1 my-2 hidden sm:hidden md:flex lg:flex xl:flex">
-          <button title="صفحه اصلی" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='https://www.afragostarnovin.ir/public/index.php'">
+          <button title="صفحه اصلی" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='index.php'">
             صفحه اصلی
           </button>
-          <button title="فروشگاه" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='https://www.afragostarnovin.ir/public/store.php'">
+          <button title="فروشگاه" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='store.php'">
             فروشگاه
           </button>
           <button title="مشاوره رایگان" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='#consult'">
@@ -61,7 +61,7 @@
         </div>
         <div class="inline-flex flex-1">
           <p>
-            <a class="cursor-pointer mx-4 text-xl text-right-pos truncate float-right" title="" href='https://www.afragostarnovin.ir/public/index.php'>
+            <a class="cursor-pointer mx-4 text-xl text-right-pos truncate float-right" title="" href='index.php'>
               <h1 class="my-3 font-bold">
                  شرکت افراگستر نوین
               </h1>
@@ -71,10 +71,10 @@
       </div>
       <div class="middle">
         <div id="menu-content" class="invisible sm:visible md:invisible lg:invisible xl:invisible" style="z-index:2;display:block;">
-          <a href="https://www.afragostarnovin.ir/public/index.php" class="text-l link-hamburger">
+          <a href="index.php" class="text-l link-hamburger">
             صفحه اصلی
           </a>
-          <a href="https://www.afragostarnovin.ir/public/store.php" class="text-l link-hamburger">
+          <a href="store.php" class="text-l link-hamburger">
              فروشگاه     
           </a>
           <a href="#consult" class="text-l link-hamburger">
@@ -90,22 +90,22 @@
         <div class="slideshow">
           <div class="owl-carousel">
             <div>
-              <a class="cursor-default" href="https://www.afragostarnovin.ir/public/store.php">
+              <a class="cursor-default" href="store.php">
                 <img title="ATM دستگاه" class="img-slideshow" src="../src/Images/slideshow/nick-pampoukidis-t-UV1rZqPuY-unsplash.jpg" />
               </a>
             </div>
             <div>
-              <a class="cursor-default" href="https://www.afragostarnovin.ir/public/store.php">
+              <a class="cursor-default" href="store.php">
                 <img title="ATM دستگاه" class="img-slideshow" src="../src/Images/slideshow/ethan-wilkinson-t5fj8QQIGPA-unsplash.jpg" />
               </a>
             </div>
             <div>
-              <a class="cursor-default" href="https://www.afragostarnovin.ir/public/store.php">
+              <a class="cursor-default" href="store.php">
                 <img title="دستگاه کارتخوان" class="img-slideshow" src="../src/Images/slideshow/IMG-20200622-WA0011.jpg"/>
               </a>
             </div>
             <div>
-            <a class="cursor-default" href="https://www.afragostarnovin.ir/public/store.php">
+            <a class="cursor-default" href="store.php">
               <img title="ATM دستگاه" class="img-slideshow" src="../src/Images/slideshow/twitter-jankolario-Sc5HUu4XzTk-unsplash.jpg" />
             </a>
             </div>
@@ -400,7 +400,7 @@
                     دسترسی سریع
                 </p>
                 <p class="footer-links">
-                    <a class="mx-5 my-auto" title="" href="https://www.afragostarnovin.ir/public/store.php">
+                    <a class="mx-5 my-auto" title="" href="store.php">
                         فروشگاه
                     </a>
                     <a class="mx-5 my-auto" title="" href="#consult">

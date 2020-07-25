@@ -6,7 +6,7 @@
     <title>شرکت افراگستر نوین</title>
     <meta name="keywords"
         content="شرکت افراگستر نوین,afragostarnovin,خرید دستگاه خودپرداز,خرید دستگاه کارتخوان و POS" />
-    <meta name="description" content="" />
+    <meta name="description" content="خرید دستگاه خودپرداز و کارتخوان با تماس با ما در این سایت،شرکت افراگستر نوین شرکتی در زمینه فروش دستگاه های خودپرداز و کارتخوان می باشد" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" />

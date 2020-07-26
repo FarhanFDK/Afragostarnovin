@@ -141,7 +141,8 @@ textarea{
 }
 
 .fa-instagram{
-
+  border-radius: 20%;
+  background-color: white;
 }
 
 .fa-telegram{

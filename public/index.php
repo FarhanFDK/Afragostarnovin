@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="../src/css/media.css" />
     <link rel="stylesheet" href="../src/assets/slideshow/OwlCarousel/dist/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="../src/assets/slideshow/OwlCarousel/dist/assets/owl.theme.default.min.css"/>
-    <link rel="shortcut icon" href="../src/Icon/Afra.ico" />
-    <link rel="icon" href="../src/Icon/Afra.ico" />
+    <link rel="shortcut icon" href="../src/icons/siteicon.ico" />
+    <link rel="icon" href="../src/icons/siteicon.ico" />
     <script src="https://kit.fontawesome.com/b39b75221a.js" crossorigin="anonymous"></script>
     <script src="../src/jquery/jquery-3.4.1.slim.min.js"></script>
     <script src="../src/assets/slideshow/OwlCarousel/dist/owl.carousel.min.js"></script>
@@ -38,6 +38,7 @@
             <a class="cursor-pointer mx-4 md:text-xl invisible sm:invisible md:visible lg:visible xl:visible text-base text-right-pos truncate float-right" title="" href='index.php'>
               <h1 class="my-3 font-bold">
                  شرکت افراگستر نوین
+                 <img src="../src/icons/sitelogo.jpg">
               </h1>
             </a>
           </p>
@@ -63,6 +64,8 @@
                  شرکت افراگستر نوین
               </h1>
           </a>
+          
+          <img class="inline mt-0" src="../src/icons/sitelogo.jpg" style="width:50px;height:50px">
         </div>
       </div>
       <div class="middle">
@@ -236,7 +239,6 @@
         </div>
         <div class="contact-us flex flex-row">
           <div class="my-4 mx-10 text-xl sm:text-xl md:text-2xl lg:text-3xl text-center" style="width:50%">
-            <br>
             <p class="text-center">
               مشاوره رایگان دریافت کنید!
               <br>
@@ -253,13 +255,13 @@
           <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl">
             <form class="pt-6 pb-8 mb-4" action="index.php" method="post">
               <a id="contactus"></a>
-              <label class="my-4 mr-20" for="fullname" id="consult">نام کامل</label>
+              <label class="my-4 mr-6" for="fullname" id="consult">نام کامل:</label>
               <input title="نام و نام خانوادگی" class="my-5 fullname border-solid border-4 h-13 text-center border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="fullname" id="fullname" required/>
               <br>
               <label class="my-4" for="phonenumber">شماره تماس:</label>
               <input title="شماره تماس" class="my-5 border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="phonenumber" id="phonenumber" required/>
               <br>
-              <div class="div-description">
+              <div class="div-description my-4">
                 <div class="inner"> 
                   <label class="mr-5" for="contact-us-description">توضیحات:</label>
                 </div>
@@ -407,12 +409,12 @@
                   <br>
                   در شبکه های اجتماعی با ما در ارتباط باشید!
                 </p>
-                <div class="social-networks inline text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
+                <div style="background-color:inherit;" class="social-networks inline text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
                   <a class="text-center" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
-                    <i class="fa fa-instagram fa-3x text-center ml-8" aria-hidden="true"></i>
+                    <i class="fa fa-instagram fa-3x text-center ml-8 bg-white rounded" aria-hidden="true"></i>
                   </a>
                   <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
-                    <i class="fa fa-telegram fa-3x text-center ml-8" aria-hidden="true" style="margin-top:2px;"></i>
+                    <i class="fa fa-telegram fa-3x text-center ml-8 bg-white rounded-full" aria-hidden="true" style="margin-top:2px;"></i>
                   </a>
                   <a class="" title="" target="_blank" href="https://wa.me/989354107274">
                     <i class="fa fa-whatsapp fa-3x text-center" aria-hidden="true"></i>

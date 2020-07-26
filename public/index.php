@@ -253,11 +253,8 @@
           <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl">
             <form class="pt-6 pb-8 mb-4" action="index.php" method="post">
               <a id="contactus"></a>
-              <label class="my-4 mr-20" for="firstname" id="consult">نام:</label>
-              <input title="نام" class="my-5 firstname border-solid border-4 h-13 text-center border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="firstname" id="firstname" required/>
-              <br>
-              <label class="my-4" for="lastname">نام خانوادگی:</label>
-              <input title="نام خانوادگی" class="my-4 border-solid border-4 border-gray-600  h-13 shadow appearance-none border rounded w-25 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="lastname" id="lastname" required/>
+              <label class="my-4 mr-20" for="fullname" id="consult">نام کامل</label>
+              <input title="نام و نام خانوادگی" class="my-5 fullname border-solid border-4 h-13 text-center border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="fullname" id="fullname" required/>
               <br>
               <label class="my-4" for="phonenumber">شماره تماس:</label>
               <input title="شماره تماس" class="my-5 border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="phonenumber" id="phonenumber" required/>
@@ -281,8 +278,7 @@
             <div>
             <?php
               if(isset($_POST['submit'])){
-                $firstname = $_POST['firstname'];
-                $lastname = $_POST['lastname'];
+                $fullname = $_POST['fullname'];
                 $phonenumber = $_POST['phonenumber'];
                 $description = $_POST['contact-us-description'];
                 date_default_timezone_set("Iran");
@@ -297,9 +293,9 @@
                         die("ارتباط با سرور با مشکل مواجه شد");
                     }
                 $chng = mysqli_set_charset($connection, "UTF-8");
-                if($firstname && $lastname && $phonenumber && $description){
-                  $sql = "INSERT INTO users(id,firstname,lastname,phonenumber,descriptions)";
-                  $sql .= "VALUES('$id','$firstname','$lastname','$phonenumber','$description')";
+                if($fullname && $phonenumber && $description){
+                  $sql = "INSERT INTO users(id,fullname,phonenumber,descriptions)";
+                  $sql .= "VALUES('$id','$fullname','$phonenumber','$description')";
                   $result = mysqli_query($connection,$sql);
                   if($result){
                     $to = "info@afragostarnovin.ir";
@@ -316,12 +312,9 @@
                     $message .= "<div class='header bg-red-700' style='left:0;right:0;top:0;position:absolute;width:100%;height:100px;color:blue;'>
                                   این ایمیل به منظور دریافت مشاوره رایگان فرستاده شده است،چناچه وقتتان اجازه می دهد،لطفا رسیدگی کنید
                                 </div>
-                                نام:
+                                نام و نام خانوادگی:
                                 ";
-                    $message .= $firstname;
-                    $message .= "<br>";
-                    $message .= "نام خانوادگی:";
-                    $message .= $lastname;
+                    $message .= $fullname;
                     $message .= "<br>";
                     $message .= "شماره تماس:";
                     $message .= $phonenumber;

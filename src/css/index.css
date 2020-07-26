@@ -135,10 +135,10 @@ textarea{
   -webkit-background-clip: text;
 }
 .fa-whatsapp  {
-  color:#25d366;/*
-  linear-gradient(#25d366,#25d366)15px 84%/15px 15px no-repeat,
-  radial-gradient(#25d366 59%,transparent 0);*/
+  color:purple;
+  background:linear-gradient(#25d366,#25d366)15px 84%/15px 15px no-repeat,radial-gradient(#25d366 59%,transparent 0);
   margin-left: 30px;
+  border-radius: 50%;
 }
 
 .fa-instagram{

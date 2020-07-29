@@ -59,14 +59,14 @@
           <button title="درباره ما" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='#aboutus'">
             درباره شرکت
           </button>
-          <a class="cursor-pointer mx-4 text-xl text-right-pos truncate float-right" title="" href='index.php'>
+        </div>
+        <a class="cursor-pointer mx-4 text-xl truncate float-left" title="" href='index.php'>
               <h1 class="my-2 font-bold">
                  شرکت افراگستر نوین
               </h1>
           </a>
           
-          <img class="inline mt-0" src="../src/icons/sitelogo.jpg" style="width:50px;height:50px">
-        </div>
+          <img class="float-left mt-2 ml-2" src="../src/icons/sitelogo.jpg" style="width:50px;height:50px">
       </div>
       <div class="middle">
         <div id="menu-content" class="invisible sm:visible md:invisible lg:invisible xl:invisible" style="z-index:2;display:block;">
@@ -117,99 +117,6 @@
           <script src="../src/assets/slideshow/slideshow.js"></script>
           <script src="../src/assets/slideshow/mouse-wheel/jquery.mousewheel.js"></script>
         </div>
-        <div class="company-description text-xl">
-          <p class="text-center text-2xl my-2">
-             دستگاه های کارتخوان
-          </p>
-          <p class="text-center mx-4">
-          دستگاه کارتخوان سیار POS که نام عامیانه
-          آن دستگاه کارت خوان است این امکان را برای افراد فراهم می نماید
-          که در پایانه های فروش با استفاده از کارت اعتباری خود مبلغ مورد نظرشان را برای خرید
-          کالاهای مورد نیاز به راحتی به فروشنده پرداخت نمایند و دیگر نیازی
-          به حمل پول نقد همراه خود نداشته باشند و از شر سارقان در امان بمانند.
-          همچنین با استفاده از دستگاه های کارتخوان تماس با اسکناس که یکی از مهمترین عوامل انتقال آلودگی و بیماری است کمتر می شود.
-          این دستگاه ها علاوه بر امکان پرداخت وجه خرید دارای قابلیت های مختلفی نیز می باشند 
-          که دارنده کارت و پذیرنده کارت می توانند از مزایای آن استفاده نمایند . بطور مثال از
-          قابلیت های جالب و کاربردی این دستگاه ها می توان نشان دادن موجودی حساب بانکی
-          در هر زمان و همینطور پرداخت قبوض ماهیانه اشاره کرد . به دلیل آسان بودن استفاده از این
-          دستگاه ها و مزایای انحصاری آنها امروزه در بیشتر مراکز خرید و مکان های تجاری
-          از این سیستم فروش استفاده می شود بنابراین بهتر است هر فردی آگاهی
-          لازم را در زمینه انواع دستگاه کارت خوان داشته باشد تا متناسب با مرکز
-          فروش خود اقدام به تهیه این سیستم نماید.
-          </p>
-          <p class="font-bold text-xl mx-10 my-3 italic">
-            بررسی کاربرد و نوع اتصال دستگاه های کارت خوان
-          </p>
-          <p class="text-l mx-12">
-          دستگاه های کارت خوان متنوع اند که بهتر است
-          فروشندگان قبل از درخواست این سیستم با انواع مختلف آن آشنا شوند و 
-          اطلاعات لازم را در زمینه هر یک از دستگاه های کارت خوان بدست آورند، در ادامه این
-          مطلب به بررسی انواع دستگاه کارت خوان می پردازیم
-          که بهتر است قبل از دریافت این دستگاه برای مراکز خرید با ویژگی های مختلف و چگونگی اتصال و عملکرد این دستگاه آشنا شوید.
-          </p>
-          <p class="font-bold text-l mx-8 my-3 italic">
-          کارت خوان تلفنی (Dialup)
-          </p>
-          <p class="text-l mx-10">
-          کارت خوان تلفنی به دستگاه Dialup نیز معروف است که این دستگاه را می توان جزء ساده ترین و پرکاربردترین
-          انواع دستگاه های کارت خوان محسوب کرد. کارت خوان تلفنی برای اتصال به شبکه بانکی از خطوط تلفنی
-          استفاده می نماید. عملکرد این دستگاه با اتصال به خط تلفن مرکز فروش
-          و به سادگی امکان پذیر است در صورتی که امکان اتصال به شیوه های دیگر
-          مقدور نباشد با توجه به نوع اتصال این  دستگاه کارت خوان برای مراکز فروش کوچک با تعداد تراکنش محدود مناسب است.
-          </p>
-          <p class="font-bold text-l mx-8 my-3 italic">
-          کارت خوان شبکه ای (Lan)
-          </p>
-          <p class="text-l mx-10">
-          دستگاه کارت خوان شبکه ای که نام انگلیسی آن Lan است از اینترنت و شبکه محلی برای اتصال به شبکه بانکی استفاده می کند
-          . این دستگاه بیشتر در فروشگاه های زنجیره ای ، مراکز خرید و فروشگاه هایی که تعداد تراکنش بالایی دارند
-          کاربرد دارد. مزیت این دستگاه در سرعت مناسب پاسخگویی آن می باشد.
-          </p>
-          <p class="font-bold text-l mx-8 my-4 italic">
-          کارت خوان بی سیم (GPRS)(عملکرد با اینترنت)
-          </p>
-          <p class="text-l mx-10">
-          استفاده از کارت خوان بی سیم محدودیت مکانی ندارد و در هر نقطه ای که تحت پوشش اپراتور تلفن همراه باشد قابل استفاده است.
-          برای متصل کردن این دستگاه به شبکه بانکی از یک سیم کارت تلفن همراه استفاده می شود
-          که قابلیت دریافت و ارسال داده ها از طریق اینترنت (GPRS) بر روی آن فعال است. تقاضا برای استفاده از این نوع دستگاه به
-           علت  تعداد زیاد اپراتورهای تلفن همراه دارای سرویس داده بیشتر است. کارت خوان های بی سیم برای شرکت های پخش، پیک و تحویل حضوری مناسب می باشند.
-          </p>
-          <p class="font-bold text-l mx-8 my-4 italic">
-          کارت خوان بلوتوثی
-          </p>
-          <p class="text-l mx-10">
-          نحوه ارتباط دستگاه کارت خوان بلوتوثی با شبکه بانکی مشابه سایر کارت خوان ها می باشد و از طریق اتصال خط تلفن و یا اینترنت امکان پذیر است.
-          تفاوت این نوع کارت خوان با سایر دستگاه ها این است که دارای قابلیت حمل به صورت بی سیم تا شعاع 50 متری می باشند . این دستگاه در کافی شاپ ها و رستوران ها کاربرد بیشتری دارد
-          </p>
-          <p class="font-bold text-l mx-8 my-4 italic">
-          کارت خوان شبکه ای(WI-FI)
-          </p>
-          <p class="text-l mx-10">
-          کارت خوان WIFI نیز مانند کارت خوان بلوتوثی برای مکان هایی مانند کافی شاپ ها ، رستوران ها و مراکز خرید که در آنها انواع دیگر اتصال به شبکه بانکی مقدور نباشد مناسب است و نحوه ارتباط آن با شبکه بانکی از طریق اتصال WiFi به اینترنت امکان پذیر می باشد .
-          </p>
-          <p class="font-bold text-l mx-8 my-4 italic">
-          کارت خوان رایانه ای (PC-POS)
-          </p>
-          <p class="text-l mx-10">
-          دستگاه کارت خوان رایانه ای که به سیستم PC-POS نیز معروف است دارای قابلیت اتصال به سیستم های کامپیوتری می باشد.
-          در این دستگاه کارتخوان سیار عملکرد کارت خوان با فرمان رایانه انجام می پذیرد و با صدور صورتحساب در سیستم حسابداری مرکز فروش، دستور انجام تراکنش به همراه مبلغ و اطلاعات مورد نیاز دیگر از رایانه به کارت خوان انتقال
-          می یابد و در صورتی که تراکنش با موفقیت انجام شده و مبلغ خرید از حساب مشتری کسر شده باشد دستگاه اقدام به چاپ رسید می کند
-          در همین هنگام کارتخوان اطلاعات مورد نیاز برای رایانه را هم، جهت ثبت در سیستم حسابداری فروشگاه ارسال می کند تا اطلاعات عملیات مالی صورت گرفته به سیستم باز گردانده شود.
-
-          </p>
-          <p class="font-bold text-l mx-8 my-4 italic">
-          کارت خوان موبایلی (mPOS)
-          </p>
-          <p class="text-l mx-10">
-          این نوع از دستگاه کارتخوان سیار به تلفن همراه وصل شده و برای صاحبان مشاغل خاص این امکان را فراهم می کند تا دستگاه کارت خوان شخصی شان را همیشه همراه خود داشته باشند و بدون محدودیت زمانی و مکانی تراکنش انجام دهند.
-          </p>
-          <p class="font-bold text-l mx-8 my-4 italic">
-          کارت خوان اندرویدی (PDA-POS)
-          </p>
-          <p class="text-l mx-10">
-          دستگاه کارت خوان اندرویدی در حوزه سیستم پرداخت الکترونیک جدیدترین فناوری است که با جمع آوری امکانات و قابلیتهای گوناگون در آن، مورد استفاده تعداد زیادی از مشتریان می باشد. کارت خوان اندرویدی شامل نمایشگر لمسی و چاپگر و دوربین و اسکنر دو بعدی ،  GPRS ، WiFi ، بلوتوث و  RFID می باشد که قابلیت اضافه کردن کارت حافظه و نرم افزارهای مربوط به مشتریان تحت پوشش سیستم عامل اندروید دارد. کاربرد این دستگاه کارت خوان برای شرکت های حمل و نقل و شرکت های پخش و ارائه سرویس در محل مشتری و رستوران ها و… مناسب می باشد و قابلیت سفارشی سازی نیز دارد.
-          </p>
-        </div>
         <div class="attributes my-4">
           <div class="text-2xl text-center">
             ویژگی های محصولات ما:
@@ -241,12 +148,12 @@
           <div class="my-4 mx-10 text-xl sm:text-xl md:text-2xl lg:text-3xl text-center" style="width:50%">
             <p class="text-center">
               مشاوره رایگان دریافت کنید!
-              <br>
-              <br>
+              inline
+              
                برای دریافت مشاوره رایگان فرم را پر کرده
-               <br>
+               
                و روی دکمه ارسال کلیک کنید
-               <br>
+               
                
                ما با شما تماس خواهیم گرفت
             </p>
@@ -255,17 +162,16 @@
           <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl">
             <form class="pt-6 pb-8 mb-4" action="index.php" method="post">
               <a id="contactus"></a>
-              <label class="my-4 mr-6" for="fullname" id="consult">نام کامل:</label>
-              <input title="نام و نام خانوادگی" class="my-5 fullname border-solid border-4 h-13 text-center border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="fullname" id="fullname" required/>
-              <br>
-              <label class="my-4" for="phonenumber">شماره تماس:</label>
-              <input title="شماره تماس" class="my-5 border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="phonenumber" id="phonenumber" required/>
-              <br>
+              <input title="نام و نام خانوادگی" placeholder="نام و نام خانوادگی" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="fullname" id="fullname" required/>
+              <input title="شماره تماس" placeholder="شماره تماس" class="my-5 border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="phonenumber" id="phonenumber" required/>
+              
               <div class="div-description my-4">
+                <!--
                 <div class="inner"> 
                   <label class="mr-5" for="contact-us-description">توضیحات:</label>
                 </div>
-                <textarea title="توضیحات" class="mr-2 text-area-descriptio h-25  border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
+                -->
+                <input type="text" placeholder="توضیحات" title="توضیحات" class="mr-2 text-area-descriptio h-12 border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
                </div>
                 <script src="https://www.google.com/recaptcha/api.js"></script>
                 <script>
@@ -273,9 +179,9 @@
                     document.getElementById("submit").submit();
                 }
                 </script>
-              <br>
+              
               <input title="ارسال" data-sitekey="6LcK9LMZAAAAAIUc_f3usxcVtc6unK2cK6oU9uJp" data-callback='onSubmit' data-action='submit' class="g-recaptcha bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" name="submit" id="submit" value="ارسال"/>
-              <br>
+              
             </form>
             <div>
             <?php
@@ -317,10 +223,10 @@
                                 نام و نام خانوادگی:
                                 ";
                     $message .= $fullname;
-                    $message .= "<br>";
+                    $message .= "";
                     $message .= "شماره تماس:";
                     $message .= $phonenumber;
-                    $message .= "<br>";
+                    $message .= "";
                     $message .= "توضیحات:";
                     $message .= $description;
                     $message .= "زمان ثبت درخواست: ";
@@ -383,7 +289,7 @@
                     <a class="mx-5 my-auto" title="" href="#consult">
                         مشاوره رایگان
                     </a>
-                    <br>
+                    
                 </p>
             </div>
         </div>
@@ -402,14 +308,13 @@
                     طراحی لوگو،
                     ساخت وب اپلیکیشن و ...
                 </p>
-                برای سفارش با ما تماس بگیرید
                 </div>
                 <p class="">
-                  <br>
-                  <br>
+                  
+                  
                   در شبکه های اجتماعی با ما در ارتباط باشید!
                 </p>
-                <div style="background-color:inherit;" class="social-networks inline text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
+                <div style="background-color:inherit;" class="social-networks text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
                   <a class="text-center" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
                     <i class="fa fa-instagram fa-3x text-center ml-8 bg-white rounded" aria-hidden="true"></i>
                   </a>
@@ -424,7 +329,7 @@
         </div>
         <div class="text-center float-right z-auto m-5">
           <iframe class="m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.454677919363!2d51.40732261517469!3d32.48727468106042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x65816dafb7d03b4d!2sAfra%20Computer%20Store!5e0!3m2!1sen!2sus!4v1595663704479!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          <br>
+          
           </div>
       </div>
     </div>

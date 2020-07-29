@@ -3,25 +3,13 @@ $(document).ready(function(){
 });
     let owl = $('.owl-carousel');
     $('.owl-carousel').owlCarousel({
-      items:5,
+      items:1,
       loop:true,
       margin:0,
       autoplay:true,
       autoplayTimeout:2000,
       autoplayHoverPause:true,
-      dots:true,
-      responsiveClass:true,
-      responsive:{
-          0:{
-              items:1,
-          },
-          600:{
-              items:2,
-          },
-          1000:{
-              items:3
-          }
-      }
+      dots:true
   })
 owl.on('mousewheel', '.owl-stage', function (e) {
   if (e.deltaY>0) {

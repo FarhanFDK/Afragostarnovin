@@ -9,7 +9,6 @@
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"/>
     <link rel="stylesheet" href="../src/css/index.css" />
-    <link rel="stylesheet" href="../src/css/a.css" />
     <link rel="stylesheet" href="../src/css/hamburger.css" />
     <link rel="stylesheet" href="../src/css/media.css" />
     <link rel="stylesheet" href="../src/assets/slideshow/OwlCarousel/dist/assets/owl.carousel.min.css"/>
@@ -50,7 +49,7 @@
           <a title="فروشگاه" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-base" href="#">
             فروشگاه
           </a>
-          <a title="مشاوره رایگان" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-base" href="#consult">
+          <a title="مشاوره رایگان" class="btn-header cursor-pointer text-white font-bold mx-4 my-2 text-base" href="#consult">
             مشاوره رایگان 
           </a>
           <a title="درباره ما" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-base" href='#aboutus'>

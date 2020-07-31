@@ -27,6 +27,17 @@ body {
     right:0 !important;
 }
 
+
+.btn-header:hover{
+  border-bottom: rgb(240, 240, 240) solid 2px;
+}
+
+
+.btn-header:focus{
+  border-bottom: rgb(240, 240, 240) solid 2px;
+}
+
+
 .phone,
 .email,
 .text-company,
@@ -84,7 +95,7 @@ table{
   margin-bottom: 25px;
 }*/
 
-button {
+a{
   margin: 10px;
   z-index: 1;
 }

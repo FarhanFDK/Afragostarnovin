@@ -18,7 +18,8 @@
     <script src="https://kit.fontawesome.com/b39b75221a.js" crossorigin="anonymous"></script>
     <script src="../src/jquery/jquery-3.4.1.slim.min.js"></script>
     <script src="../src/assets/slideshow/OwlCarousel/dist/owl.carousel.min.js"></script>
-    <style></style>
+    <style>
+    </style>
   </head>
   <body class="bg-white">
     <div class="main grid grid-cols-1">
@@ -43,16 +44,16 @@
           </p>
         </div>
         <div class="menu flex-1 my-2 hidden sm:hidden md:flex lg:flex xl:flex">
-          <a title="صفحه اصلی" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-base" href="#">
+          <a title="صفحه اصلی" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="#">
             صفحه اصلی
           </a>
-          <a title="فروشگاه" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-base" href="#">
+          <a title="فروشگاه" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="#">
             فروشگاه
           </a>
-          <a title="مشاوره رایگان" class="btn-header cursor-pointer text-white font-bold mx-4 my-2 text-base" href="#consult">
+          <a title="مشاوره رایگان" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="#consult">
             مشاوره رایگان 
           </a>
-          <a title="درباره ما" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-base" href='#aboutus'>
+          <a title="درباره ما" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href='#aboutus'>
             درباره شرکت
           </a>
         </div>
@@ -65,6 +66,8 @@
           <img class="float-left mt-2 ml-2" src="../src/icons/sitelogo.jpg" style="width:50px;height:50px">
       </div>
       <div class="middle">
+        
+      <a id="consult"></a>
         <!--
         <div id="menu-content" class="invisible sm:visible md:invisible lg:invisible xl:invisible" style="z-index:2;display:block;">
           <a href="index.php" class="text-l link-hamburger">
@@ -82,7 +85,7 @@
         </div>
         -->
         <div>
-          <img class="img" src="../src/Images/store/PAXD210B-1.jpg" />
+          <img class="img" src="../src/Images/container-image.jpg" />
         </div>
         <!--
         <div class="attributes my-4">
@@ -114,7 +117,6 @@
         </div>
         -->
         <div class="contact-us flex flex-row">
-          <a id="consult"></a>
           <div class="my-4 mx-10 text-xl sm:text-xl md:text-2xl lg:text-3xl text-center" style="width:50%">
             <p class="text-center">
               مشاوره رایگان دریافت کنید!

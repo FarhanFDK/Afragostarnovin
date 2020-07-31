@@ -83,36 +83,8 @@
              درباره ما
           </a>
         </div>
-        <div class="slideshow">
-          <div class="owl-carousel">
-            <div>
-              <a class="cursor-default" href="store.php">
-                <img title="ATM دستگاه" class="img-slideshow" src="../src/Images/slideshow/nick-pampoukidis-t-UV1rZqPuY-unsplash.jpg" />
-              </a>
-            </div>
-            <div>
-              <a class="cursor-default" href="store.php">
-                <img title="ATM دستگاه" class="img-slideshow" src="../src/Images/slideshow/ethan-wilkinson-t5fj8QQIGPA-unsplash.jpg" />
-              </a>
-            </div>
-            <div>
-              <a class="cursor-default" href="store.php">
-                <img title="دستگاه کارتخوان" class="img-slideshow" src="../src/Images/slideshow/IMG-20200622-WA0011.jpg"/>
-              </a>
-            </div>
-            <div>
-            <a class="cursor-default" href="store.php">
-              <img title="ATM دستگاه" class="img-slideshow" src="../src/Images/slideshow/twitter-jankolario-Sc5HUu4XzTk-unsplash.jpg" />
-            </a>
-            </div>
-            <div>
-              <a class="cursor-default" href="store.php">
-                <img title="دستگاه کارتخوان" class="img-slideshow" src="../src/Images/slideshow/PAXS910-2.jpg" />
-              </a>
-            </div>
-          </div>
-          <script src="../src/assets/slideshow/slideshow.js"></script>
-          <script src="../src/assets/slideshow/mouse-wheel/jquery.mousewheel.js"></script>
+        <div>
+          <img class="img" src="../src/Images/store/PAXD210B-1.jpg" />
         </div>
         <div class="attributes my-4">
           <div class="text-2xl text-center">

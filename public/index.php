@@ -9,7 +9,7 @@
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"/>
     <link rel="stylesheet" href="../src/css/index.css" />
-    <link rel="stylesheet" href="../src/css/button.css" />
+    <link rel="stylesheet" href="../src/css/a.css" />
     <link rel="stylesheet" href="../src/css/hamburger.css" />
     <link rel="stylesheet" href="../src/css/media.css" />
     <link rel="stylesheet" href="../src/assets/slideshow/OwlCarousel/dist/assets/owl.carousel.min.css"/>
@@ -44,23 +44,20 @@
           </p>
         </div>
         <div class="menu flex-1 my-2 hidden sm:hidden md:flex lg:flex xl:flex">
-          <button title="صفحه اصلی" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='index.php'">
+          <a title="صفحه اصلی" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-base" href="#">
             صفحه اصلی
-          </button>
-          <button title="فروشگاه" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='store.php'">
+          </a>
+          <a title="فروشگاه" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-base" href="#">
             فروشگاه
-          </button>
-          <button title="مشاوره رایگان" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='#consult'">
+          </a>
+          <a title="مشاوره رایگان" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-base" href="#consult">
             مشاوره رایگان 
-          </button>
-          <button title="تماس با ما" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='#contactus'">
-            تماس با ما
-          </button>
-          <button title="درباره ما" class="btn-header btn text-white font-bold mx-4 my-2 text-base" onclick="location.href='#aboutus'">
+          </a>
+          <a title="درباره ما" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-base" href='#aboutus'>
             درباره شرکت
-          </button>
+          </a>
         </div>
-        <a class="cursor-pointer mx-4 text-xl truncate float-left" title="" href='index.php'>
+        <a class="cursor-pointer mx-4 text-xl truncate float-left" title="" href='#'>
               <h1 class="my-2 font-bold">
                  شرکت افراگستر نوین
               </h1>
@@ -69,6 +66,7 @@
           <img class="float-left mt-2 ml-2" src="../src/icons/sitelogo.jpg" style="width:50px;height:50px">
       </div>
       <div class="middle">
+        <!--
         <div id="menu-content" class="invisible sm:visible md:invisible lg:invisible xl:invisible" style="z-index:2;display:block;">
           <a href="index.php" class="text-l link-hamburger">
             صفحه اصلی
@@ -83,9 +81,11 @@
              درباره ما
           </a>
         </div>
+        -->
         <div>
           <img class="img" src="../src/Images/store/PAXD210B-1.jpg" />
         </div>
+        <!--
         <div class="attributes my-4">
           <div class="text-2xl text-center">
             ویژگی های محصولات ما:
@@ -113,7 +113,9 @@
             </tr>
           </table>
         </div>
+        -->
         <div class="contact-us flex flex-row">
+          <a id="consult"></a>
           <div class="my-4 mx-10 text-xl sm:text-xl md:text-2xl lg:text-3xl text-center" style="width:50%">
             <p class="text-center">
               مشاوره رایگان دریافت کنید!
@@ -129,7 +131,6 @@
           </div>
           <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl">
             <form class="pt-6 pb-8 mb-4" action="index.php" method="post">
-              <a id="contactus"></a>
               <input title="نام و نام خانوادگی" placeholder="نام و نام خانوادگی" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="fullname" id="fullname" required/>
               <input title="شماره تماس" placeholder="شماره تماس" class="my-5 border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="phonenumber" id="phonenumber" required/>
               
@@ -251,7 +252,7 @@
                     دسترسی سریع
                 </p>
                 <p class="footer-links">
-                    <a class="mx-5 my-auto" title="" href="store.php">
+                    <a class="mx-5 my-auto" title="" href="#">
                         فروشگاه
                     </a>
                     <a class="mx-5 my-auto" title="" href="#consult">

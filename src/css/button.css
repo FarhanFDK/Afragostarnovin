@@ -1,9 +1,9 @@
-.btn-header:hover{
+a.btn-header:hover{
     border-bottom: rgb(240, 240, 240) solid 2px;
     outline:none;
 }
   
-.btn-header:focus{
+a.btn-header:focus{
     border-bottom: rgb(240, 240, 240) solid 2px;
     outline:none;
 }

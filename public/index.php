@@ -79,9 +79,6 @@
           <a href="#consult" class="text-l link-hamburger">
              مشاوره رایگان
           </a>
-          <a href="#contactus" class="text-l link-hamburger">
-             تماس با ما
-          </a>
           <a href="#aboutus" class="text-l link-hamburger">
              درباره ما
           </a>
@@ -148,7 +145,6 @@
           <div class="my-4 mx-10 text-xl sm:text-xl md:text-2xl lg:text-3xl text-center" style="width:50%">
             <p class="text-center">
               مشاوره رایگان دریافت کنید!
-              inline
               
                برای دریافت مشاوره رایگان فرم را پر کرده
                

@@ -1,13 +1,7 @@
-/*@media only screen and (max-width: 768px) {
-    /* MOBILE PHONES 
-    .buttons {
-      display: none;
-      visibility: hidden;
+@media only screen and (max-width: 768px) {
+    /* MOBILE PHONES */
+    img{
+      width: 100%;
+      height:100px;
     }
-    .menu-with-hamburger {
-      visibility: visible;
-    }
-    .menu-content {
-      visibility: visible;
-    }
-  }*/
+  }

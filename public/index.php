@@ -52,7 +52,7 @@
           </a>
         </div>
        
-          <a class="cursor-pointer ml-4 mr-20 sm:mr-20 md:mr-4 lg:mr-4 xl:mr-4 text-xl truncate float-left sm:float-left" title="" href='#'>
+          <a class="cursor-pointer ml-4 mr-8 sm:mr-8 md:mr-4 lg:mr-4 xl:mr-4 text-xl truncate float-left sm:float-left" title="" href='#'>
               <h1 class="my-2 font-bold">
                  شرکت افراگستر نوین
               </h1>
@@ -112,9 +112,9 @@
           </table>
         </div>
         -->
-        <div class="contact-us flex flex-row">
-          <div class="my-4 mx-10 text-xl sm:text-xl md:text-2xl lg:text-3xl text-center" style="width:50%">
-            <p class="text-center">
+        <div class="contact-us block sm:block md:flex lg:flex xl:flex text-center">
+          <div class="my-4 text-xl sm:text-xl md:text-2xl lg:text-3xl text-center w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 block">
+            <p class="text-center" style="">
               مشاوره رایگان دریافت کنید!
               
                برای دریافت مشاوره رایگان فرم را پر کرده
@@ -127,7 +127,7 @@
             
           </div>
           <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl">
-            <form class="pt-6 pb-8 mb-4" action="index.php" method="post">
+            <form class="pt-6 pb-8 mb-4 mr-2" action="index.php" method="post">
               <input title="نام و نام خانوادگی" placeholder="نام و نام خانوادگی" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="fullname" id="fullname" required/>
               <input title="شماره تماس" placeholder="شماره تماس" class="my-5 border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="phonenumber" id="phonenumber" required/>
               

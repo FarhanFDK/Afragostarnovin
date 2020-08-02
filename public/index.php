@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"/>
     <link rel="stylesheet" href="../src/css/index.css" />
     <link rel="stylesheet" href="../src/css/media.css" />
+    <link rel="stylesheet" href="../src/css/menu-side-navbar.css" />
     <link rel="stylesheet" href="../src/assets/slideshow/OwlCarousel/dist/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="../src/assets/slideshow/OwlCarousel/dist/assets/owl.theme.default.min.css"/>
     <link rel="shortcut icon" href="../src/icons/siteicon.ico" />
@@ -25,7 +26,14 @@
       <div class="header flex h-16">
         <div class="menu-with-hamburger">
           <div id="hamburger" class="block sm:block md:hidden lg:hidden xl:hidden ml-20" style="margin-top: 8px; float: right;">
-            <span class="opener-span cursor-pointer" onclick="openMenu()"><img src="../src/icons/hamburger.png" style="width:3rem;height:3rem;" /></span>
+            <span class="opener-span cursor-pointer" onclick="menuOpen()"><img src="../src/icons/hamburger.png" style="width:3rem;height:3rem;" /></span>
+          </div>
+          <div class="menu-side-navbar" id="menu-side-navbar">
+            <a class="closebtn" href="javascript:void(0)" onclick="menuClose()">&times;</a>
+            <a class="" href="#">صفحه اصلی</a>
+            <a class="" href="#">فروشگاه</a>
+            <a class="" href="#consult">مشاوره رایگان</a>
+            <a class="" href="#aboutus">درباره شرکت</a>
           </div>
           <script src="../src/js/menu-opener.js"></script>
         </div>
@@ -214,7 +222,7 @@
       </div>
       
       <div class="footer h-50 w-full">
-        <div class="float-left" style="width:50%;">
+        <div class="" style="">
           <div class="flex flex-row">
             <div>
                 <p class="phone my-5 mx-2">
@@ -285,8 +293,8 @@
             </div>
         </div>
         </div>
-        <div class="text-center float-right z-auto m-5">
-          <iframe class="m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.454677919363!2d51.40732261517469!3d32.48727468106042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x65816dafb7d03b4d!2sAfra%20Computer%20Store!5e0!3m2!1sen!2sus!4v1595663704479!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="text-center z-auto m-5">
+          <iframe class="m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.454677919363!2d51.40732261517469!3d32.48727468106042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x65816dafb7d03b4d!2sAfra%20Computer%20Store!5e0!3m2!1sen!2sus!4v1595663704479!5m2!1sen!2sus" width="80%" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           
           </div>
       </div>

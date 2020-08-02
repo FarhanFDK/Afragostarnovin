@@ -83,10 +83,6 @@ table{
   direction: ltr;
 }
 
-.img {
-  height: 420px;
-  width: 100%;
-}
 /*.text-contents {
   margin-top: 20px;
   margin-right: 20px;
@@ -116,9 +112,6 @@ form{
   border-spacing: 5px;
 }
 
-textarea{ 
-  resize: none;
-}
 .footer {
   background-color: darkred;
   bottom: 0;

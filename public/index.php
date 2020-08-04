@@ -52,7 +52,7 @@
           </a>
         </div>
        
-          <a class="cursor-pointer ml-4 mr-8 sm:mr-8 md:mr-4 lg:mr-4 xl:mr-4 text-xl truncate float-left sm:float-left" title="" href='#'>
+          <a class="cursor-pointer ml-4 text-center sm:text-center md:text-left text-xl truncate float-left sm:float-left" title="" href='#'>
               <h1 class="my-2 font-bold">
                  شرکت افراگستر نوین
               </h1>

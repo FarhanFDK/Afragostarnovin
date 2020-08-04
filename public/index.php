@@ -251,7 +251,7 @@
                     دسترسی سریع
                 </p>
                 <p class="footer-links">
-                    <a class="mx-5 my-auto" title="" href="#">
+                    <a class="mx-5 my-auto" title="" href="https://www.afragostarnovin.ir/public/store.php">
                         فروشگاه
                     </a>
                     <a class="mx-5 my-auto" title="" href="#consult">

@@ -158,11 +158,10 @@
                 $phonenumber = $_POST['phonenumber'];
                 $description = $_POST['contact-us-description'];
                 date_default_timezone_set("Iran");
-                $date = date("Y/m/d.h:i:sa");
-                $id = $date;
+                $id = date("Y/m/d.h:i:sa");
                 $host_name = 'localhost';
-                $user_name = 'admin';
-                $user_pass = '';
+                $user_name = 'afragost_admin';
+                $user_pass = '7=DUwg}oVIbE';
                 $db_name = 'afragost_users_free_consulting';
                 $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
                     if(!$connection){

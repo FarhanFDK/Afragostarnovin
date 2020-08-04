@@ -141,15 +141,7 @@
                 -->
                 <input type="text" placeholder="توضیحات" title="توضیحات" class="mr-2 text-area-descriptio h-12 border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
                </div>
-                <script src="https://www.google.com/recaptcha/api.js"></script>
-                <script>
-                    function onSubmit(token) {
-                    document.getElementById("submit").submit();
-                }
-                </script>
-              
-              <input title="ارسال" data-sitekey="6LcK9LMZAAAAAIUc_f3usxcVtc6unK2cK6oU9uJp" data-callback='onSubmit' data-action='submit' class="g-recaptcha bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" name="submit" id="submit" value="ارسال"/>
-              
+              <input title="ارسال" class="bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" name="submit" id="submit" value="ارسال"/>
             </form>
             <div>
             <?php
@@ -206,7 +198,7 @@
                     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
                     $headers .= 'From: <info@afragostarnovin.ir>' . "\r\n";
                     $headers .= 'Cc: info@afragostarnovin.ir' . "\r\n";
-                    $sendmail = mail($to,$subject,$message,$headers); 
+                    mail($to,$subject,$message,$headers); 
                     echo "<p class='success-text' style='color:green;'>درخواست شما با موفقیت ثبت شد</p>";
                   } else{
                      die("<p class='warning-text'>درخواست شما انجام نشد لطفا بعدا تلاش کنید</p>");

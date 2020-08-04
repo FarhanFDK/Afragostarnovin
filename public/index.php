@@ -25,15 +25,15 @@
     <div class="main grid grid-cols-1">
       <div class="header flex h-16">
         <div class="menu-with-hamburger">
-          <div id="hamburger" class="block sm:block md:hidden lg:hidden xl:hidden ml-20" style="margin-top: 8px; float: right;">
+          <div id="hamburger" class="block sm:block md:hidden lg:hidden xl:hidden" style="margin-top: 8px; float: right;">
             <span class="opener-span cursor-pointer" onclick="menuOpen()"><img src="../src/icons/hamburger.png" style="width:3rem;height:3rem;" /></span>
           </div>
           <div class="menu-side-navbar" id="menu-side-navbar">
             <a class="closebtn" href="javascript:void(0)" onclick="menuClose()">&times;</a>
             <a class="" href="#">صفحه اصلی</a>
             <a class="" href="#">فروشگاه</a>
-            <a class="" href="#consult">مشاوره رایگان</a>
-            <a class="" href="#aboutus">درباره شرکت</a>
+            <a class="" href="#consult" onclick="menuClose()">مشاوره رایگان</a>
+            <a class="" href="#aboutus" onclick="menuClose()">درباره شرکت</a>
           </div>
           <script src="../src/js/menu-opener.js"></script>
         </div>
@@ -284,13 +284,13 @@
                 </p>
                 <div style="background-color:inherit;" class="social-networks text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
                   <a class="text-center" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
-                    <i class="fa fa-instagram fa-3x text-center ml-8 bg-white rounded" aria-hidden="true"></i>
+                    <img class="text-center sm:text-center md:text-right lg:text-right xl:text-right ml-8 inline" src="../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
                   </a>
                   <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
-                    <i class="fa fa-telegram fa-3x text-center ml-8 bg-white rounded-full" aria-hidden="true" style="margin-top:2px;"></i>
+                    <img class="text-center sm:text-center md:text-right lg:text-right xl:text-right ml-8 inline" src="../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
                   </a>
                   <a class="" title="" target="_blank" href="https://wa.me/989354107274">
-                    <i class="fa fa-whatsapp fa-3x text-center" aria-hidden="true"></i>
+                    <img class="text-center sm:text-center md:text-right lg:text-right xl:text-right inline" src="../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
                   </a>
             </div>
         </div>

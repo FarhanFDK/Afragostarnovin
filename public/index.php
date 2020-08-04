@@ -28,20 +28,20 @@
           <div id="hamburger" class="block sm:block md:hidden lg:hidden xl:hidden" style="margin-top: 8px; float: right;">
             <span class="opener-span cursor-pointer" onclick="menuOpen()"><img src="../src/icons/hamburger.png" style="width:3rem;height:3rem;" /></span>
           </div>
-          <div class="menu-side-navbar" id="menu-side-navbar">
+          <div class="menu-side-navbar block sm:block md:hidden lg;hidden xl:hidden" id="menu-side-navbar">
             <a class="closebtn" href="javascript:void(0)" onclick="menuClose()">&times;</a>
-            <a class="" href="#">صفحه اصلی</a>
-            <a class="" href="#">فروشگاه</a>
+            <a class="" href="https://www.afragostarnovin.ir/public/index.php">صفحه اصلی</a>
+            <a class="" href="https://www.afragostarnovin.ir/public/store.php">فروشگاه</a>
             <a class="" href="#consult" onclick="menuClose()">مشاوره رایگان</a>
             <a class="" href="#aboutus" onclick="menuClose()">درباره شرکت</a>
           </div>
           <script src="../src/js/menu-opener.js"></script>
         </div>
         <div class="menu flex-1 my-2 hidden sm:hidden md:flex lg:flex xl:flex">
-          <a title="صفحه اصلی" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="#">
+          <a title="صفحه اصلی" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="https://www.afragostarnovin.ir/public/index.php">
             صفحه اصلی
           </a>
-          <a title="فروشگاه" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="#">
+          <a title="فروشگاه" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="https://www.afragostarnovin.ir/public/store.php">
             فروشگاه
           </a>
           <a title="مشاوره رایگان" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="#consult">

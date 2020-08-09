@@ -127,7 +127,7 @@
             
           </div>
           <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
-            <form class="pt-6 pb-8 mb-4" action="index.php" method="post">
+            <form class="pt-6 pb-8 mb-4" action="https://www.afragostarnovin.ir/public/index.php" method="post">
               <div>
                 <input title="نام و نام خانوادگی" placeholder="نام و نام خانوادگی" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="fullname" id="fullname" required/>
               </div>

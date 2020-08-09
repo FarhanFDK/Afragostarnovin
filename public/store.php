@@ -196,7 +196,7 @@
                 $id = date("Y/m/d.h:i:sa");
                 $host_name = 'localhost';
                 $user_name = 'afragost_admin';
-                $user_pass = '7=DUwg}oVIbE';
+                $user_pass = 'w[Z+4,N*JY#Z';
                 $db_name = 'afragost_users_free_consulting';
                 $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
                     if(!$connection){
@@ -225,12 +225,13 @@
                                 نام و نام خانوادگی:
                                 ";
                     $message .= $fullname;
-                    $message .= "";
+                    $message .= "<br>";
                     $message .= "شماره تماس:";
                     $message .= $phonenumber;
-                    $message .= "";
+                    $message .= "<br>";
                     $message .= "توضیحات:";
                     $message .= $description;
+                    $message .= "<br>";
                     $message .= "زمان ثبت درخواست: ";
                     $message .= $id;
                     $message .= "

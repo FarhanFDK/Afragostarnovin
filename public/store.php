@@ -9,6 +9,7 @@
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"/>
     <link rel="stylesheet" href="../src/css/index.css" />
+    <link rel="stylesheet" href="../src/css/store.css" />
     <link rel="stylesheet" href="../src/css/media.css" />
     <link rel="stylesheet" href="../src/css/menu-side-navbar.css" />
     <link rel="stylesheet" href="../src/assets/slideshow/OwlCarousel/dist/assets/owl.carousel.min.css"/>
@@ -62,49 +63,53 @@
          
       </div>
       <div class="middle">
-        <div class="mt-5 block sm:block md:flex lg:flex xl:flex">
-            <div class="text-center">
+        <div class="mt-5 block sm:block md:flex lg:flex xl:flex text-xl">
+            <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3">
                 <div class="text-center">
-                    <img class="text-center" src="../src/Images/store/PAXD210B-1.jpg"/>
-                    دستگاه کارتخوان مدل D210B
+                    <img class="m-auto img-store mt-6" src="../src/Images/store/PAXD210B-1.jpg"/>
+                    دستگاه کارتخوان مدل <span class="font-text">D210B</span>
                 </div>
-                <div class="text-center">
-                    <img class="" src="../src/Images/store/PAXS90.jpg"/>
-                    دستگاه کارتخوان مدل S90
+                <div class="text-center shadow-text mt-6">
+                    <img class="m-auto img-store" src="../src/Images/store/PAXS90.jpg"/>
+                    دستگاه کارتخوان مدل <span class="font-text">S90</span>
                 </div>
-                <div class="text-center">
-                    <img class="" src="../src/Images/store/PAXS900.png"/>
-                    دستگاه کارتخوان مدل S900
+                <div class="text-center shadow-text mt-6">
+                    <img class="m-auto img-store" src="../src/Images/store/PAXS900.png"/>
+                    دستگاه کارتخوان مدل <span class="font-text">D210B</span>
                 </div>
             </div>
-            <div class="">
-                <div class>
-                    <img class="" src="../src/Images/store/"/>
-                    دستگاه
+            <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3">
+                <div class="text-center shadow-text mt-6">
+                    <img class="m-auto img-store" src="../src/Images/store/PAXS80.jpg"/>
+                    دستگاه کارتخوان مدل <span class="font-text">S80</span>
                 </div>
-                <div>
-                    <img class="" src="../src/Images/store/"/>
-                    دستگاه
+                <div class="text-center mt-6">
+                    <img class="m-auto img-store" src="../src/Images/store/BTM.jpg"/>
+                    دستگاه خودپرداز بیت کوین
                 </div>
-                <div>
-                    <img class="" src="../src/Images/store/"/>
-                    دستگاه
-                </div>
-            </div>
-            <div class="">
-                <div>
-                    <img class="" src="../src/Images/store/"/>
-                    دستگاه
-                </div>
-                <div>
-                    <img class="" src="../src/Images/store/"/>
-                    دستگاه
-                </div>
-                <div>
-                    <img class="" src="../src/Images/store/"/>
-                    دستگاه
+                <div class="text-center mt-6">
+                    <img class="m-auto img-store" src="../src/Images/store/PAXS910-1.jpg"/>
+                    دستگاه کارتخوان مدل <span class="font-text">S910</span>
                 </div>
             </div>
+            <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3">
+                <div class="text-center mt-6">
+                    <img class="m-auto img-store" src="../src/Images/store/IMG-20200622-WA0017.jpg"/>
+                    دستگاه کارتخوان مدل ...
+                </div>
+                <div class="text-center mt-6">
+                    <img class="m-auto img-store" src="../src/Images/store/ATM-ncr86.jpg"/>
+                     دستگاه خودپرداز مدل <span class="font-text">ncr</span>
+                </div>
+                <div class="text-center mt-6">
+                    <img class="m-auto img-store" src="../src/Images/store/IMG-20200622-WA0012.jpg"/>
+                    دستگاه کارتخوان مدل ...
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-2xl mt-12">
+          برای خرید تماس بگیرید
+          <i class="fa fa-phone"></i>
         </div>
       <a id="consult"></a>
         <!--

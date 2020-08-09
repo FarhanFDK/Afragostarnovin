@@ -18,6 +18,14 @@ body {
   text-align: center;
 }
 
+.font-text{
+  font-family: Arial;
+}
+
+.shadow-text{
+  text-shadow: 1px black;
+}
+
 .header {
   width: 100%;
   background-color: darkred;

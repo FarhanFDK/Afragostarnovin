@@ -157,24 +157,30 @@
           <div class="my-4 text-xl sm:text-xl md:text-2xl lg:text-3xl text-center w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
             <p class="text-center" style="">
               مشاوره رایگان دریافت کنید!
-              برای دریافت مشاوره رایگان فرم را پر کرده
-              و روی دکمه ارسال کلیک کنید
-              ما با شما تماس خواهیم گرفت
+              
+               برای دریافت مشاوره رایگان فرم را پر کرده
+               
+               و روی دکمه ارسال کلیک کنید
+               
+               
+               ما با شما تماس خواهیم گرفت
             </p>
+            
           </div>
           <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
-            <form class="pt-6 pb-8 mb-4" action="https://www.afragostarnovin.ir/public/store.php" method="post">
+            <form class="pt-6 pb-8 mb-4" action="https://www.afragostarnovin.ir/public/index.php" method="post">
               <div>
-                <input title="نام و نام خانوادگی" placeholder="نام و نام خانوادگی" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="fullname" id="fullname" required/>
+                <input title="نام و نام خانوادگی" placeholder="نام و نام خانوادگی" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="fullname" id="fullname" required/>
               </div>
               <input title="شماره تماس" placeholder="شماره تماس" class="my-5 border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="phonenumber" id="phonenumber" required/>
+              
               <div class="div-description my-4">
-              <!--
-                  <div class="inner"> 
-                    <label class="mr-5" for="contact-us-description">توضیحات:</label>
-                  </div>
-              -->
-                <textarea type="text" placeholder="توضیحات" title="توضیحات" class="text-area-description border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
+                <!--
+                <div class="inner"> 
+                  <label class="mr-5" for="contact-us-description">توضیحات:</label>
+                </div>
+                -->
+                <textarea type="text" placeholder="توضیحات" title="توضیحات" class="text-area-description h-12 border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
                </div>
               <input title="ارسال" class="bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" name="submit" id="submit" value="ارسال"/>
             </form>
@@ -191,9 +197,9 @@
                 $user_pass = 'w[Z+4,N*JY#Z';
                 $db_name = 'afragost_users_free_consulting';
                 $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
-                  if(!$connection){
-                    die("ارتباط با سرور با مشکل مواجه شد");
-                  }
+                    if(!$connection){
+                        die("ارتباط با سرور با مشکل مواجه شد");
+                    }
                 $chng = mysqli_set_charset($connection, "UTF-8");
                 if($fullname && $phonenumber && $description){
                   $sql = "INSERT INTO users(id,fullname,phonenumber,descriptions)";
@@ -223,7 +229,6 @@
                     $message .= "<br>";
                     $message .= "توضیحات:";
                     $message .= $description;
-                    $message .= "<br>";
                     $message .= "زمان ثبت درخواست: ";
                     $message .= $id;
                     $message .= "
@@ -247,81 +252,85 @@
             </div>
           </div>
         </div>
+        
       </div>
+      
       <div class="footer h-50 w-full">
         <div class="" style="">
           <div class="flex flex-row">
             <div>
-              <p class="phone my-5 mx-2">
-                <a class="cursor-pointer" href="tel:09354107274">
-                  <i class="fa fa-phone fa-30x"></i>
-                  09354107274
-                </a>
-              </p>
-              <p class="phone my-5 mx-2">
-                <a class="cursor-pointer" href="tel:09132364267">
-                  <i class="fa fa-phone fa-30x"></i>
-                  09132364267
-                </a>
-              </p>
-              <p class="email my-5 mx-2">
-                <i class="fa fa-envelope"></i>
-                <a class="email-footer-send" href = "mailto:info@afragostarnovin.ir">
-                  info@afragostarnovin.ir
-                </a>
-              </p>
+                <p class="phone my-5 mx-2">
+                    <a class="cursor-pointer" href="tel:09354107274">
+                        <i class="fa fa-phone fa-30x"></i>
+                        09354107274
+                    </a>
+                </p>
+                <p class="phone my-5 mx-2">
+                    <a class="cursor-pointer" href="tel:09132364267">
+                        <i class="fa fa-phone fa-30x"></i>
+                        09132364267
+                    </a>
+                </p>
+                <p class="email my-5 mx-2">
+                    <i class="fa fa-envelope"></i>
+                    <a class="email-footer-send" href = "mailto:info@afragostarnovin.ir">
+                        info@afragostarnovin.ir
+                    </a>
+                </p>
             </div>
             <div>
-              <p class="footer-content my-3 text-center text-xl">
-                دسترسی سریع
+                <p class="footer-content my-3 text-center text-xl">
+                    دسترسی سریع
+                </p>
+                <p class="footer-links">
+                    <a class="mx-5 my-auto" title="" href="https://www.afragostarnovin.ir/public/store.php">
+                        فروشگاه
+                    </a>
+                    <a class="mx-5 my-auto" title="" href="#consult">
+                        مشاوره رایگان
+                    </a>
+                    
+                </p>
+            </div>
+        </div>
+        <div class="company-description mx-4">
+            <div class="my-5 text-lg">
+                <p>
+                    <a id="aboutus"></a>
+                    شرکت افرا گستر نوین شرکتی در زمینه فروش دستگاه های خودپرداز
+                    (ATM)،
+                    دستگاه های کارتخوان   
+                    (POS)،
+                    فروش قطعات
+                    و ارائه خدمات دیگر می باشد
+                </p>
+                <p class="my-3 text-lg">
+                    خدماتی نظیر طراحی وبسایت،
+                    طراحی لوگو،
+                    ساخت وب اپلیکیشن،
+                    و شبکه
+                </p>
+            </div>
+              <p class="text-center">
+                در شبکه های اجتماعی با ما در ارتباط باشید!
               </p>
-              <p class="footer-links">
-                <a class="mx-5 my-auto" title="" href="https://www.afragostarnovin.ir/public/store.php">
-                  فروشگاه
-                </a>
-                <a class="mx-5 my-auto" title="" href="#consult">
-                  مشاوره رایگان
-                </a>  
-              </p>
+            <div style="background-color:inherit;" class="social-networks text-center sm:text-center md:text-center lg:text-center xl:text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
+              <a class="" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
+                <img class="inline" src="../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
+              </a>
+              <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
+                <img class="inline" src="../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
+              </a>
+              <a class="" title="" target="_blank" href="https://wa.me/989354107274">
+                <img class="inline" src="../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
+              </a>
             </div>
           </div>
-          <div class="company-description mx-4">
-            <p>
-              <a id="aboutus"></a>
-                شرکت افرا گستر نوین شرکتی در زمینه فروش دستگاه های خودپرداز
-                (ATM)،
-                دستگاه های کارتخوان   
-                (POS)،
-                فروش قطعات
-                و ارائه خدمات دیگر می باشد
-            </p>
-            <p class="my-3 text-lg">
-              خدماتی نظیر طراحی وبسایت،
-              طراحی لوگو،
-              ساخت وب اپلیکیشن،
-              و شبکه
-            </p>
-          </div>
-          <p class="text-center"> 
-            در شبکه های اجتماعی با ما در ارتباط باشید!
-          </p>
-          <div style="background-color:inherit;" class="social-networks text-center sm:text-center md:text-center lg:text-center xl:text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
-            <a class="" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
-              <img class="inline" src="../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
-            </a>
-            <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
-              <img class="inline" src="../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
-            </a>
-            <a class="" title="" target="_blank" href="https://wa.me/989354107274">
-              <img class="inline" src="../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
-            </a>
-          </div>
+        </div>
+        <div class="text-center z-auto m-5">
+          <iframe class="m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.454677919363!2d51.40732261517469!3d32.48727468106042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x65816dafb7d03b4d!2sAfra%20Computer%20Store!5e0!3m2!1sen!2sus!4v1595663704479!5m2!1sen!2sus" width="80%" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
       </div>
-      <div class="text-center z-auto m-5">
-        <iframe class="m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.454677919363!2d51.40732261517469!3d32.48727468106042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x65816dafb7d03b4d!2sAfra%20Computer%20Store!5e0!3m2!1sen!2sus!4v1595663704479!5m2!1sen!2sus" width="80%" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

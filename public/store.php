@@ -207,7 +207,7 @@
                 if($fullname && $phonenumber && $description){
                   $sql = "INSERT INTO users(id,fullname,phonenumber,descriptions)";
                   $sql .= "VALUES('$id','$fullname','$phonenumber','$description')";
-                  $result = mysqli_query($connection,$sql);
+                  $result = mysqli_query($chng,$sql);
                   if($result){
                     $to = "info@afragostarnovin.ir";
                     $subject = "ایمیل دریافت شده برای مشاوره";

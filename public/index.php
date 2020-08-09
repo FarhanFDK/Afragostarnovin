@@ -139,7 +139,7 @@
                   <label class="mr-5" for="contact-us-description">توضیحات:</label>
                 </div>
                 -->
-                <textarea type="text" placeholder="توضیحات" title="توضیحات" class="mr-2 text-area-description h-12 border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
+                <textarea type="text" placeholder="توضیحات" title="توضیحات" class="text-area-description h-12 border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
                </div>
               <input title="ارسال" class="bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" name="submit" id="submit" value="ارسال"/>
             </form>
@@ -259,37 +259,36 @@
                     شرکت افرا گستر نوین شرکتی در زمینه فروش دستگاه های خودپرداز
                     (ATM)،
                     دستگاه های کارتخوان   
-                   (POS)
+                    (POS)،
+                    فروش قطعات
                     و ارائه خدمات دیگر می باشد
                 </p>
                 <p class="my-3 text-lg">
                     خدماتی نظیر طراحی وبسایت،
                     طراحی لوگو،
-                    ساخت وب اپلیکیشن و ...
+                    ساخت وب اپلیکیشن،
+                    و شبکه
                 </p>
-                </div>
-                <p class="text-center">
-                  
-                  
-                  در شبکه های اجتماعی با ما در ارتباط باشید!
-                </p>
-                <div style="background-color:inherit;" class="social-networks text-center sm:text-center md:text-center lg:text-center xl:text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
-                  <a class="" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
-                    <img class="inline" src="../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
-                  </a>
-                  <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
-                    <img class="inline" src="../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
-                  </a>
-                  <a class="" title="" target="_blank" href="https://wa.me/989354107274">
-                    <img class="inline" src="../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
-                  </a>
             </div>
-        </div>
+              <p class="text-center">
+                در شبکه های اجتماعی با ما در ارتباط باشید!
+              </p>
+            <div style="background-color:inherit;" class="social-networks text-center sm:text-center md:text-center lg:text-center xl:text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
+              <a class="" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
+                <img class="inline" src="../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
+              </a>
+              <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
+                <img class="inline" src="../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
+              </a>
+              <a class="" title="" target="_blank" href="https://wa.me/989354107274">
+                <img class="inline" src="../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
+              </a>
+            </div>
+          </div>
         </div>
         <div class="text-center z-auto m-5">
           <iframe class="m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.454677919363!2d51.40732261517469!3d32.48727468106042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x65816dafb7d03b4d!2sAfra%20Computer%20Store!5e0!3m2!1sen!2sus!4v1595663704479!5m2!1sen!2sus" width="80%" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          
-          </div>
+        </div>
       </div>
     </div>
   </body>

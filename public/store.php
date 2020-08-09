@@ -62,11 +62,25 @@
          
       </div>
       <div class="middle">
-        <div class="flex flex-row mt-5">
-            <div class="w-1/3">
-                <div class="text-center" style="text-align:center;width:33%;">
-                    <img class="" src="../src/Images/store/PAXD210B-1.jpg"/>
-                        دستگاه کارتخوان مدل D210B
+        <div class="mt-5 block sm:block md:flex lg:flex xl:flex">
+            <div class="text-center">
+                <div class="text-center">
+                    <img class="text-center" src="../src/Images/store/PAXD210B-1.jpg"/>
+                    دستگاه کارتخوان مدل D210B
+                </div>
+                <div class="text-center">
+                    <img class="" src="../src/Images/store/PAXS90.jpg"/>
+                    دستگاه کارتخوان مدل S90
+                </div>
+                <div class="text-center">
+                    <img class="" src="../src/Images/store/PAXS900.png"/>
+                    دستگاه کارتخوان مدل S900
+                </div>
+            </div>
+            <div class="">
+                <div class>
+                    <img class="" src="../src/Images/store/"/>
+                    دستگاه
                 </div>
                 <div>
                     <img class="" src="../src/Images/store/"/>
@@ -77,21 +91,7 @@
                     دستگاه
                 </div>
             </div>
-            <div class="w-1/3">
-                <div>
-                    <img class="" src="../src/Images/store/"/>
-                    دستگاه
-                </div>
-                <div>
-                    <img class="" src="../src/Images/store/"/>
-                    دستگاه
-                </div>
-                <div>
-                    <img class="" src="../src/Images/store/"/>
-                    دستگاه
-                </div>
-            </div>
-            <div class="w-1/3">
+            <div class="">
                 <div>
                     <img class="" src="../src/Images/store/"/>
                     دستگاه

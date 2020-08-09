@@ -125,25 +125,3 @@ form{
   padding-left: 10px;
   padding-right: 10px;
 }
-
-.fa-instagram {
-  color: transparent;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-.fa-whatsapp  {
-  background:linear-gradient(#25d366,#25d366)15px 84%/15px 15px no-repeat,radial-gradient(#25d366 59%,transparent 0);
-  margin-left: 30px;
-  border-radius: 50%;
-}
-
-.fa-instagram{
-  border-radius: 20%;
-  background-color: white;
-}
-
-.fa-telegram{
-  color: #0088CC;
-}

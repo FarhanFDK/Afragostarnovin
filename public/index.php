@@ -166,7 +166,7 @@
                   $result = mysqli_query($connection,$sql);
                   if($result){
                     $to = "info@afragostarnovin.ir";
-                    $subject = "ایمیل دریافت شده برای مشاوره";
+                    $subject = "Downloaded E-mail for consulting request";
                     $message = "
                                 <!DOCTYPE html>
                                 <html>
@@ -182,10 +182,10 @@
                                 نام و نام خانوادگی:
                                 ";
                     $message .= $fullname;
-                    $message .= "";
+                    $message .= "<br>";
                     $message .= "شماره تماس:";
                     $message .= $phonenumber;
-                    $message .= "";
+                    $message .= "<br>";
                     $message .= "توضیحات:";
                     $message .= $description;
                     $message .= "زمان ثبت درخواست: ";

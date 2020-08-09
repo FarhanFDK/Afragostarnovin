@@ -209,7 +209,7 @@
                   $result = mysqli_query($connection,$sql);
                   if($result){
                     $to = "info@afragostarnovin.ir";
-                    $subject = "ایمیل دریافت شده برای مشاوره";
+                    $subject = "Downloaded E-mail for consulting request";
                     $message = "
                                 <!DOCTYPE html>
                                 <html>

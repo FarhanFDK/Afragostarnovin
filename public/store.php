@@ -176,14 +176,13 @@
                 <input title="نام و نام خانوادگی" placeholder="نام و نام خانوادگی" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="fullname" id="fullname" required/>
               </div>
               <input title="شماره تماس" placeholder="شماره تماس" class="my-5 border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="phonenumber" id="phonenumber" required/>
-              
               <div class="div-description my-4">
-                <!--
-                <div class="inner"> 
-                  <label class="mr-5" for="contact-us-description">توضیحات:</label>
-                </div>
-                -->
-                <input type="text" placeholder="توضیحات" title="توضیحات" class="mr-2 text-area-descriptio h-12 border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
+              <!--
+                  <div class="inner"> 
+                    <label class="mr-5" for="contact-us-description">توضیحات:</label>
+                  </div>
+              -->
+                <input type="text" placeholder="توضیحات" title="توضیحات" class="mr-2 text-area-description border-solid border-4 border-gray-600 shadow appearance-none border rounded w-30 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" name="contact-us-description" id="contact-us-description" required></textarea>
                </div>
               <input title="ارسال" class="bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" name="submit" id="submit" value="ارسال"/>
             </form>

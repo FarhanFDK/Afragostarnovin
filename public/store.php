@@ -75,7 +75,7 @@
                 </div>
                 <div class="text-center shadow-text mt-6">
                     <img class="m-auto img-store" src="../src/Images/store/PAXS900.png"/>
-                    دستگاه کارتخوان مدل <span class="font-text">D210B</span>
+                    دستگاه کارتخوان مدل <span class="font-text">S900</span>
                 </div>
             </div>
             <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3">
@@ -94,16 +94,16 @@
             </div>
             <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3">
                 <div class="text-center mt-6">
-                    <img class="m-auto img-store" src="../src/Images/store/IMG-20200622-WA0017.jpg"/>
-                    دستگاه کارتخوان مدل ...
+                    <img class="m-auto img-store" src="../src/Images/store/PAXS9000i.jpg"/>
+                    دستگاه کارتخوان مدل <span class="font-text">S9000i</span>
                 </div>
                 <div class="text-center mt-6">
                     <img class="m-auto img-store" src="../src/Images/store/ATM-ncr86.jpg"/>
                      دستگاه خودپرداز مدل <span class="font-text">ncr</span>
                 </div>
                 <div class="text-center mt-6">
-                    <img class="m-auto img-store" src="../src/Images/store/IMG-20200622-WA0012.jpg"/>
-                    دستگاه کارتخوان مدل ...
+                    <img class="m-auto img-store" src="../src/Images/store/PAXD210G.jpg"/>
+                    دستگاه کارتخوان مدل <span class="font-text">D210G</span>
                 </div>
             </div>
         </div>

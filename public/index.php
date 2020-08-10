@@ -151,10 +151,10 @@
                 $description = $_POST['contact-us-description'];
                 date_default_timezone_set("Iran");
                 $id = date("Y/m/d.h:i:sa");
-                $host_name = 'localhost';
-                $user_name = 'afragost_admin';
-                $user_pass = 'w[Z+4,N*JY#Z';
-                $db_name = 'afragost_users_free_consulting';
+                $host_name = '';
+                $user_name = '';
+                $user_pass = '';
+                $db_name = '';
                 $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
                     if(!$connection){
                         die("ارتباط با سرور با مشکل مواجه شد");

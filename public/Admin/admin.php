@@ -61,16 +61,19 @@
         </div>
         <div class="middle">
             <?php
-                $host_name = '';
-                $user_name = '';
+                $host_name = 'localhost';
+                $user_name = 'root';
                 $user_pass = '';
-                $db_name = '';
+                $db_name = 'users';
                 $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
                 if(!$connection){
                     die("ارتباط با سرور با مشکل مواجه شد");
                 }
+                $query = "SELECT * FROM users";
+                $result = mysqli_query($connection,$query);
                 while($row = mysqli_fetch_assoc($result)){
-                    print_r($row);
+                    echo $row['fullname'];
+                    echo $row['id'] . "<br>";
                 }
             ?>
         </div>

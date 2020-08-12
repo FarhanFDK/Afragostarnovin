@@ -191,7 +191,7 @@
                 $phonenumber = $_POST['phonenumber'];
                 $description = $_POST['contact-us-description'];
                 date_default_timezone_set("Iran");
-                $id = date("Y/m/d.h:i:sa");
+                $id = date("Y/m/d  h:i:sa");
                 $host_name = '';
                 $user_name = '';
                 $user_pass = '';

@@ -71,11 +71,34 @@
                 }
                 $query = "SELECT * FROM users";
                 $result = mysqli_query($connection,$query);
-                while($row = mysqli_fetch_assoc($result)){
-                    echo $row['fullname'];
-                    echo $row['id'] . "<br>";
-                }
+                 echo "
+                 <table>
+                    <tr>
+                        <th>
+                            نام و نام خانوادگی
+                        </th>
+                        <th>
+                            شماره تلفن
+                        </th>
+                        <th>
+                            توضیحات
+                        </th>
+                        <th>
+                            زمان ثبت درخواست
+                        </th>
+                    </tr>";
             ?>
+            
+                <?php
+                    while($row = mysqli_fetch_array($result)){
+                        echo "<tr><td>" . $row['fullname'] . "</td>";
+                        echo "<td>" . $row['phonenumber'] . "</td>";
+                        echo "<td>" . $row['descriptions'] . "</td>";
+                        echo "<td>" . $row['id'] . "</td></tr>";
+                    }
+                    echo "</table>";
+                ?>
+            </table>
         </div>
         <div class="footer">
 

@@ -191,15 +191,7 @@
                 $phonenumber = $_POST['phonenumber'];
                 $description = $_POST['contact-us-description'];
                 require "../src/includes/jdf.php";
-                date_default_timezone_set("Iran");
-                $current_gdate = date('Y/m/d');
-                $arr_parts = explode('/' , $current_gdate);
-                $gY = $arr_parts[0];
-                $gM = $arr_parts[1];
-                $gD = $arr_parts[2];
-                $current_jdate = gregorian_to_jalali($gY , $gM , $gD , '/');
-                $hour = jdate('g:i:s a');
-                $id = $current_jdate . $hour;
+                $id = jdate('Y/m/d g:i:s a' , '' , '' , 'Asia/Tehran' , 'en'); ;
                 $host_name = 'localhost';
                 $user_name = 'afragost_admin';
                 $user_pass = '7d1KS~eK[}{a';

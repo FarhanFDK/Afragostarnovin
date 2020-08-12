@@ -149,8 +149,9 @@
                 $fullname = $_POST['fullname'];
                 $phonenumber = $_POST['phonenumber'];
                 $description = $_POST['contact-us-description'];
-                date_default_timezone_set("Iran");
-                $id = date("Y/m/d  h:i:sa");
+                require "../src/includes/jdf.php";
+                // date_default_timezone_set("Iran");
+                $id = jdate('Y/m/d g:i:s');
                 $host_name = 'localhost';
                 $user_name = 'root';
                 $user_pass = '';

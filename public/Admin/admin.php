@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="../../src/css/index.css" />
         <link rel="stylesheet" href="../../src/css/media.css" />
         <link rel="stylesheet" href="../../src/css/menu-side-navbar.css" />
+        <link rel="stylesheet" href="../../src/css/admin.css" />
         <link rel="stylesheet" href="../../src/assets/slideshow/OwlCarousel/dist/assets/owl.carousel.min.css"/>
         <link rel="stylesheet" href="../../src/assets/slideshow/OwlCarousel/dist/assets/owl.theme.default.min.css"/>
         <link rel="shortcut icon" href="../../src/icons/siteicon.ico" />

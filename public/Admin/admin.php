@@ -76,11 +76,12 @@
                 if(!mysqli_num_rows($result)){
                     echo "درخواستی موجود نیست";
                 }else{
-                    echo "<a class='text-center' href='https://www.afragostarnovin.ir/public/Admin/requests.php'>درخواست ها</a>";
+                    $num_of_rows = mysqli_num_rows($result);
+                    echo "<a class='text-center' href='https://www.afragostarnovin.ir/public/Admin/requests.php'>" . "درخواست ها" . "(" . $num_of_rows . ")" . "</a>";
                 }
             ?>
         </div>
-        <div class="footer h-50 w-full">
+        <div class="footer w-full">
             <div class="" style="">
                 <div class="flex flex-row">
                     <div>
@@ -150,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center z-auto m-5">
+            <div class="text-center z-auto p-5">
                 <iframe class="m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.454677919363!2d51.40732261517469!3d32.48727468106042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x65816dafb7d03b4d!2sAfra%20Computer%20Store!5e0!3m2!1sen!2sus!4v1595663704479!5m2!1sen!2sus" width="80%" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>

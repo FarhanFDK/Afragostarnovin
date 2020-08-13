@@ -60,7 +60,7 @@
                 <img class="float-left mt-2 ml-2" src="../../src/icons/sitelogo.jpg" style="width:50px;height:50px;left:0;">
             </div>
         </div>
-        <div class="middle">
+        <div class="middle mb-12 mt-12">
             <?php
                 $host_name = 'localhost';
                 $user_name = 'afragost_admin';
@@ -71,11 +71,13 @@
                         die("ارتباط با پایگاه داده (درخواست ها) با مشکل مواجه شد");
                     }
                 $query = "SELECT * FROM users";
-                $result = mysql_query($connection,$query);
-                    if ($result) {
-                        echo "<a class='float-right' target='_blank' href='https://www.afragostarnovin.ir/public/requests.php'>درخواست ها</a>";
-                        mysql_free_result($result);
-                    }
+                $result = mysqli_query($connection,$query);
+                $row = mysqli_fetch_array($result);
+                if(!mysqli_num_rows($result)){
+                    echo "درخواستی موجود نیست";
+                }else{
+                    echo "<a class='text-center' href='https://www.afragostarnovin.ir/public/Admin/requests.php'>درخواست ها</a>";
+                }
             ?>
         </div>
         <div class="footer h-50 w-full">
@@ -137,13 +139,13 @@
                     </p>
                     <div style="background-color:inherit;" class="social-networks text-center sm:text-center md:text-center lg:text-center xl:text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
                         <a class="" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
-                            <img class="inline" src="../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
+                            <img class="inline" src="../../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
                         </a>
                         <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
-                            <img class="inline" src="../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
+                            <img class="inline" src="../../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
                         </a>
                         <a class="" title="" target="_blank" href="https://wa.me/989354107274">
-                            <img class="inline" src="../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
+                            <img class="inline" src="../../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
                         </a>
                     </div>
                 </div>

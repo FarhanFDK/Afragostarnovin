@@ -70,10 +70,10 @@
                     if(!$connection){
                         die("ارتباط با پایگاه داده (درخواست ها) با مشکل مواجه شد");
                     }
-                $query = "SHOW TABLES FROM $db_name";
+                $query = "SELECT * FROM users";
                 $result = mysql_query($connection,$query);
                     if ($result) {
-                        echo "<a class='float-right' href='https://www.afragostarnovin.ir/public/requests.php'>درخواست ها</a>";
+                        echo "<a class='float-right' target='_blank' href='https://www.afragostarnovin.ir/public/requests.php'>درخواست ها</a>";
                         mysql_free_result($result);
                     }
             ?>
@@ -95,8 +95,8 @@
                             </a>
                         </p>
                         <p class="email my-5 mx-2">
-                            <i class="fa fa-envelope"></i>
                             <a class="email-footer-send" href = "mailto:info@afragostarnovin.ir">
+                                <i class="fa fa-envelope"></i>
                                 info@afragostarnovin.ir
                             </a>
                         </p>

@@ -114,8 +114,8 @@
                     </a>
                 </p>
                 <p class="email my-5 mx-2">
-                    <i class="fa fa-envelope"></i>
                     <a class="email-footer-send" href = "mailto:info@afragostarnovin.ir">
+                        <i class="fa fa-envelope"></i>
                         info@afragostarnovin.ir
                     </a>
                 </p>

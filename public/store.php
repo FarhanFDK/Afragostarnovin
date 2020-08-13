@@ -216,9 +216,10 @@
                                   <title>دریافت مشاوره</title>
                                 </head>";
                     $message .= "<body style='direction:rtl;'>";
-                    $message .= "<div class='header bg-red-700' style='left:0;right:0;top:0;position:absolute;width:100%;height:100px;color:blue;'>
+                    $message .= "<header style='left:0;right:0;top:0;position:absolute;width:100%;height:100px;color:blue;background-color:darkred;'>
                                   این ایمیل به منظور دریافت مشاوره رایگان فرستاده شده است،چناچه وقتتان اجازه می دهد،لطفا رسیدگی کنید
-                                </div>
+                                </header>
+                                <div>
                                 نام و نام خانوادگی:
                                 ";
                     $message .= $fullname;
@@ -232,6 +233,7 @@
                     $message .= "زمان ثبت درخواست: ";
                     $message .= $id;
                     $message .= "
+                                </div>
                                 </body>
                                 </html>
                     " ;
@@ -272,8 +274,8 @@
                     </a>
                 </p>
                 <p class="email my-5 mx-2">
-                    <i class="fa fa-envelope"></i>
                     <a class="email-footer-send" href = "mailto:info@afragostarnovin.ir">
+                        <i class="fa fa-envelope"></i>
                         info@afragostarnovin.ir
                     </a>
                 </p>

@@ -65,7 +65,7 @@
                 $host_name = 'localhost';
                 $user_name = 'afragost_admin';
                 $user_pass = '7d1KS~eK[}{a';
-                $db_name = 'afragost_users_free_consulting';
+                $db_name   = 'afragost_users_free_consulting';
                 $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
                 if(!$connection){
                     die("ارتباط با سرور با مشکل مواجه شد");

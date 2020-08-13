@@ -214,7 +214,6 @@
                                 <head>
                                   <meta charset='UTF-8'/>
                                   <title>دریافت مشاوره</title>
-                                  <link rel='stylesheet' href='https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css'/>
                                 </head>";
                     $message .= "<body style='direction:rtl;'>";
                     $message .= "<div class='header bg-red-700' style='left:0;right:0;top:0;position:absolute;width:100%;height:100px;color:blue;'>
@@ -229,6 +228,7 @@
                     $message .= "<br>";
                     $message .= "توضیحات:";
                     $message .= $description;
+                    $message .= "<br>";
                     $message .= "زمان ثبت درخواست: ";
                     $message .= $id;
                     $message .= "

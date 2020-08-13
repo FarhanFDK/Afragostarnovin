@@ -154,7 +154,7 @@
                 $host_name = 'localhost';
                 $user_name = 'afragost_admin';
                 $user_pass = '7d1KS~eK[}{a';
-                $db_name = 'afragost_users_free_consulting';
+                $db_name   = 'afragost_users_free_consulting';
                 $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
                     if(!$connection){
                         die("ارتباط با سرور با مشکل مواجه شد");
@@ -173,7 +173,6 @@
                                 <head>
                                   <meta charset='UTF-8'/>
                                   <title>دریافت مشاوره</title>
-                                  <link rel='stylesheet' href='https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css'/>
                                 </head>";
                     $message .= "<body style='direction:rtl;'>";
                     $message .= "<div class='header bg-red-700' style='left:0;right:0;top:0;position:absolute;width:100%;height:100px;color:blue;'>
@@ -188,6 +187,7 @@
                     $message .= "<br>";
                     $message .= "توضیحات:";
                     $message .= $description;
+                    $message .= "<br>";
                     $message .= "زمان ثبت درخواست: ";
                     $message .= $id;
                     $message .= "

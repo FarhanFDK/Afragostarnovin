@@ -73,18 +73,18 @@
                 $query = "SELECT * FROM users";
                 $result = mysqli_query($connection,$query);
                  echo "
-                 <table>
-                    <tr>
-                        <th>
+                 <table class='text-center'>
+                    <tr class='text-center'>
+                        <th class='text-center'>
                             نام و نام خانوادگی
                         </th>
-                        <th>
+                        <th class='text-center'>
                             شماره تلفن
                         </th>
-                        <th>
+                        <th class='text-center'>
                             توضیحات
                         </th>
-                        <th>
+                        <th class='text-center'>
                             زمان ثبت درخواست
                         </th>
                     </tr>";
@@ -92,10 +92,10 @@
             
                 <?php
                     while($row = mysqli_fetch_array($result)){
-                        echo "<tr><td>" . $row['fullname'] . "</td>";
-                        echo "<td>" . $row['phonenumber'] . "</td>";
-                        echo "<td>" . $row['descriptions'] . "</td>";
-                        echo "<td>" . $row['id'] . "</td></tr>";
+                        echo "<tr class='text-center'><td class='text-center'>" . $row['fullname'] . "</td>";
+                        echo "<td class='text-center'>" . $row['phonenumber'] . "</td>";
+                        echo "<td class='text-center'>" . $row['descriptions'] . "</td>";
+                        echo "<td class='text-center'>" . $row['id'] . "</td></tr>";
                     }
                     echo "</table>";
                 ?>

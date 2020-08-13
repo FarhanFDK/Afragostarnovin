@@ -91,8 +91,8 @@
           </div>
           <div class="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3">
             <div class="text-center mt-6">
-              <img class="m-auto img-store" src="../src/Images/store/PAXS9000i.jpg"/>
-              دستگاه کارتخوان مدل <span class="font-text">S9000i</span>
+              <img class="m-auto img-store" src="../src/Images/store/PAXS.jpg"/>
+              دستگاه کارتخوان مدل <span class="font-text"></span>
             </div>
             <div class="text-center mt-6">
               <img class="m-auto img-store" src="../src/Images/store/ATM-ncr86.jpg"/>
@@ -201,6 +201,9 @@
                         die("ارتباط با سرور با مشکل مواجه شد");
                     }
                 $chng = mysqli_set_charset($connection, "UTF-8");
+                $fullname = mysqli_real_escape_string($connection , $fullname);
+                $phonenumber = mysqli_real_escape_string($connection , $phonenumber);
+                $description = mysqli_real_escape_string($connection , $description);
                 if($fullname && $phonenumber && $description){
                   $sql = "INSERT INTO users(id,fullname,phonenumber,descriptions)";
                   $sql .= "VALUES('$id','$fullname','$phonenumber','$description')";

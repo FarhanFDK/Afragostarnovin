@@ -73,10 +73,7 @@
                 $query = "SHOW TABLES FROM $db_name";
                 $result = mysql_query($connection,$query);
                     if ($result) {
-                        while ($row = mysql_fetch_row($result)) {
-                            echo "Table: {$row[0]}\n";
-                        }
-        
+                        echo "<a class='float-right' href='https://www.afragostarnovin.ir/public/requests.php'>درخواست ها</a>";
                         mysql_free_result($result);
                     }
             ?>

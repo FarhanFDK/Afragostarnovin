@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>ADMIN | شرکت افراگستر نوین</title>
+        <title>LOGIN | شرکت افراگستر نوین</title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -62,12 +62,22 @@
         </div>
         <div class="middle mb-12 mt-12">
             <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
-                <form class="pt-6 pb-8 mb-4" action="https://www.afragostarnovin.ir/public/login.php" method="post">
-                    <input type="text" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" />
+                <form class="pt-6 pb-8 mb-4 text-center" action="https://www.afragostarnovin.ir/public/login.php" method="post">
+                    <label for="fullname">ایمیل</label>
+                    <input type="text" id="fullname" name="fullname" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" />
+                    <label for="password">رمز عبور</label>
                     <input type="password" class="my-5 password border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" />
-                    <input type="submit" value="ورود" class="bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer"/>
+                    <input type="submit" value="ورود" class="text-center bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer"/>
                 </form>
                 <?php
+                  $host_name = 'localhost';
+                  $user_name = 'afragost_admin';
+                  $user_pass = '7d1KS~eK[}{a';
+                  $db_name   = 'afragost_users_free_consulting';
+                  $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
+                      if(!$connection){
+                          die("ارتباط با سرور با مشکل مواجه شد");
+                      }
                 ?>
             </div>
         </div>

@@ -88,18 +88,14 @@
                             زمان ثبت درخواست
                         </th>
                     </tr>";
+                while($row = mysqli_fetch_array($result)){
+                    echo "<tr class='text-center'><td class='text-center'>" . $row['fullname'] . "</td>";
+                    echo "<td class='text-center'>" . $row['phonenumber'] . "</td>";
+                    echo "<td class='text-center'>" . $row['descriptions'] . "</td>";
+                    echo "<td class='text-center'>" . $row['id'] . "</td></tr>";
+                }
+                echo "</table>";
             ?>
-            
-                <?php
-                    while($row = mysqli_fetch_array($result)){
-                        echo "<tr class='text-center'><td class='text-center'>" . $row['fullname'] . "</td>";
-                        echo "<td class='text-center'>" . $row['phonenumber'] . "</td>";
-                        echo "<td class='text-center'>" . $row['descriptions'] . "</td>";
-                        echo "<td class='text-center'>" . $row['id'] . "</td></tr>";
-                    }
-                    echo "</table>";
-                ?>
-            </table>
         </div>
         <div class="footer">
 

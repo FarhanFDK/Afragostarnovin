@@ -67,18 +67,34 @@
                 $user_pass = '7d1KS~eK[}{a';
                 $db_name = 'afragost_users_free_consulting';
                 $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
-                    if(!$connection){
-                        die("ارتباط با پایگاه داده (درخواست ها) با مشکل مواجه شد");
-                    }
-                $query = "SHOW TABLES FROM $db_name";
-                $result = mysql_query($connection,$query);
-                    if ($result) {
-                        while ($row = mysql_fetch_row($result)) {
-                            echo "Table: {$row[0]}\n";
-                        }
-        
-                        mysql_free_result($result);
-                    }
+                if(!$connection){
+                    die("ارتباط با سرور با مشکل مواجه شد");
+                }
+                $query = "SELECT * FROM users";
+                $result = mysqli_query($connection,$query);
+                 echo "
+                 <table class='text-center'>
+                    <tr class='text-center'>
+                        <th class='text-center'>
+                            نام و نام خانوادگی
+                        </th>
+                        <th class='text-center'>
+                            شماره تلفن
+                        </th>
+                        <th class='text-center'>
+                            توضیحات
+                        </th>
+                        <th class='text-center'>
+                            زمان ثبت درخواست
+                        </th>
+                    </tr>";
+                while($row = mysqli_fetch_array($result)){
+                    echo "<tr class='text-center'><td class='text-center'>" . $row['fullname'] . "</td>";
+                    echo "<td class='text-center'>" . $row['phonenumber'] . "</td>";
+                    echo "<td class='text-center'>" . $row['descriptions'] . "</td>";
+                    echo "<td class='text-center'>" . $row['id'] . "</td></tr>";
+                }
+                echo "</table>";
             ?>
         </div>
         <div class="footer">

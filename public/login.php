@@ -63,21 +63,28 @@
         <div class="middle mb-12 mt-12">
             <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
                 <form class="pt-6 pb-8 mb-4 text-center" action="https://www.afragostarnovin.ir/public/login.php" method="post">
-                    <label for="fullname">ایمیل</label>
-                    <input type="text" id="fullname" name="fullname" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" />
+                    <label for="phonenumber">شماره همراه</label>
+                    <input type="telephone" id="phonenumber" name="phonenumber" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required"/>
                     <label for="password">رمز عبور</label>
-                    <input type="password" class="my-5 password border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" />
-                    <input type="submit" value="ورود" class="text-center bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer"/>
+                    <input type="password" id="password" name="password" class="my-5 password border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required" />
+                    <input type="submit" id="submit" name="submit" value="ورود" class="text-center bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer"/>
                 </form>
                 <?php
-                  $host_name = 'localhost';
-                  $user_name = 'afragost_admin';
-                  $user_pass = '7d1KS~eK[}{a';
-                  $db_name   = 'afragost_users_free_consulting';
-                  $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
-                      if(!$connection){
-                          die("ارتباط با سرور با مشکل مواجه شد");
-                      }
+                    if(isset($_POST['submit'])){
+                      $email = $_POST['phonenumber'];
+                      $password = $_POST['password'];
+                      if($email && $password) {
+                        $host_name = 'localhost';
+                        $user_name = 'afragost_admin';
+                        $user_pass = '7d1KS~eK[}{a';
+                        $db_name   = 'afragost_users_free_consulting';
+                        $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
+                            if(!$connection){
+                                die("ارتباط با سرور با مشکل مواجه شد");
+                            }
+                        $email = mysqli_real_escape_string($connection,$phonenumber);
+                        $password = mysqli_real_escape_string($connection,$password);
+                    }
                 ?>
             </div>
         </div>

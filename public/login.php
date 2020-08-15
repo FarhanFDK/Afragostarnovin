@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>LOGIN | شرکت افراگستر نوین</title>
+        <title>ورود | شرکت افراگستر نوین</title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -71,9 +71,9 @@
                 </form>
                 <?php
                     if(isset($_POST['submit'])){
-                      $email = $_POST['phonenumber'];
+                      $phonenumber = $_POST['phonenumber'];
                       $password = $_POST['password'];
-                      if($email && $password) {
+                      if($phonenumber && $password) {
                         $host_name = 'localhost';
                         $user_name = 'afragost_admin';
                         $user_pass = '7d1KS~eK[}{a';
@@ -82,7 +82,7 @@
                             if(!$connection){
                                 die("ارتباط با سرور با مشکل مواجه شد");
                             }
-                        $email = mysqli_real_escape_string($connection,$phonenumber);
+                        $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
                         $password = mysqli_real_escape_string($connection,$password);
                     }
                 ?>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>شرکت افراگستر نوین</title>
-    <meta name="keywords" content="شرکت افرا گستر نوین,afragostarnovin,خرید دستگاه خودپرداز,خرید دستگاه کارتخوان و POS"/>
-    <meta name="description" content="خرید دستگاه خودپرداز و کارتخوان با تماس با ما در این سایت،شرکت افرا گستر نوین شرکتی در زمینه فروش دستگاه های خودپرداز و کارتخوان می باشد" />
+    <meta name="keywords" content="afragostarnovin,شرکت افراگسترنوین,شرکت افراگستر نوین,شرکت افرا گسترنوین,شرکت افرا گستر نوین,خرید دستگاه خودپرداز,خرید دستگاه کارتخوان"/>
+    <meta name="description" content="شرکت افراگسترنوین شرکتی در زمینه فروش دستگاه های خودپرداز،کارتخوان و خدماتی نظیر طراحی وب سایت،طراحی لوگو،شبکه و خدمات دیگر می باشد." />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"/>
@@ -44,12 +44,14 @@
           <a title="صفحه اصلی" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="https://www.afragostarnovin.ir/public/index.php">
             صفحه اصلی
           </a>
+          <!--
           <a title="ورود" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="https://www.afragostarnovin.ir/public/login.php">
             ورود
           </a>
           <a title="ثبت نام" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="https://www.afragostarnovin.ir/public/register.php">
             ثبت نام
           </a>
+          -->
           <a title="فروشگاه" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="https://www.afragostarnovin.ir/public/store.php">
             فروشگاه
           </a>

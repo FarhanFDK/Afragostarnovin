@@ -63,28 +63,45 @@
         <div class="middle mb-12 mt-12">
             <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
                 <form class="pt-6 pb-8 mb-4 text-center" action="https://www.afragostarnovin.ir/public/login.php" method="post">
-                    <label for="phonenumber">شماره همراه</label>
-                    <input type="telephone" id="phonenumber" name="phonenumber" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required"/>
+                    <label for="email">ایمیل</label>
+                    <input type="telephone" id="email" name="email" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required"/>
                     <label for="password">رمز عبور</label>
                     <input type="password" id="password" name="password" class="my-5 password border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required" />
                     <input type="submit" id="submit" name="submit" value="ورود" class="text-center bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer"/>
                 </form>
                 <?php
                     if(isset($_POST['submit'])){
-                      $phonenumber = $_POST['phonenumber'];
-                      $password = $_POST['password'];
-                      if($phonenumber && $password) {
-                        $host_name = 'localhost';
-                        $user_name = 'afragost_admin';
-                        $user_pass = '7d1KS~eK[}{a';
-                        $db_name   = 'afragost_users_free_consulting';
-                        $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
-                            if(!$connection){
-                                die("ارتباط با سرور با مشکل مواجه شد");
+                        $email = $_POST['email'];
+                        $password = $_POST['password'];
+                        require "../src/includes/jdf.php";
+                        $id = jdate('Y/m/d g:i:s a' , '' , '' , 'Asia/Tehran' , 'en');
+                        if($email && $password){
+                            $host_name = 'localhost';
+                            $user_name = 'afragost_admin';
+                            $user_pass = '7d1KS~eK[}{a';
+                            $db_name   = 'afragost_users_free_consulting';
+                            $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
+                                if(!$connection){
+                                    die("ارتباط با سرور با مشکل مواجه شد");
+                                }
+                            $chng = mysqli_set_charset($connection, "UTF-8");
+                            $email = mysqli_real_escape_string($connection,$email);
+                            $password = mysqli_real_escape_string($connection,$password);
+                            $hashFormat = "$2y$10$";
+                            $salt = "iuse290102uyhnvmlbcjie";
+                            $hashFormat_and_salt = $hashFormat . $salt;
+                            $password = crypt($password , $hashFormat_and_salt);
+                            $sql = "INSERT INTO users(id , email , password)";
+                            $sql .= "VALUES('$id' , '$email' , '$password' )";
+                            $sql .= "SELECT * FROM (SELECT '$email') ";
+                            $sql .= "AS tmp WHERE NOT EXISTS (
+                                        SELECT '$email' FROM users WHERE email = '$email'
+                                    ) LIMIT 1;";
+                            $result = mysqli_query($connection,$sql);
+                            if($result){
+                                echo "<p class='' style='color:green;'>با موفقیت ثبت نام شدید</p>";
                             }
-                        $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
-                        $password = mysqli_real_escape_string($connection,$password);
-                    }
+                        }
                 ?>
             </div>
         </div>

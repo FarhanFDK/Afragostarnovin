@@ -74,7 +74,7 @@
                         $code_post = $_POST['code'];
                         if($code_post = $code){
                             $host_name = 'localhost';
-D                            $user_name = 'afragost_user';
+                            $user_name = 'afragost_user';
                             $user_pass = ')37;c0m*ZO}=';
                             $db_name   = 'afragost_users';
                             $connection = mysqli_connect($host_name , $user_name , $user_pass , $db_name);

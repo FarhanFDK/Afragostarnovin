@@ -71,19 +71,21 @@
                 </form>
                 <?php
                     if(isset($_POST['submit'])){
-                      $phonenumber = $_POST['phonenumber'];
-                      $password = $_POST['password'];
-                      if($phonenumber && $password) {
-                        $host_name = 'localhost';
-                        $user_name = 'afragost_admin';
-                        $user_pass = '7d1KS~eK[}{a';
-                        $db_name   = 'afragost_users_free_consulting';
-                        $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
-                            if(!$connection){
-                                die("ارتباط با سرور با مشکل مواجه شد");
+                        $phonenumber = $_POST['phonenumber'];
+                        $password = $_POST['password'];
+                        if($phonenumber && $password) {
+                            $host_name = 'localhost';
+                            $user_name = 'afragost_admin';
+                            $user_pass = '7d1KS~eK[}{a';
+                            $db_name   = 'afragost_users_free_consulting';
+                            $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
+                                if(!$connection){
+                                    die("ارتباط با سرور با مشکل مواجه شد");
+                                }
+                            $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
+                            $password = mysqli_real_escape_string($connection,$password);
                             }
-                        $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
-                        $password = mysqli_real_escape_string($connection,$password);
+
                     }
                 ?>
             </div>

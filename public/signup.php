@@ -62,7 +62,7 @@
         </div>
         <div class="middle mb-12 mt-12">
             <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
-                <form class="pt-6 pb-8 mb-4 text-center" action="https://www.afragostarnovin.ir/public/login.php" method="post">
+                <form class="pt-6 pb-8 mb-4 text-center" action="https://www.afragostarnovin.ir/public/signup.php" method="post">
                     <label for="email">ایمیل</label>
                     <input type="telephone" id="email" name="email" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required"/>
                     <label for="password">رمز عبور</label>
@@ -91,17 +91,49 @@
                             $salt = "iuse290102uyhnvmlbcjie";
                             $hashFormat_and_salt = $hashFormat . $salt;
                             $password = crypt($password , $hashFormat_and_salt);
-                            $sql = "INSERT INTO users(id , email , password)";
-                            $sql .= "VALUES('$id' , '$email' , '$password' )";
+                            $sql = "INSERT INTO users(id , email , password , verified)";
+                            $sql .= "VALUES('$id' , '$email' , '$password' , 'false')";
                             $sql .= "SELECT * FROM (SELECT '$email') ";
                             $sql .= "AS tmp WHERE NOT EXISTS (
-                                        SELECT '$email' FROM users WHERE email = '$email'
+                                        SELECT 'email' FROM users WHERE email = '$email'
                                     ) LIMIT 1;";
                             $result = mysqli_query($connection,$sql);
                             if($result){
-                                echo "<p class='' style='color:green;'>با موفقیت ثبت نام شدید</p>";
+                                $code = rand(100001,899998);
+                                $to = $email;
+                                $subject = "VERIFY YOUR ACCOUNT";
+                                $message = "
+                                    <!DOCTYPE html>
+                                    <html>
+                                    <head>
+                                        <meta charset='UTF-8'/>
+                                        <title>PLEASE VERIFY YOUR ACCOUNT</title>
+                                    </head>
+                                    <body>
+                                        <div style='top:0;right:0;left:0;position:absolute;width:100%;height:150px;background-color:darkred;'>
+
+                                        </div>
+                                        <div style=''>
+                                        ENTER THE CODE TO VERIFY YOUR ACCOUNT!
+                                        <br>
+                                        ";
+                                    $message .= $code;
+                                    $message .=" 
+                                    </div>     
+                                    </body>
+                                    </html>
+                                    ";
+                                    $headers = "MIME-Version: 1.0" . "\r\n";
+                                    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                                    $headers .= 'From: <xyz@example.com">' . "\r\n";
+                                    $headers .= 'Cc: xyz@example.com"' . "\r\n";
+                                    mail($to,$subject,$message,$headers);
+                                    header('location: verify-email.php');
+                            }else{
+                                echo "<p>درخواست شما انجام نشد.بعدا تلاش کنید</p>";
                             }
                         }
+                    }
                 ?>
             </div>
         </div>

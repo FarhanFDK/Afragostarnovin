@@ -77,9 +77,9 @@
                         $id = jdate('Y/m/d g:i:s a' , '' , '' , 'Asia/Tehran' , 'en');
                         if($email && $password){
                             $host_name = 'localhost';
-                            $user_name = 'afragost_admin';
-                            $user_pass = '7d1KS~eK[}{a';
-                            $db_name   = 'afragost_users_free_consulting';
+                            $user_name = 'afragost_user';
+                            $user_pass = ')37;c0m*ZO}=';
+                            $db_name   = 'afragost_users';
                             $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
                                 if(!$connection){
                                     die("ارتباط با سرور با مشکل مواجه شد");

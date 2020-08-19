@@ -1,4 +1,0 @@
-$host_name = 'localhost';
-$user_name = 'afragost_admin';
-$user_pass = '7d1KS~eK[}{a';
-$db_name = 'afragost_users_free_consulting';

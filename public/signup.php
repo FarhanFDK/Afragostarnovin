@@ -84,7 +84,11 @@
                                             $code = rand(100010,899995);
                                             $to = $email;
                                             $message = "";
-                                            $headers
+                                            $headers;
+                                            class Car{
+                                                
+                                            }
+                                            if(property_exists("Car" , ""))
                                         ?>";
                         div_php.innerHTML = php_codes
                     }

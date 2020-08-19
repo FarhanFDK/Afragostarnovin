@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -162,6 +162,10 @@
                   $sql .= "VALUES('$id','$fullname','$phonenumber','$description')";
                   $result = mysqli_query($connection,$sql);
                   if($result){
+                    /*$mail = new PHPMailer();
+                    $mail->isSMTP();
+                    $mail->CharSet = "UTF-8";
+                    $mail->*/
                     $to = "info@afragostarnovin.ir";
                     $subject = "Downloaded E-mail for consulting request";
                     $message = "

@@ -18,8 +18,7 @@
     <script src="https://kit.fontawesome.com/b39b75221a.js" crossorigin="anonymous"></script>
     <script src="../src/jquery/jquery-3.4.1.slim.min.js"></script>
     <script src="../src/assets/slideshow/OwlCarousel/dist/owl.carousel.min.js"></script>
-    <style>
-    </style>
+    <style></style>
   </head>
   <body class="bg-white">
     <div class="main grid grid-cols-1">

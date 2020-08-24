@@ -1,8 +1,5 @@
 <?php
-    require "../src/includes/Exception.php";
-    require "../src/includes/PHPMailer.php";
-    require "../src/includes/SMTP.php";
-    require "../src/includes/PHPMailerAutoload.php";
+    
     $mail = new PHPMailer(true);
     try {
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;

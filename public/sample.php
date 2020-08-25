@@ -1,5 +1,4 @@
 <?php
-    
     $mail = new PHPMailer(true);
     try {
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;

@@ -11,7 +11,7 @@
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'mail.afragostarnovin.ir';                    // Set the SMTP server to send through
+    $mail->Host       = 'localhost';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'Farhanabdollahi@afargostarnovin.ir';                     // SMTP username
     $mail->Password   = 'z?OTBYxRm#wh';                               // SMTP password

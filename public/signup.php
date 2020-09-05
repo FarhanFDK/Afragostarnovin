@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>ثبت نام | شرکت افراگستر نوین</title>
+        <title>ورود | شرکت افراگستر نوین</title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -61,38 +61,33 @@
             </div>
         </div>
         <div class="middle mb-12 mt-12">
-            <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl w-full">
-                <form class="pt-6 pb-8 mb-4 text-center" id="form" action="https://www.afragostarnovin.ir/public/signup.php" method="post">
-                    <label class="block" for="email">ایمیل</label>
-                    <input type="telephone" id="email" name="email" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required"/>
-                    <label class="block" for="password">رمز عبور</label>
+            <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+                <form class="pt-6 pb-8 mb-4 text-center" action="https://www.afragostarnovin.ir/public/login.php" method="post">
+                    <label for="phonenumber">شماره همراه</label>
+                    <input type="telephone" id="phonenumber" name="phonenumber" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required"/>
+                    <label for="password">رمز عبور</label>
                     <input type="password" id="password" name="password" class="my-5 password border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required" />
-                    <input type="button" onclick="" id="submit" name="submit" value="ارسال" class="text-center bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer"/>
+                    <input type="submit" id="submit" name="submit" value="ورود" class="text-center bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer"/>
                 </form>
-                <div class="php" id="php"></div>
-                <script>
-                    function signup(){
-                        var form = document.getElementById('form');
-                        var ;
-                        clearForm();
+                <?php
+                    if(isset($_POST['submit'])){
+                        $phonenumber = $_POST['phonenumber'];
+                        $password = $_POST['password'];
+                        if($phonenumber && $password) {
+                            $host_name = 'localhost';
+                            $user_name = 'afragost_admin';
+                            $user_pass = '7d1KS~eK[}{a';
+                            $db_name   = 'afragost_users_free_consulting';
+                            $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
+                                if(!$connection){
+                                    die("ارتباط با سرور با مشکل مواجه شد");
+                                }
+                            $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
+                            $password = mysqli_real_escape_string($connection,$password);
+                            }
+
                     }
-                    function clearForm(){
-                        var form = document.getElementById('form');
-                        form.innerHTML = "<div class='text-center'>لطفا کد ارسال شده به ایمیل را وارد کنید و روی دکمه ارسال کلید کنید</div><input max='6' name='code' id='code' type='text' class='text-center my-5 border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline'/><br><input class='text-center bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer' type='submit' value='تایید'/>";
-                        var div_php = document.getElementById('php');
-                        var php_codes = "<?php 
-                                            $code = rand(100010,899995);
-                                            $to = $email;
-                                            $message = "";
-                                            $headers;
-                                            class Car{
-                                                
-                                            }
-                                            if(property_exists("Car" , ""))
-                                        ?>";
-                        div_php.innerHTML = php_codes
-                    }
-                </script>
+                ?>
             </div>
         </div>
         <div class="footer w-full">
@@ -135,12 +130,12 @@
                 <div class="company-description mx-4">
                     <div class="my-5 text-lg">
                         <p>
-                          شرکت افرا گستر نوین شرکتی در زمینه فروش دستگاه های خودپرداز
-                          (ATM)،
-                          دستگاه های کارتخوان   
-                          (POS)،
-                          فروش قطعات
-                          و ارائه خدمات دیگر می باشد
+                                شرکت افرا گستر نوین شرکتی در زمینه فروش دستگاه های خودپرداز
+                                (ATM)،
+                                دستگاه های کارتخوان   
+                                (POS)،
+                                فروش قطعات
+                                و ارائه خدمات دیگر می باشد
                         </p>
                         <p class="my-3 text-lg">
                             خدماتی نظیر طراحی وبسایت،

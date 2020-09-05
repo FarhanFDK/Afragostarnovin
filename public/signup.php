@@ -72,9 +72,14 @@
                             document.getElementById('err').innerHTML       = error_text;
                             docuemnt.getElementById('submit').setAttribute = "disabled";
                         }
+
+                        function success(){
+                            document.getElementById('submit').removeAttribute("disabled");
+                        }
+
                     </script>
                 </div>
-                <form class="text-center m-5" action="verify-email.php" method="POST">
+                <form class="text-center m-5 block" action="signup.php" method="POST">
                     <label for="first_name">نام : </label>
                     <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" name="first_name" id="first_name" required/>
                     <label for="last_name">نام خانوادگی : </label>
@@ -84,7 +89,7 @@
                     <label for="password">رمز عبور : </label>
                     <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" type="password" name="password" id="password" required/>
                     <label for="password_verify">تایید رمز عبور : </label>
-                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" type="password" name="password_verify" id="password_verify" onchange="" required/>
+                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" type="password" name="password_verify" id="password_verify" onchange="call_error_function()" required/>
                     <div>
                         <input class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" value="ثبت نام" id="submit" name="submit" />
                     </div>
@@ -95,7 +100,7 @@
                             if(Password != Password_verify){
                                 error();
                             } else{
-                                document.getElementById('submit').removeAttribute("disabled");
+                                success();
                             }
                         }
                     </script>

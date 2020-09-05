@@ -62,30 +62,64 @@
         </div>
         <div class="middle mb-12 mt-12">
             <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
-                <form class="pt-6 pb-8 mb-4 text-center" action="https://www.afragostarnovin.ir/public/login.php" method="post">
-                    <label for="phonenumber">شماره همراه</label>
-                    <input type="telephone" id="phonenumber" name="phonenumber" class="my-5 fullname border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required"/>
-                    <label for="password">رمز عبور</label>
-                    <input type="password" id="password" name="password" class="my-5 password border-solid border-4 h-13 border-gray-600 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" required="required" />
-                    <input type="submit" id="submit" name="submit" value="ورود" class="text-center bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer"/>
+                <div class="error-text">
+                    <div class="err" id="err">
+                        
+                    </div>
+                    <script>
+                        function error(){
+                            let error_text = "<p style='color:red;'>رمز عبور شما همخوانی ندارد</p>";
+                            document.getElementById('err').innerHTML       = error_text;
+                            docuemnt.getElementById('submit').setAttribute = "disabled";
+                        }
+                    </script>
+                </div>
+                <form class="text-center m-5" action="verify-email.php" method="POST">
+                    <label for="first_name">نام : </label>
+                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" name="first_name" id="first_name" required/>
+                    <label for="last_name">نام خانوادگی : </label>
+                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" name="last_name" id="last_name" required/>
+                    <label for="email">ایمیل : </label>
+                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="email" name="email" id="email" required/>
+                    <label for="password">رمز عبور : </label>
+                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" type="password" name="password" id="password" required/>
+                    <label for="password_verify">تایید رمز عبور : </label>
+                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" type="password" name="password_verify" id="password_verify" onchange="" required/>
+                    <div>
+                        <input class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" value="ثبت نام" id="submit" name="submit" />
+                    </div>
+                    <script>
+                        let Password = document.getElementById('password').value;
+                        let Password_verify = document.getElementById('password_verify').value;
+                        function call_error_function(){
+                            if(Password != Password_verify){
+                                error();
+                            } else{
+                                document.getElementById('submit').removeAttribute("disabled");
+                            }
+                        }
+                    </script>
                 </form>
                 <?php
                     if(isset($_POST['submit'])){
-                        $phonenumber = $_POST['phonenumber'];
-                        $password = $_POST['password'];
-                        if($phonenumber && $password) {
+                        $first_name = $_POST['first_name'];
+                        $last_name  = $_POST['last_name'];
+                        $email      = $_POST['email'];
+                        $password   = $_POST['password'];
+                        if($first_name && $last_name && $email && $password) {
                             $host_name = 'localhost';
-                            $user_name = 'afragost_admin';
+                            $user_name = 'afragost_user';
                             $user_pass = '7d1KS~eK[}{a';
-                            $db_name   = 'afragost_users_free_consulting';
+                            $db_name   = 'afragost_users';
                             $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
                                 if(!$connection){
                                     die("ارتباط با سرور با مشکل مواجه شد");
                                 }
-                            $phonenumber = mysqli_real_escape_string($connection,$phonenumber);
-                            $password = mysqli_real_escape_string($connection,$password);
-                            }
-
+                            $first_name = mysqli_real_escape_string($connection,$first_name);
+                            $last_name  = mysqli_real_escape_string($connection,$last_name);
+                            $email      = mysqli_real_escape_string($connection,$email);
+                            $password   = mysqli_real_escape_string($connection,$password);
+                        }
                     }
                 ?>
             </div>

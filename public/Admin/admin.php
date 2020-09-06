@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -62,6 +63,27 @@
         </div>
         <div class="middle mb-12 mt-12">
             <?php
+                $host_name = "localhost";
+                $user_name = "afragost_admin";
+                $user_pass = "";
+                $db_name   = "afragost_admin";
+                $connection = mysqli_connect($host_name , $user_name , $user_pass , $db_name);
+                if(!$connection){
+                    echo("ارتباط با سرور با مشکل مواجه شد");
+                }else{
+                    $sql = "SELECT * FROM admins";
+                    $result = mysqli_query($connection , $sql);
+                    $row = mysqli_fetch_array($result);
+                    if(!mysqli_num_rows($result)){
+                        die("دسترسی به ادمین پنل امکان پذیر نیست");
+                    }elseif(!isset($_SESSION)){
+                        header("location: password.php");
+                    }elseif(isset($_SESSION)){
+                        
+                    }else{
+                        
+                    }
+                }
                 $host_name = 'localhost';
                 $user_name = 'afragost_admin';
                 $user_pass = '7d1KS~eK[}{a';

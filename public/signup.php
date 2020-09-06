@@ -2,23 +2,33 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>ورود | شرکت افراگستر نوین</title>
+        <title>ثبت نام | شرکت افراگستر نوین</title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="robots" content="noindex,nofollow" />
         <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"/>
-        <link rel="stylesheet" href="../../src/css/index.css" />
-        <link rel="stylesheet" href="../../src/css/media.css" />
-        <link rel="stylesheet" href="../../src/css/menu-side-navbar.css" />
-        <link rel="stylesheet" href="../../src/css/admin.css" />
-        <link rel="stylesheet" href="../../src/assets/slideshow/OwlCarousel/dist/assets/owl.carousel.min.css"/>
-        <link rel="stylesheet" href="../../src/assets/slideshow/OwlCarousel/dist/assets/owl.theme.default.min.css"/>
-        <link rel="shortcut icon" href="../../src/icons/siteicon.ico" />
-        <link rel="icon" href="../../src/icons/siteicon.ico" />
+        <link rel="stylesheet" href="../src/css/index.css" />
+        <link rel="stylesheet" href="../src/css/media.css" />
+        <link rel="stylesheet" href="../src/css/menu-side-navbar.css" />
+        <link rel="stylesheet" href="../src/css/admin.css" />
+        <link rel="shortcut icon" href="../src/icons/siteicon.ico" />
+        <link rel="icon" href="../src/icons/siteicon.ico" />
         <script src="https://kit.fontawesome.com/b39b75221a.js" crossorigin="anonymous"></script>
-        <script src="../../src/jquery/jquery-3.4.1.slim.min.js"></script>
-        <script src="../../src/assets/slideshow/OwlCarousel/dist/owl.carousel.min.js"></script>
+        <script src="../src/jquery/jquery-3.4.1.slim.min.js"></script>
+        <script>
+            function verifier(){
+                var p1 = document.getElementById('password').value;
+                var p2 = document.getElementById('passwordVerify').value;
+                if(p1 != p2){
+                    document.getElementById('err').innerHTML = "<p style='color:red;'>رمز همخوانی ندارد</p>";
+                    document.getElementById('submit').disabled = true;
+                }else{
+                    document.getElementById('err').innerHTML = "";
+                    document.getElementById('submit').disabled = false;
+                }
+            }
+        </script>
         <style>
         </style>
     </head>
@@ -27,7 +37,7 @@
             <div class="header flex h-16">
                 <div class="menu-with-hamburger">
                     <div id="hamburger" class="block sm:block md:hidden lg:hidden xl:hidden" style="margin-top: 8px; float: right;">
-                        <span class="opener-span cursor-pointer" onclick="menuOpen()"><img src="../../src/icons/hamburger.png" style="width:3rem;height:3rem;" /></span>
+                        <span class="opener-span cursor-pointer" onclick="menuOpen()"><img src="../src/icons/hamburger.png" style="width:3rem;height:3rem;" /></span>
                     </div>
                     <div class="menu-side-navbar block sm:block md:hidden lg;hidden xl:hidden" id="menu-side-navbar">
                         <a class="closebtn" href="javascript:void(0)" onclick="menuClose()">&times;</a>
@@ -36,7 +46,7 @@
                         <a class="" href="https://www.afragostarnovin.ir/public/index#consult" onclick="menuClose()">مشاوره رایگان</a>
                         <a class="" href="https://www.afragostarnovin.ir/public/index#aboutus" onclick="menuClose()">درباره شرکت</a>
                     </div>
-                    <script src="../../src/js/menu-opener.js"></script>
+                    <script src="../src/js/menu-opener.js"></script>
                 </div>
                 <div class="menu flex-1 my-2 hidden sm:hidden md:flex lg:flex xl:flex">
                     <a title="صفحه اصلی" class="cursor-pointer btn-header text-white font-bold mx-4 my-2 text-l" href="https://www.afragostarnovin.ir/public/index.php">
@@ -57,52 +67,47 @@
                         شرکت افراگستر نوین
                     </h1>
                 </a>
-                <img class="float-left mt-2 ml-2" src="../../src/icons/sitelogo.jpg" style="width:50px;height:50px;left:0;">
+                <img class="float-left mt-2 ml-2" src="../src/icons/sitelogo.jpg" style="width:50px;height:50px;left:0;">
             </div>
         </div>
         <div class="middle mb-12 mt-12">
-            <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+            <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl">
                 <div class="error-text">
-                    <div class="err" id="err">
+                    <p class="err" id="err">
                         
-                    </div>
-                    <script>
-                        function error(){
-                            let error_text = "<p style='color:red;'>رمز عبور شما همخوانی ندارد</p>";
-                            document.getElementById('err').innerHTML       = error_text;
-                            docuemnt.getElementById('submit').setAttribute = "disabled";
-                        }
-
-                        function success(){
-                            document.getElementById('submit').removeAttribute("disabled");
-                        }
-
-                    </script>
+                    </p>
                 </div>
-                <form class="text-center m-5 block" action="signup.php" method="POST">
-                    <label for="first_name">نام : </label>
-                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" name="first_name" id="first_name" required/>
-                    <label for="last_name">نام خانوادگی : </label>
-                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" name="last_name" id="last_name" required/>
-                    <label for="email">ایمیل : </label>
-                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="email" name="email" id="email" required/>
-                    <label for="password">رمز عبور : </label>
-                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" type="password" name="password" id="password" required/>
-                    <label for="password_verify">تایید رمز عبور : </label>
-                    <input class="shadow appearance-none border border-gray-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" type="password" name="password_verify" id="password_verify" onchange="call_error_function()" required/>
+                <form class="text-center m-5 w-1/2 m-auto" action="signup.php" method="POST">
+                    <div class="m-auto">
+                        <input class="firstname shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="نام" type="text" name="first_name" id="first_name" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)" required/>
+                    </div>
                     <div>
-                        <input class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" value="ثبت نام" id="submit" name="submit" />
+                        <input class="lastname shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="نام خانوادگی" type="text" name="last_name" id="last_name" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)" required/>
+                    </div>
+                    <div>
+                        <input class="email-input shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="ایمیل" type="email" name="email" id="email" required/>
+                    </div>
+                    <div>
+                        <input class="password shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" placeholder="رمز عبور" type="password" name="password" id="password" oninput="verifier()" required/>
+                    </div>
+                    <div>
+                        <input class="passwordverify shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" placeholder="تایید رمز عبور" type="password" name="passwordVerify" id="passwordVerify" oninput="verifier()" required/>
+                    </div>
+                    <div>
+                        <input class="submit inline-block bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" value="ثبت نام" id="submit" name="submit"/>
                     </div>
                     <script>
-                        let Password = document.getElementById('password').value;
-                        let Password_verify = document.getElementById('password_verify').value;
-                        function call_error_function(){
-                            if(Password != Password_verify){
-                                error();
-                            } else{
-                                success();
+                        function preventNumberInput(e){
+                            var keyCode = (e.keyCode ? e.keyCode : e.which);
+                            if (keyCode > 47 && keyCode < 58 || keyCode > 95 && keyCode < 107 ){
+                                e.preventDefault();
                             }
                         }
+                        $(document).ready(function(){
+                            $('').keypress(function(e) {
+                                preventNumberInput(e);
+                            });
+                        });
                     </script>
                 </form>
                 <?php
@@ -169,12 +174,12 @@
                 <div class="company-description mx-4">
                     <div class="my-5 text-lg">
                         <p>
-                                شرکت افرا گستر نوین شرکتی در زمینه فروش دستگاه های خودپرداز
-                                (ATM)،
-                                دستگاه های کارتخوان   
-                                (POS)،
-                                فروش قطعات
-                                و ارائه خدمات دیگر می باشد
+                            شرکت افرا گستر نوین شرکتی در زمینه فروش دستگاه های خودپرداز
+                            (ATM)،
+                            دستگاه های کارتخوان   
+                            (POS)،
+                            فروش قطعات
+                            و ارائه خدمات دیگر می باشد
                         </p>
                         <p class="my-3 text-lg">
                             خدماتی نظیر طراحی وبسایت،
@@ -188,13 +193,13 @@
                     </p>
                     <div style="background-color:inherit;" class="social-networks text-center sm:text-center md:text-center lg:text-center xl:text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
                         <a class="" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
-                            <img class="inline" src="../../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
+                            <img class="inline" src="../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
                         </a>
                         <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
-                            <img class="inline" src="../../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
+                            <img class="inline" src="../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
                         </a>
                         <a class="" title="" target="_blank" href="https://wa.me/989354107274">
-                            <img class="inline" src="../../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
+                            <img class="inline" src="../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
                         </a>
                     </div>
                 </div>

@@ -63,45 +63,25 @@
         </div>
         <div class="middle mb-12 mt-12">
             <?php
-                $host_name = "localhost";
-                $user_name = "afragost_admin";
+                $host_name = "";
+                $user_name = "";
                 $user_pass = "";
-                $db_name   = "afragost_admin";
+                $db_name   = "";
                 $connection = mysqli_connect($host_name , $user_name , $user_pass , $db_name);
                 if(!$connection){
                     echo("ارتباط با سرور با مشکل مواجه شد");
                 }else{
-                    $sql = "SELECT * FROM admins";
+                    $sql = "SELECT * FROM";
                     $result = mysqli_query($connection , $sql);
                     $row = mysqli_fetch_array($result);
                     if(!mysqli_num_rows($result)){
                         die("دسترسی به ادمین پنل امکان پذیر نیست");
-                    }elseif(!isset($_SESSION)){
+                    }elseif(!isset($_SESSION['key'])){
                         header("location: password.php");
-                    }elseif(isset($_SESSION)){
-                        
-                    }else{
-                        
+                    }elseif(isset($_SESSION['key'])){
+                        header("location: panel.php");
                     }
                 }
-                $host_name = 'localhost';
-                $user_name = 'afragost_admin';
-                $user_pass = '7d1KS~eK[}{a';
-                $db_name   = 'afragost_users_free_consulting';
-                $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
-                    if(!$connection){
-                        die("ارتباط با پایگاه داده (درخواست ها) با مشکل مواجه شد");
-                    }
-                $query = "SELECT * FROM users";
-                $result = mysqli_query($connection,$query);
-                $row = mysqli_fetch_array($result);
-                if(!mysqli_num_rows($result)){
-                    echo "درخواستی موجود نیست";
-                }else{
-                    $num_of_rows = mysqli_num_rows($result);
-                    echo "<a class='text-center' href='https://www.afragostarnovin.ir/public/Admin/requests.php'>" . "درخواست ها" . "(" . $num_of_rows . ")" . "</a>";
-                }
-                
             ?>
         </div>
         <div class="footer w-full">

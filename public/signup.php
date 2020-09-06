@@ -59,24 +59,34 @@
         </div>
         <div class="middle mb-12 mt-12">
             <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl">
+                <script>
+                    function validation(){
+                        var p1 = document.getElementById('password').value;
+                        var p2 = document.getElementById('passwordVerify').value;
+                        if(p1 != p2){
+                            document.getElementById('err').innerHTML = "<p style='color:red;'>رمز همخوانی ندارد</p>";
+                            document.getElementById('submit').disabled = true;
+                        }else{
+                            document.getElementById('err').innerHTML = "";
+                            document.getElementById('submit').disabled = false;
+                        }
+                    }
+                </script>
                 <div class="error-text">
                     
                 </div>
-                <form class="text-center m-5 w-1/2 m-auto" action="signup.php" method="POST">
+                <form class="text-center m-5 w-1/2 m-auto" onsubmit="validation()" action="signup.php" method="POST">
                     <div>
-                        <input class="firstname shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="نام" type="text" name="first_name" id="first_name" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)" required/>
-                    </div>
-                    <div>
-                        <input class="lastname shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="نام خانوادگی" type="text" name="last_name" id="last_name" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)" required/>
+                        <input class="fullname shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="نام و نام خانوادگی" type="text" name="fullname" id="fullname" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)" required/>
                     </div>
                     <div>
                         <input class="email-input shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="ایمیل" type="email" name="email" id="email" required/>
                     </div>
                     <div>
-                        <input class="password shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" placeholder="رمز عبور" type="password" name="password" id="password" oninput="validation()" required/>
+                        <input class="password shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" placeholder="رمز عبور" type="password" name="password" id="password" required/>
                     </div>
                     <div>
-                        <input class="passwordverify shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" placeholder="تایید رمز عبور" type="password" name="passwordVerify" id="passwordVerify" oninput="validation()" required/>
+                        <input class="passwordverify shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" placeholder="تایید رمز عبور" type="password" name="passwordVerify" id="passwordVerify" required/>
                     </div>
                     <div>
                         <input class="submit inline-block bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" value="ثبت نام" id="submit" name="submit"/>
@@ -93,26 +103,14 @@
                                 preventNumberInput(e);
                             });
                         });
-                        function validation(){
-                            var p1 = document.getElementById('password').value;
-                            var p2 = document.getElementById('passwordVerify').value;
-                            if(p1 != p2){
-                                document.getElementById('err').innerHTML = "<p style='color:red;'>رمز همخوانی ندارد</p>";
-                                document.getElementById('submit').disabled = true;
-                            }else{
-                                document.getElementById('err').innerHTML = "";
-                                document.getElementById('submit').disabled = false;
-                            }
-                        }
                     </script>
                 </form>
                 <?php
                     if(isset($_POST['submit'])){
-                        $first_name = $_POST['first_name'];
-                        $last_name  = $_POST['last_name'];
+                        $fullname  = $_POST['fullname'];
                         $email      = $_POST['email'];
                         $password   = $_POST['password'];
-                        if($first_name && $last_name && $email && $password) {
+                        if($fullname && $last_name && $email && $password) {
                             $host_name = 'localhost';
                             $user_name = 'afragost_user';
                             $user_pass = '7d1KS~eK[}{a';
@@ -121,10 +119,11 @@
                                 if(!$connection){
                                     die("ارتباط با سرور با مشکل مواجه شد");
                                 }
-                            $first_name = mysqli_real_escape_string($connection,$first_name);
+                            $fullname = mysqli_real_escape_string($connection,$first_name);
                             $last_name  = mysqli_real_escape_string($connection,$last_name);
                             $email      = mysqli_real_escape_string($connection,$email);
                             $password   = mysqli_real_escape_string($connection,$password);
+                            $email = strtolower($email);
                         }
                     }
                 ?>

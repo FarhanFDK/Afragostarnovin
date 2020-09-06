@@ -144,10 +144,10 @@
                 $description = $_POST['contact-us-description'];
                 require "../src/includes/jdf.php";
                 $id = jdate('Y/m/d g:i:s a' , '' , '' , 'Asia/Tehran' , 'en'); ;
-                $host_name = 'localhost';
-                $user_name = 'afragost_admin';
-                $user_pass = '7d1KS~eK[}{a';
-                $db_name   = 'afragost_users_free_consulting';
+                $host_name = '';
+                $user_name = '';
+                $user_pass = '';
+                $db_name   = '';
                 $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
                     if(!$connection){
                         die("ارتباط با سرور با مشکل مواجه شد");

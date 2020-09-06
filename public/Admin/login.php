@@ -98,7 +98,7 @@
                             $password = $_POST['password'];
                             $username = mysqli_real_escape_string($connection,$username);
                             $password = mysqli_real_escape_string($connection,$password);
-                            $sql = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
+                            $sql = "SELECT * FROM admins WHERE username='$username' AND password='$password' LIMIT 1";
                             $result = mysqli_query($connection,$sql);
                             if(!mysqli_num_rows($result)){
                                 echo "نام کاربری یا رمز عبور اشباه است";

@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -71,15 +73,22 @@
                 if(!$connection){
                     echo("ارتباط با سرور با مشکل مواجه شد");
                 }else{
-                    $sql = "SELECT * FROM";
+                    $sql = "SELECT * FROM admins";
                     $result = mysqli_query($connection , $sql);
                     $row = mysqli_fetch_array($result);
                     if(!mysqli_num_rows($result)){
                         die("دسترسی به ادمین پنل امکان پذیر نیست");
                     }elseif(!isset($_SESSION['key'])){
-                        header("location: password.php");
+                        echo "
+                            <script>
+                                function redirect(){
+                                    location.href = 'https://www.afragostarnovin.ir/public/Admin/login.php';
+                                }
+                                redirect();
+                            </script>
+                            ";
                     }elseif(isset($_SESSION['key'])){
-                        header("location: panel.php");
+                        include "panel.php";
                     }
                 }
             ?>

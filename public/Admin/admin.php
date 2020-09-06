@@ -101,6 +101,7 @@
                     $num_of_rows = mysqli_num_rows($result);
                     echo "<a class='text-center' href='https://www.afragostarnovin.ir/public/Admin/requests.php'>" . "درخواست ها" . "(" . $num_of_rows . ")" . "</a>";
                 }
+                
             ?>
         </div>
         <div class="footer w-full">

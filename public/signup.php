@@ -16,19 +16,6 @@
         <link rel="icon" href="../src/icons/siteicon.ico" />
         <script src="https://kit.fontawesome.com/b39b75221a.js" crossorigin="anonymous"></script>
         <script src="../src/jquery/jquery-3.4.1.slim.min.js"></script>
-        <script>
-            function verifier(){
-                var p1 = document.getElementById('password').value;
-                var p2 = document.getElementById('passwordVerify').value;
-                if(p1 != p2){
-                    document.getElementById('err').innerHTML = "<p style='color:red;'>رمز همخوانی ندارد</p>";
-                    document.getElementById('submit').disabled = true;
-                }else{
-                    document.getElementById('err').innerHTML = "";
-                    document.getElementById('submit').disabled = false;
-                }
-            }
-        </script>
         <style>
         </style>
     </head>
@@ -73,12 +60,10 @@
         <div class="middle mb-12 mt-12">
             <div class="div-form my-2 text-xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl">
                 <div class="error-text">
-                    <p class="err" id="err">
-                        
-                    </p>
+                    
                 </div>
                 <form class="text-center m-5 w-1/2 m-auto" action="signup.php" method="POST">
-                    <div class="m-auto">
+                    <div>
                         <input class="firstname shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="نام" type="text" name="first_name" id="first_name" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)" required/>
                     </div>
                     <div>
@@ -88,10 +73,10 @@
                         <input class="email-input shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="ایمیل" type="email" name="email" id="email" required/>
                     </div>
                     <div>
-                        <input class="password shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" placeholder="رمز عبور" type="password" name="password" id="password" oninput="verifier()" required/>
+                        <input class="password shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" placeholder="رمز عبور" type="password" name="password" id="password" oninput="validation()" required/>
                     </div>
                     <div>
-                        <input class="passwordverify shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" placeholder="تایید رمز عبور" type="password" name="passwordVerify" id="passwordVerify" oninput="verifier()" required/>
+                        <input class="passwordverify shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline inline-block" placeholder="تایید رمز عبور" type="password" name="passwordVerify" id="passwordVerify" oninput="validation()" required/>
                     </div>
                     <div>
                         <input class="submit inline-block bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" value="ثبت نام" id="submit" name="submit"/>
@@ -108,6 +93,17 @@
                                 preventNumberInput(e);
                             });
                         });
+                        function validation(){
+                            var p1 = document.getElementById('password').value;
+                            var p2 = document.getElementById('passwordVerify').value;
+                            if(p1 != p2){
+                                document.getElementById('err').innerHTML = "<p style='color:red;'>رمز همخوانی ندارد</p>";
+                                document.getElementById('submit').disabled = true;
+                            }else{
+                                document.getElementById('err').innerHTML = "";
+                                document.getElementById('submit').disabled = false;
+                            }
+                        }
                     </script>
                 </form>
                 <?php

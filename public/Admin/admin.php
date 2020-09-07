@@ -78,7 +78,7 @@
                     $row = mysqli_fetch_array($result);
                     if(!mysqli_num_rows($result)){
                         die("دسترسی به ادمین پنل امکان پذیر نیست");
-                    }elseif(!isset($_SESSION['key'])){
+                    }elseif(!isset($_COOKIE['admin'])){
                         echo "
                             <script>
                                 function redirect(){
@@ -87,7 +87,10 @@
                                 redirect();
                             </script>
                             ";
-                    }elseif(isset($_SESSION['key'])){
+                    }elseif(isset($_COOKIE['admin'])){
+                        function preventer(){
+                            
+                        }
                         include "panel.php";
                     }
                 }

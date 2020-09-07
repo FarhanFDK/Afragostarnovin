@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(isset($_SESSION['key'])){
+    if(isset($_COOKIE['admin'])){
         die("
             <script>
                 function redirect(){
@@ -103,7 +103,9 @@
                             if(!mysqli_num_rows($result)){
                                 echo "نام کاربری یا رمز عبور اشباه است";
                             }else{
-                                $_SESSION['key'] = "key";
+                                $cookie_name  = "admin";
+                                $cookie_value = "admin panel access";
+                                setcookie($cookie_name , $cookie_value , time() + (3600) , "/");
                                     echo "  <script>
                                                 function redirect(){
                                                     location.href = 'https://www.afragostarnovin.ir/public/Admin/admin.php';

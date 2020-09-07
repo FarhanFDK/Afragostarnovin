@@ -1,4 +1,14 @@
 <?php
+    if(function_exists("preventer")){
+        die("
+            <script>
+                function redirect(){
+                    location.href = 'https://www.afragostarnovin.ir/public/Admin/admin.php';
+                }
+                redirect();
+            </script>
+        ");
+    }
     $host_name = '';
     $user_name = '';
     $user_pass = '';

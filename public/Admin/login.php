@@ -21,14 +21,14 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="robots" content="noindex,nofollow" />
         <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"/>
-        <link rel="stylesheet" href="../src/css/index.css" />
-        <link rel="stylesheet" href="../src/css/media.css" />
-        <link rel="stylesheet" href="../src/css/menu-side-navbar.css" />
-        <link rel="stylesheet" href="../src/css/admin.css" />
-        <link rel="shortcut icon" href="../src/icons/siteicon.ico" />
-        <link rel="icon" href="../src/icons/siteicon.ico" />
+        <link rel="stylesheet" href="../../src/css/index.css" />
+        <link rel="stylesheet" href="../../src/css/media.css" />
+        <link rel="stylesheet" href="../../src/css/menu-side-navbar.css" />
+        <link rel="stylesheet" href="../../src/css/admin.css" />
+        <link rel="shortcut icon" href="../../src/icons/siteicon.ico" />
+        <link rel="icon" href="../../src/icons/siteicon.ico" />
         <script src="https://kit.fontawesome.com/b39b75221a.js" crossorigin="anonymous"></script>
-        <script src="../src/jquery/jquery-3.4.1.slim.min.js"></script>
+        <script src="../../src/jquery/jquery-3.4.1.slim.min.js"></script>
         <style>
         </style>
     </head>
@@ -67,7 +67,7 @@
                         شرکت افراگستر نوین
                     </h1>
                 </a>
-                <img class="float-left mt-2 ml-2" src="../src/icons/sitelogo.jpg" style="width:50px;height:50px;left:0;">
+                <img class="float-left mt-2 ml-2" src="../../src/icons/sitelogo.jpg" style="width:50px;height:50px;left:0;">
             </div>
         </div>
         <div class="middle mb-12 mt-12">
@@ -101,8 +101,11 @@
                                 echo "نام کاربری یا رمز عبور اشباه است";
                             }else{
                                 $cookie_name  = "admin";
-                                $cookie_value = "admin panel access";
-                                setcookie($cookie_name , $cookie_value , time() + (3600) , "/");
+                                $cookie_value = "admin";
+                                function setter(){
+                                    setcookie($cookie_name,$cookie_value,time() + 3600 , "/");
+                                }
+                                setter();
                                     echo "  <script>
                                                 function redirect(){
                                                     location.href = 'https://www.afragostarnovin.ir/public/Admin/admin.php';
@@ -174,13 +177,13 @@
                     </p>
                     <div style="background-color:inherit;" class="social-networks text-center sm:text-center md:text-center lg:text-center xl:text-center text-sm sm:text-sm md:text-xl lg:text-xl" style="direction:ltr;">
                         <a class="" title="" target="_blank" href="https://instagram.com/mohammadhitman5?igshid=uo17vpqw0ux8">
-                            <img class="inline" src="../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
+                            <img class="inline" src="../../src/icons/instagram.png" aria-hidden="true" style="width:50px;height:50px;"/>
                         </a>
                         <a class="" title="" target="_blank" href="https://t.me/mohammadhitman5">
-                            <img class="inline" src="../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
+                            <img class="inline" src="../../src/icons/telegram.png" aria-hidden="true" style="margin-top:2px;width:50px;height:50px;"/>
                         </a>
                         <a class="" title="" target="_blank" href="https://wa.me/989354107274">
-                            <img class="inline" src="../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
+                            <img class="inline" src="../../src/icons/whatsapp.png" style="width:60px;height:60px;" aria-hidden="true"/>
                         </a>
                     </div>
                 </div>

@@ -1,5 +1,15 @@
 <?php
     session_start();
+    if(!isset($_COOKIE['admin'])){
+        die("
+            <script>
+                function redirect(){
+                    location.href = 'https://www.afragostarnovin.ir/public/Admin/login.php';
+                }
+                redirect();
+            </script>
+            ");
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -75,19 +85,7 @@
                     $row = mysqli_fetch_array($result);
                     if(!mysqli_num_rows($result)){
                         die("دسترسی به ادمین پنل امکان پذیر نیست");
-                    }elseif(!isset($_COOKIE['admin'])){
-                        echo "
-                            <script>
-                                function redirect(){
-                                    location.href = 'https://www.afragostarnovin.ir/public/Admin/login.php';
-                                }
-                                redirect();
-                            </script>
-                            ";
-                    }elseif(isset($_COOKIE['admin'])){
-                        function preventer(){
-
-                        }
+                    }else{
                         include "panel.php";
                     }
                 }

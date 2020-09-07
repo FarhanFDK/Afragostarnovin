@@ -1,5 +1,5 @@
 <?php
-    if(function_exists("preventer")){
+    /*if(function_exists("preventer")){
         die("
             <script>
                 function redirect(){
@@ -8,7 +8,7 @@
                 redirect();
             </script>
         ");
-    }
+    }*/
     $host_name = '';
     $user_name = '';
     $user_pass = '';

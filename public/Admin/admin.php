@@ -15,13 +15,10 @@
         <link rel="stylesheet" href="../../src/css/media.css" />
         <link rel="stylesheet" href="../../src/css/menu-side-navbar.css" />
         <link rel="stylesheet" href="../../src/css/admin.css" />
-        <link rel="stylesheet" href="../../src/assets/slideshow/OwlCarousel/dist/assets/owl.carousel.min.css"/>
-        <link rel="stylesheet" href="../../src/assets/slideshow/OwlCarousel/dist/assets/owl.theme.default.min.css"/>
         <link rel="shortcut icon" href="../../src/icons/siteicon.ico" />
         <link rel="icon" href="../../src/icons/siteicon.ico" />
         <script src="https://kit.fontawesome.com/b39b75221a.js" crossorigin="anonymous"></script>
         <script src="../../src/jquery/jquery-3.4.1.slim.min.js"></script>
-        <script src="../../src/assets/slideshow/OwlCarousel/dist/owl.carousel.min.js"></script>
         <style>
         </style>
     </head>
@@ -89,7 +86,7 @@
                             ";
                     }elseif(isset($_COOKIE['admin'])){
                         function preventer(){
-                            
+
                         }
                         include "panel.php";
                     }

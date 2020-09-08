@@ -15,7 +15,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>REQUESTS | شرکت افراگستر نوین</title>
+        <title>SERVICES | شرکت افراگستر نوین</title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -79,34 +79,18 @@
                 $user_pass = '';
                 $db_name   = '';
                 $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
-                if(!$connection){
-                    die("ارتباط با سرور با مشکل مواجه شد");
-                }
-                $query = "SELECT * FROM users";
+                    if(!$connection){
+                        die("ارتباط با سرور با مشکل مواجه شد");
+                    }
+                $query = "SELECT * FROM services";
                 $result = mysqli_query($connection,$query);
-                 echo "
-                 <table class='text-center'>
-                    <tr class='text-center'>
-                        <th class='text-center'>
-                            نام و نام خانوادگی
-                        </th>
-                        <th class='text-center'>
-                            شماره تلفن
-                        </th>
-                        <th class='text-center'>
-                            توضیحات
-                        </th>
-                        <th class='text-center'>
-                            زمان ثبت درخواست
-                        </th>
-                    </tr>";
-                while($row = mysqli_fetch_array($result)){
-                    echo "<tr class='text-center'><td class='text-center'>" . $row['fullname'] . "</td>";
-                    echo "<td class='text-center'>" . $row['phonenumber'] . "</td>";
-                    echo "<td class='text-center'>" . $row['descriptions'] . "</td>";
-                    echo "<td class='text-center'>" . $row['id'] . "</td></tr>";
+                if(!mysqli_num_rows($result)){
+                    echo "خدماتی موجود نیست";
+                }else{
+                    while($row = mysqli_fetch_array($result)){
+                        echo "<a href='https://www.afragostarnovin.ir/public/services/$row.php' style=''>" . $row['title'];
+                    }
                 }
-                echo "</table>";
             ?>
         </div>
         <div class="footer h-50 w-full">

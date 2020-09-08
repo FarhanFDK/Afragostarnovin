@@ -86,7 +86,7 @@
                     $result = mysqli_query($connection , $sql);
                     $row = mysqli_fetch_array($result);
                     if(!mysqli_num_rows($result)){
-                        die("دسترسی به ادمین پنل امکان پذیر نیست");
+                        echo("دسترسی به ادمین پنل امکان پذیر نیست");
                     }else{
                         include "panel.php";
                     }

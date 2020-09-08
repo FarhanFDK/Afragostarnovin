@@ -10,6 +10,51 @@
             </script>
             ");
     }
+    if(isset($_POST['submit'])){
+        $host_name = "";
+        $user_name = "";
+        $user_pass = "";
+        $db_name   = "";
+        $connection = mysqli_connect($host_name , $user_name , $user_pass , $db_name);
+        if(!$connection){
+            echo("ارتباط با سرور با مشکل مواجه شد");
+        }else{
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $username = mysqli_real_escape_string($connection,$username);
+            $password = mysqli_real_escape_string($connection,$password);
+            $sql = "SELECT * FROM admins WHERE username='$username' AND password='$password' LIMIT 1";
+            $result = mysqli_query($connection,$sql);
+            if(!mysqli_num_rows($result)){
+                echo "نام کاربری یا رمز عبور اشباه است";
+            }else{
+                $cookie_name  = "admin";
+                $cookie_value = "admin";
+                $remember_me = $_POST['remember_me'];
+                if(isset($remember_me)){
+                    ob_start();
+                    setcookie($cookie_name,$cookie_value,time() + (3600 * 24) , "/", "" , true , true);
+                    ob_end_flush();
+                    echo "  <script>
+                                function redirect(){
+                                    location.href = 'https://www.afragostarnovin.ir/public/Admin/admin.php';
+                                }
+                                redirect();
+                            </script>";
+                }else{
+                    ob_start();
+                    setcookie($cookie_name,$cookie_value,time() + 3600 , "/", "" , true , true);
+                    ob_end_flush();
+                    echo "  <script>
+                                function redirect(){
+                                    location.href = 'https://www.afragostarnovin.ir/public/Admin/admin.php';
+                                }
+                                redirect();
+                            </script>";
+                }
+            }
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,57 +112,26 @@
                         شرکت افراگستر نوین
                     </h1>
                 </a>
-                <a class="cursor-pointer" href="https://www.afragostarnovin.ir">
+                <a href="https://www.afragostarnovin.ir">
                     <img class="float-left" src="../../src/icons/sitelogo.jpg" style="width:50px;height:50px;left:0;">
                 </a>
             </div>
         </div>
         <div class="middle mb-12 mt-12">
             <form class="text-center m-5 w-1/2 m-auto" action="login.php" method="POST">
-                <div class="m-auto">
+                <div>
                     <input class="username shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="نام کاربری" type="text" name="username" maxlength="15" id="username" required/>
                 </div>
                 <div>
                     <input class="password shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="رمز عبور" type="password" name="password" maxlength="20" id="password" required/>
                 </div>
-                <div>
-                    <input class="submit inline-block bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" value="ورود" id="submit" name="submit"/>
+                <div class="float-right">
+                    <input class="checkbox shadow border border-gray-500 mt-4 leading-tight focus:outline-none focus:shadow-outline" type="checkbox" name="remember_me" id="remember_me" />
+                    <label class="mr-1" for="remember_me">مرا بخاطر بسپار</label>
                 </div>
-                <?php
-                    if(isset($_POST['submit'])){
-                        $host_name = "";
-                        $user_name = "";
-                        $user_pass = "";
-                        $db_name   = "";
-                        $connection = mysqli_connect($host_name , $user_name , $user_pass , $db_name);
-                        if(!$connection){
-                            echo("ارتباط با سرور با مشکل مواجه شد");
-                        }else{
-                            $username = $_POST['username'];
-                            $password = $_POST['password'];
-                            $username = mysqli_real_escape_string($connection,$username);
-                            $password = mysqli_real_escape_string($connection,$password);
-                            $sql = "SELECT * FROM admins WHERE username='$username' AND password='$password' LIMIT 1";
-                            $result = mysqli_query($connection,$sql);
-                            if(!mysqli_num_rows($result)){
-                                echo "نام کاربری یا رمز عبور اشباه است";
-                            }else{
-                                $cookie_name  = "admin";
-                                $cookie_value = "admin";
-                                function setter(){
-                                    setcookie($cookie_name,$cookie_value,time() + 3600 , "/");
-                                }
-                                setter();
-                                    echo "  <script>
-                                                function redirect(){
-                                                    location.href = 'https://www.afragostarnovin.ir/public/Admin/admin.php';
-                                                }
-                                                redirect();
-                                            </script>";
-                            }
-                        }
-                    }
-                ?>
+                <div class="clear-both">
+                    <input class="submit mt-4 inline-block bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" value="ورود" id="submit" name="submit"/>
+                </div>
             </form>
             </div>
         <div class="footer w-full">

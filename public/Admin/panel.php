@@ -24,7 +24,7 @@
                     echo "درخواستی موجود نیست";
                 }else{
                     $num_of_rows = mysqli_num_rows($result);
-                    echo "<a class='text-center' href='https://www.afragostarnovin.ir/public/Admin/requests.php'>" . "درخواست ها" . "(" . $num_of_rows . ")" . "</a>";
+                    echo "<a href='https://www.afragostarnovin.ir/public/Admin/requests.php' style='display:block;'>" . "درخواست ها" . "(" . $num_of_rows . ")" . "</a>";
                 }
         }
     $host_name = '';
@@ -33,7 +33,7 @@
     $db_name   = '';
     $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
         if(!$connection){
-            echo("ارتباط با پایگاه داده (کاربرها) با مشکل مواجه شد");
+            echo "ارتباط با پایگاه داده (کاربرها) با مشکل مواجه شد" . "<br>";
         }else{
             $query = "SELECT * FROM users";
             $result = mysqli_query($connection,$query);
@@ -42,7 +42,7 @@
                     echo "کاربری وجود ندارد";
                 }else{
                     $num_of_rows = mysqli_num_rows($result);
-                    echo "<a class='text-center' href='https://www.afragostarnovin.ir/public/Admin/users.php'>" . "کاربران" . "(" . $num_of_rows . ")" . "</a>";
+                    echo "<a href='https://www.afragostarnovin.ir/public/Admin/users.php' style='display:block;'>" . "کاربران" . "(" . $num_of_rows . ")" . "</a>";
                 }
         }
     $host_name = '';
@@ -51,15 +51,15 @@
     $db_name   = '';
     $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
         if(!$connection){
-            echo("ارتباط با پایگاه داده (بازدیدها) با مشکل مواجه شد");
+            echo("ارتباط با پایگاه داده (بازدیدها) با مشکل مواجه شد" . "<br>");
         }else{
-            $query = "SELECT * FROM users";
+            $query = "SELECT * FROM visits";
             $result = mysqli_query($connection,$query);
             $row = mysqli_fetch_array($result);
                 if(!mysqli_num_rows($result)){
-                    echo "کاربری وجود ندارد";
+                    echo "بازدیدی وجود ندارد";
                 }else{
                     $num_of_rows = mysqli_num_rows($result);
-                    echo "<a class='text-center' href='https://www.afragostarnovin.ir/public/Admin/users.php'>" . "کاربران" . "(" . $num_of_rows . ")" . "</a>";
+                    echo "<a href='https://www.afragostarnovin.ir/public/Admin/users.php' style='display:block;'>" . "بازدیدها" . "(" . $num_of_rows . ")" . "</a>";
                 }
         }

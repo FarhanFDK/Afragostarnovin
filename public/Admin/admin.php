@@ -67,8 +67,8 @@
                         شرکت افراگستر نوین
                     </h1>
                 </a>
-                <a class="" title="" href="">
-                    <img class="float-left mt-2 ml-2" src="../../src/icons/sitelogo.jpg" style="width:50px;height:50px;left:0;">
+                <a class="cursor-pointer" href="https://www.afragostarnovin.ir">
+                    <img class="float-left" src="../../src/icons/sitelogo.jpg" style="width:50px;height:50px;left:0;">
                 </a>
             </div>
         </div>

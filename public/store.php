@@ -62,12 +62,14 @@
             درباره شرکت
           </a>
         </div>
-        <a class="cursor-pointer ml-4 text-center sm:text-center md:text-left text-xl truncate float-left sm:float-left" title="" href='#'>
+        <a class="cursor-pointer ml-4 text-center sm:text-center md:text-left text-xl truncate float-left sm:float-left" title="" href='https://www.afragostarnovin.ir'>
           <h1 class="my-2 font-bold">
            شرکت افراگستر نوین
           </h1>
         </a>
-        <img class="float-left mt-2 ml-2" src="../src/icons/sitelogo.jpg" style="width:50px;height:50px;left:0;">
+        <a class="cursor-pointer" href="https://www.afragostarnovin.ir">
+          <img class="float-left" src="../../src/icons/sitelogo.jpg" style="width:50px;height:50px;left:0;">
+        </a>
       </div>
       <div class="middle">
         <div class="mt-5 block sm:block md:flex lg:flex xl:flex text-xl">

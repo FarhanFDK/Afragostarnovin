@@ -17,7 +17,9 @@
         $db_name   = "";
         $connection = mysqli_connect($host_name , $user_name , $user_pass , $db_name);
         if(!$connection){
-            echo("ارتباط با سرور با مشکل مواجه شد");
+            echo "  <script>
+                        document.getElementById('err').innerHTML = 'ارتباط با سرور با مشکل مواجه شد';
+                    </script>";
         }else{
             $username = $_POST['username'];
             $password = $_POST['password'];
@@ -26,7 +28,9 @@
             $sql = "SELECT * FROM admins WHERE username='$username' AND password='$password' LIMIT 1";
             $result = mysqli_query($connection,$sql);
             if(!mysqli_num_rows($result)){
-                echo "نام کاربری یا رمز عبور اشباه است";
+                echo "  <script>
+                            document.getElementById('err').innerHTML = 'ارتباط با سرور با مشکل مواجه شد';
+                        </script>";
             }else{
                 $cookie_name  = "admin";
                 $cookie_value = "admin";
@@ -132,8 +136,10 @@
                 <div class="clear-both">
                     <input class="submit mt-4 inline-block bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" value="ورود" id="submit" name="submit"/>
                 </div>
+                <div id="err">
+                </div>
             </form>
-            </div>
+        </div>
         <div class="footer w-full">
             <div class="" style="">
                 <div class="flex flex-row">

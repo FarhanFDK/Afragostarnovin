@@ -88,7 +88,8 @@
                     echo "خدماتی موجود نیست";
                 }else{
                     while($row = mysqli_fetch_array($result)){
-                        echo "<a href='https://www.afragostarnovin.ir/public/services/$row.php' style=''>" . $row['title'];
+                        $row_title = $row['service_title'];
+                        echo "<a href='https://www.afragostarnovin.ir/public/services/$row_title.php' style=''>" . "</a>";
                     }
                 }
             ?>

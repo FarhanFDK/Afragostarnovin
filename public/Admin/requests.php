@@ -74,7 +74,7 @@
         </div>
         <div class="middle">
             <?php
-                $host_name = '';
+                $host_name = 'localhost';
                 $user_name = '';
                 $user_pass = '';
                 $db_name   = '';

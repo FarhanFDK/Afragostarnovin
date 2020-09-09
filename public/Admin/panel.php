@@ -9,7 +9,7 @@
             </script>
         ");
     }*/
-    $host_name = '';
+    $host_name = 'localhost';
     $user_name = '';
     $user_pass = '';
     $db_name   = '';
@@ -21,13 +21,14 @@
             $result = mysqli_query($connection,$query);
             $row = mysqli_fetch_array($result);
                 if(!mysqli_num_rows($result)){
-                    echo "درخواستی موجود نیست";
+                    $num_of_rows = mysqli_num_rows($result);
+                    echo "<a href='https://www.afragostarnovin.ir/public/Admin/requests.php' style='display:block;'>" . "درخواست ها" . "(" . $num_of_rows . ")" . "</a>";
                 }else{
                     $num_of_rows = mysqli_num_rows($result);
                     echo "<a href='https://www.afragostarnovin.ir/public/Admin/requests.php' style='display:block;'>" . "درخواست ها" . "(" . $num_of_rows . ")" . "</a>";
                 }
         }
-    $host_name = '';
+    $host_name = 'localhost';
     $user_name = '';
     $user_pass = '';
     $db_name   = '';
@@ -39,13 +40,14 @@
             $result = mysqli_query($connection,$query);
             $row = mysqli_fetch_array($result);
                 if(!mysqli_num_rows($result)){
-                    echo "کاربری وجود ندارد";
+                    $num_of_rows = mysqli_num_rows($result);
+                    echo "<a href='https://www.afragostarnovin.ir/public/Admin/users.php' style='display:block;'>" . "کاربران" . "(" . $num_of_rows . ")" . "</a>";
                 }else{
                     $num_of_rows = mysqli_num_rows($result);
                     echo "<a href='https://www.afragostarnovin.ir/public/Admin/users.php' style='display:block;'>" . "کاربران" . "(" . $num_of_rows . ")" . "</a>";
                 }
         }
-    $host_name = '';
+    $host_name = 'localhost';
     $user_name = '';
     $user_pass = '';
     $db_name   = '';
@@ -57,13 +59,14 @@
             $result = mysqli_query($connection,$query);
             $row = mysqli_fetch_array($result);
                 if(!mysqli_num_rows($result)){
-                    echo "بازدیدی وجود ندارد";
+                    $num_of_rows = mysqli_num_rows($result);
+                    echo "<a href='https://www.afragostarnovin.ir/public/Admin/users.php' style='display:block;'>" . "بازدیدها" . "(" . $num_of_rows . ")" . "</a>";
                 }else{
                     $num_of_rows = mysqli_num_rows($result);
                     echo "<a href='https://www.afragostarnovin.ir/public/Admin/users.php' style='display:block;'>" . "بازدیدها" . "(" . $num_of_rows . ")" . "</a>";
                 }
         }
-    $host_name = '';
+    $host_name = 'localhost';
     $user_name = '';
     $user_pass = '';
     $db_name   = '';
@@ -75,9 +78,10 @@
             $result = mysqli_query($connection , $query);
             $row = mysqli_fetch_array($result);
                 if(!mysqli_num_rows($result)){
-                    echo "خدماتی وجود ندارد";
+                    $num_of_rows = mysqli_num_rows($result);
+                    echo "<a href='https://www.afragostarnovin.ir/public/Admin/services.php' style='display:block;'>" . "خدمات" . "(" . $num_of_rows . ")" . "</a>";
                 }else{
                     $num_of_rows = mysqli_num_rows($result);
-                    echo "<a href='https://www.afragostarnovin.ir/public/Admin/services.php' style='display:block;float:left;'>" . "خدمات" . "(" . $num_of_rows . ")" . "</a>";
+                    echo "<a href='https://www.afragostarnovin.ir/public/Admin/services.php' style='display:block;'>" . "خدمات" . "(" . $num_of_rows . ")" . "</a>";
                 }
         }

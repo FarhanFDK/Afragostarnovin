@@ -11,7 +11,7 @@
             ");
     }
     if(isset($_POST['submit'])){
-        $host_name = "";
+        $host_name = "localhost";
         $user_name = "";
         $user_pass = "";
         $db_name   = "";
@@ -25,6 +25,10 @@
             $password = $_POST['password'];
             $username = mysqli_real_escape_string($connection,$username);
             $password = mysqli_real_escape_string($connection,$password);
+            $hashFormat = "$2y$10$";
+        	$salt = "crazyformatyurvery22pv";
+        	$hashFormat_and_salt = $hashFormat . $salt;
+        	$password = crypt($password,$hashFormat_and_salt);
             $sql = "SELECT * FROM admins WHERE username='$username' AND password='$password' LIMIT 1";
             $result = mysqli_query($connection,$sql);
             if(!mysqli_num_rows($result)){

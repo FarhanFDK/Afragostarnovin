@@ -72,27 +72,68 @@
                 </a>
             </div>
         </div>
-        <div class="middle">
-            <?php
-                $host_name = '';
-                $user_name = '';
-                $user_pass = '';
-                $db_name   = '';
-                $connection = mysqli_connect($host_name, $user_name , $user_pass, $db_name);
+        <div class="middle mt-16 mb-16">
+            <div class="">
+                <?php
+                    $host_name = 'localhost';
+                    $user_name = '';
+                    $user_pass = '';
+                    $db_name = '';
+                    $connection = mysqli_connect($host_name , $user_name , $user_pass , $db_name);
                     if(!$connection){
-                        die("ارتباط با سرور با مشکل مواجه شد");
+                        echo "ارتباط با سرور با مشکل مواجه شد";
+                    }else{
+                        if(isset($_POST['submit'])){
+                            $service_title = $_POST['service_title'];
+                            $service_description = $_POST['service_description'];
+                            $service_title = mysqli_real_escape_string($connection , $service_title);
+                            $service_description = mysqli_real_escape_string($connection , $service_title);
+                            $sql = "SELECT * FROM services WHERE service_title='$service_title'";
+                            $result = mysqli_query($connection,$sql);
+                            if(mysqli_num_rows($result) >= 1){
+                                echo "<div>";
+                                echo "این خدمات موجود می باشد";
+                                echo "</div>";
+                            }else{
+                                $sql = "INSERT INTO services(service_title,service_description)";
+                                $sql .= "VALUES('$service_title','$service_description')";
+                                $result = mysqli_query($connection,$sql);
+                                if($result){
+                                    echo "<div>";
+                                    echo "خدمات " . $service_title . " اضافه شد";
+                                    echo "</div>";
+                                }
+                            }
+                        }
+                        $sql = "SELECT * FROM services";
+                        $result = mysqli_query($connection , $sql);
+                        if(!mysqli_num_rows($result)){
+                            echo "<div>";
+                            echo "خدماتی وجود ندارد";
+                            echo "</div>";
+                        }else{
+                            while($row = mysqli_fetch_array($result)){
+                                $service_title = $row['service_title'];
+                                $service_description = $row['service_description'];
+                                echo "<div class='text-center w-1/2 bg-red-500 mt-4 mb-2 h-16 m-auto pt-4 pb-4' title='$service_description'>";
+                                echo "<a href='https://www.afragostarnovin.ir/public/services/$service_title.php' class='float-right align-middle' title='$service_description'> " . $service_title . " </a>";
+                                echo "</div>";
+                            }
+                        }
                     }
-                $query = "SELECT * FROM services";
-                $result = mysqli_query($connection,$query);
-                if(!mysqli_num_rows($result)){
-                    echo "خدماتی موجود نیست";
-                }else{
-                    while($row = mysqli_fetch_array($result)){
-                        $row_title = $row['service_title'];
-                        echo "<a href='https://www.afragostarnovin.ir/public/services/$row_title.php' style=''>" . "</a>";
-                    }
-                }
-            ?>
+                ?>
+                <form class="text-center m-5 w-1/2 m-auto" action="services.php" method="POST">
+                    <div>
+                        <input class="service_title shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" autocompelte="off" name="service_title" type="text" id="service_title" maxlength="30" required="true" placeholder="نام خدمات" />
+                    </div>
+                    <div>
+                        <input class="service_description shadow appearance-none border border-gray-500 rounded w-full py-2 pb-16 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" autocompelte="off" type="text" name="service_description" id="service_description" required="true" placeholder="توضیحات(الزامی)" />
+                    </div>
+                    <div>
+                        <input class="submit mt-4 inline-block bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded cursor-pointer" name="submit" id="submit" type="submit" value="ثبت" />
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="footer h-50 w-full">
             <div class="" style="">

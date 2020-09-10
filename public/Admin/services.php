@@ -76,9 +76,9 @@
             <div class="">
                 <?php
                     $host_name = 'localhost';
-                    $user_name = '';
-                    $user_pass = '';
-                    $db_name = '';
+                    $user_name = 'afragost_admin';
+                    $user_pass = '7d1KS~eK[}{a';
+                    $db_name = 'afragost_services';
                     $connection = mysqli_connect($host_name , $user_name , $user_pass , $db_name);
                     if(!$connection){
                         echo "ارتباط با سرور با مشکل مواجه شد";
@@ -116,7 +116,7 @@
                                 $service_title = $row['service_title'];
                                 $service_description = $row['service_description'];
                                 echo "<div class='text-center w-1/2 bg-red-500 mt-4 mb-2 h-16 m-auto pt-4 pb-4' title='$service_description'>";
-                                echo "<a href='https://www.afragostarnovin.ir/public/services/$service_title.php' class='float-right align-middle' title='$service_description'> " . $service_title . " </a>";
+                                echo "<a href='https://www.afragostarnovin.ir/public/services/$service_title.php' class='float-right align-middle rounded;' title='$service_description' style='display:flex;align-items: center;justify-content: center'> " . $service_title . " </a>";
                                 echo "</div>";
                             }
                         }

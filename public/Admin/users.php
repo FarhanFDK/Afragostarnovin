@@ -4,7 +4,7 @@
 		die("
 			<script>
 				function redirect(){
-					location.href = "https://www.afragostarnovin.ir/public/Admin/login.php";
+					location.href = 'https://www.afragostarnovin.ir/public/Admin/login.php';
 				}
 				redirect();
 			</script>

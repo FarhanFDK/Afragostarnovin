@@ -1,26 +1,27 @@
 <?php
-    session_start();
-    if(!isset($_COOKIE['admin'])){
-        die("
-            <script>
-                function redirect(){
-                    location.href = 'https://www.afragostarnovin.ir/public/Admin/login.php';
-                }
-                redirect();
-            </script>
-            ");
-    }
+	session_start();
+	if(!isset($_COOKIE['admin'])){
+		die("
+			<script>
+				function redirect(){
+					location.href = "https://www.afragostarnovin.ir/public/Admin/login.php";
+				}
+				redirect();
+			</script>
+		");
+	}
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>ADMIN | شرکت افراگستر نوین</title>
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
+	<head>
+		<meta charset="UTF-8" />
+		<title>USERS | شرکت افراگستر نوین</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="description" content="" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="robots" content="noindex,nofollow" />
-        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"/>
         <link rel="stylesheet" href="../../src/css/index.css" />
         <link rel="stylesheet" href="../../src/css/media.css" />
         <link rel="stylesheet" href="../../src/css/menu-side-navbar.css" />
@@ -82,13 +83,16 @@
                 if(!$connection){
                     echo("ارتباط با سرور با مشکل مواجه شد");
                 }else{
-                    $sql = "SELECT * FROM admins";
+                    $sql = "SELECT * FROM users";
                     $result = mysqli_query($connection , $sql);
                     $row = mysqli_fetch_array($result);
                     if(!mysqli_num_rows($result)){
-                        echo("دسترسی به ادمین پنل امکان پذیر نیست");
+                        echo "کاربری موجود نیست";
                     }else{
-                        include "panel.php";
+                    	while($row = mysqli_fetch_row($result)){
+                    		$username = $row['username'];
+                    		echo "<a href='https://www.afragostarnovin'ir/public/Admin/users.php?$username'> " . $username . " </a>";
+                    	}
                     }
                 }
             ?>
